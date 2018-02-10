@@ -1,0 +1,35 @@
+{
+  "name": "cytoscape-cola",
+  "description": "The Cola.js physics simulation layout for Cytoscape.js",
+  "main": "cytoscape-cola.js",
+  "dependencies": {
+    "cytoscape": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cytoscape/cytoscape.js-cola.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "cytoscape",
+    "cytoscape-extension"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cytoscape/cytoscape.js-cola",
+  "version": "2.1.0",
+  "_release": "2.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.0",
+    "commit": "76ef4eae9408bc79f4fbec89190fe5c527f6d742"
+  },
+  "_source": "https://github.com/cytoscape/cytoscape.js-cola.git",
+  "_target": "^2.0.1",
+  "_originalSource": "cytoscape-cola"
+}
