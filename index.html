@@ -1,34 +1,69 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <link href="css/index-style.css" rel="stylesheet" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css" rel="stylesheet" type="text/css" />
-        <link href="css/maskloader.css" rel="stylesheet">
-        <link href="css/jquery.restable.min.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-        <link rel="shortcut icon" href="image/favicon.ico" >
+        <title>autolinks</title>
 
-        <meta charset=utf-8 />
-        <script src="libs/jquery-1.11.2.min.js"></script>
-        <script src="libs/cytoscapejs_2.4.0/cytoscape.min.js"></script>
-        <script src="libs/jquery-ui.js"></script>
-        <script src="libs/cytoscape-cxtmenu.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script>
-        <script src="libs/cytoscape-qtip.js"></script>
-        <script src="libs/jquery.maskloader.js"></script>
-        <script src="libs/jquery.restable.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="assets/javascripts/libs/bootstrap/dist/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/javascripts/libs/angular-ui-layout/src/ui-layout.css"/>
+        <link type="text/css" rel="stylesheet" href="assets/javascripts/libs/cytoscape-panzoom/cytoscape.js-panzoom.css">
+        <link type="text/css" rel="stylesheet" href="assets/stylesheets/style.css">
+        <link type="text/css" rel="stylesheet" href="assets/stylesheets/input.css">
 
-        <script src="libs/cose_bilkent/cytoscape-cose-bilkent.js"></script>
-        <script src="libs/ngraph_forceLayout/cytoscape-ngraph.forcelayout.js"></script>
+        <link type="text/css" rel="stylesheet" href="assets/javascripts/libs/qtip2/basic/jquery.qtip.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/javascripts/libs/angular-material/angular-material.min.css">
 
-        <script type="text/javascript" src="config/url_mappings.json"></script>
-
-        <title>alvinrindra.github.io</title>
+        <script data-main="assets/javascripts/main.js" type="text/javascript" src="assets/javascripts/libs/requirejs/require.js"></script>
     </head>
 
-    <body>
-      <div id="content">
-        <div id="cy">
-        </div>
+    <body ng-controller="AppController as app" ngsf-fullscreen>
+      <div id="wrapper" layout="column" ng-cloak layout-fill>
+        <div id="sidenav" ui-view="sidenav"></div>
+        <span class="graphs">
+            <main id="center-box-entity" resizable r-directions="['right']" r-flex="true" flex="none">
+              <div id="content" class="container" ng-controller="GraphController">
+                <div>
+                  <div class="row">
+                    <div class="col-xs-8">
+                      <span>Node:</span>
+                      <select class="btn btn-primary dropdown-toggle" ng-model="form.obj.objTypes" ng-options="name for name in objTypes"></select>
+                      <md-input-container style="margin: 0; vertical-align:top; height: 30px;">
+                        <input ng-model="form.obj.name" placeholder="Node text">
+                      </md-input-container>
+                      <button class="btn btn-success" ng-click="addObj()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ADD NODE</button>
+                      <button class="btn btn-danger" ng-click="delObj()"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> DELETE NODE</button>
+                      <button class="btn btn-default" ng-click="centerGraph()"><span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span> FIT NODES</button>
+                      <button class="btn btn-default" ng-click="reset()"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> RESET NODES</button>
+                    </div>
+                    <div class="col-xs-4 text-right">
+                      <button ng-hide="edgehandler" class="btn btn-success" ng-click="activateEdgeHandle()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ADD EDGE</button>
+                      <button ng-show="edgehandler" class="btn btn-default" ng-click="disableEdgeHandle()"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> BACK</button>
+                      <span ng-hide="mapData.length > 1">
+                        After adding 2 nodes, you can start adding connecting edges
+                      </span>
+                      <span ng-show="mapData.length > 1">
+                          Edge (between 2 nodes)
+                        <select ng-model="formEdges.fromName" ng-options="c.name for c in mapData">
+                          <option value=""> From >> </option>
+                        </select>
+                        <select ng-model="formEdges.toName" ng-options="c.name for c in mapData">
+                          <option value="">  To >> </option>
+                        </select>
+                        <button class="btn btn-success" ng-click="addEdge()">ADD EDGE</button>
+                      </span>
+                    </div>
+                  </div>
+                  <cytoscape data="graphData" cy-data="mapData" cy-edges="edgeData" cy-click="doClick(value)" options="graphOptions" events="graphEvents"/>
+                </div>
+              </div>
+            </main>
+        </span>
+        <div id="input" ui-view="input"></div>
       </div>
     </body>
 </html>
