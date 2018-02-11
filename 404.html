@@ -7,13 +7,12 @@
         <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-        <title>autolinks</title>
+        <title>Alvin Rindra @ Github.io</title>
 
         <link type="text/css" rel="stylesheet" href="assets/javascripts/libs/bootstrap/dist/css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="assets/javascripts/libs/angular-ui-layout/src/ui-layout.css"/>
         <link type="text/css" rel="stylesheet" href="assets/javascripts/libs/cytoscape-panzoom/cytoscape.js-panzoom.css">
         <link type="text/css" rel="stylesheet" href="assets/stylesheets/style.css">
-        <link type="text/css" rel="stylesheet" href="assets/stylesheets/input.css">
 
         <link type="text/css" rel="stylesheet" href="assets/javascripts/libs/qtip2/basic/jquery.qtip.min.css">
         <link type="text/css" rel="stylesheet" href="assets/javascripts/libs/angular-material/angular-material.min.css">
@@ -23,7 +22,70 @@
 
     <body ng-controller="AppController as app" ngsf-fullscreen>
       <div id="wrapper" layout="column" ng-cloak layout-fill>
-        <div id="sidenav" ui-view="sidenav"></div>
+        <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="z-index: 1001">
+          <div ng-controller="SidenavController">
+             <form>
+               <md-toolbar class="md-theme-light">
+                 <h1 class="md-toolbar-tools">
+                   <md-input-container class="example-full-width" ng-if="selectedEntity !== 'createCompound'">
+                     <input
+                      style="color: white"
+                      ng-model="selectedEntity.data().name"
+                      ng-model-options="{ getterSetter: true, updateOn: 'default' }"
+                     >
+                   </md-input-container>
+                   <!-- <input value="{{selectedEntity.data('name')}}" /> -->
+                   <div ng-if="selectedEntity === 'createCompound'">
+                    Create Compound Node:
+                  </div>
+                  </h1>
+               </md-toolbar>
+               <md-content layout-padding>
+                  <img
+                    ng-show="selectedEntity.data('image')"
+                    ng-src="{{selectedEntity.data('image') === undefined ? '' : selectedEntity.data('image')}}"
+                    style="width:200px;"
+                  />
+                   <md-input-container
+                    ng-if="selectedEntity !== 'createCompound'"
+                   >
+                     <label for="testInput">Description</label>
+                     <textarea
+                        ng-model="selectedEntity.data().desc"
+                        md-autofocus
+                        ng-model-options="{ getterSetter: true, updateOn: 'default' }"
+                      >
+                     </textarea>
+                   </md-input-container>
+                   <md-input-container
+                    ng-if="selectedEntity === 'createCompound'"
+                   >
+                     <label for="newCompound">Name</label>
+                     <input
+                        id="newCompound"
+                        ng-if="selectedEntity === 'createCompound'"
+                      >
+                    </input>
+                   </md-input-container>
+                 <md-button ng-click="delete()" class="md-warn" ng-if="selectedEntity !== 'createCompound'">
+                   Delete
+                 </md-button>
+                 <md-button ng-click="update()" class="md-primary" ng-if="selectedEntity !== 'createCompound'">
+                   Update
+                 </md-button>
+                 <md-button ng-click="createCompound()" class="md-primary" ng-if="selectedEntity === 'createCompound'">
+                   Create
+                 </md-button>
+               </md-content>
+             </form>
+             <md-toolbar class="md-scroll-shrink">
+              <div layout="row" layout-align="center center" class="overflow-y: auto" ng-click="close()" flex>
+                Close
+              </div>
+            </md-toolbar>
+           </div>
+        </md-sidenav>
+
         <span class="graphs">
             <main id="center-box-entity" resizable r-directions="['right']" r-flex="true" flex="none">
               <div id="content" class="container" ng-controller="GraphController">

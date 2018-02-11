@@ -1,4 +1,5 @@
 html, body, .container {
+    z-index: 1001; 
     height: 100%;
     width: 100%;
 }
@@ -12,42 +13,12 @@ html, body, .container {
     clear: both;*/
 }
 
-#input-region {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  height: 181px;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-#viewer-region {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 181px;
-  background-color: rgba(255, 255, 255, 0);
+#canvas {
+	z-index: 1 !important;
 }
 
 .outer-canvas {
   z-index: 2;
-}
-
-.magnify-container {
-  top: 0px;
-  position: absolute;
-}
-
-.magnify-image {
-  top: 0px;
-  position: absolute;
-  width: 200px;
-  height: 200px;
-}
-
-.magnify-glass {
-  margin-left: 200px;
 }
 
 .node-buttons {
@@ -57,7 +28,7 @@ html, body, .container {
 }
 
 .qtip {
-  z-index: 2 !important;
+  z-index: 1001 !important;
   background-color: rgba(255, 255, 255, 0) !important;
   border: none !important;
 }
