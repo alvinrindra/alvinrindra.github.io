@@ -1,8 +1,7 @@
 define([
     'angular',
-    './components/sidenav/SidenavController',
-    './components/input/InputController',
-    './components/viewer/ViewerController',
+    './components/navs/SidenavController',
+    './components/navs/CirclenavController',
     './components/network/GraphController',
     './components/network/GraphConfig',
     './services/EntityService',
@@ -17,27 +16,20 @@ define([
 
     var app = angular.module('autolinks', [
             'ui.layout', 'ui.router', 'ui.bootstrap', 'underscore',  'autolinks.graphConfig', 'autolinks.graph',
-            'autolinks.input', 'autolinks.viewer', 'ngMaterial', 'autolinks.entityservice', 'autolinks.sidenav', 'autolinks.endpointservice'
+            'ngMaterial', 'autolinks.entityservice', 'autolinks.sidenav', 'autolinks.circlenav', 'autolinks.endpointservice'
           ]);
 
     app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
         $stateProvider
         .state('layout', {
             views: {
+              'circlenav': {
+                  controller: 'CirclenavController'
+                },
                 'network': {
-                    // templateUrl: 'assets/partials/network.html',
                     controller: 'GraphController'
                 },
-                'input': {
-                  // templateUrl: 'assets/partials/input.html',
-                  controller: 'InputController'
-                },
-                'viewer': {
-                  // templateUrl: 'assets/partials/viewer.html',
-                  controller: 'ViewerController'
-                },
                 'sidenav': {
-                  // templateUrl: 'assets/partials/sidenav.html',
                   controller: 'SidenavController'
                 }
             }

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <title>Alvin Rindra @ Github.io</title>
 
@@ -125,7 +125,33 @@
               </div>
             </main>
         </span>
-        <div id="input" ui-view="input"></div>
       </div>
+
+      <div ng-controller="CirclenavController">
+        <ul id="navs">
+          <li>
+            <a href="" ng-click="centerGraph()">
+              <i id="circle-fit" class="fa fa-expand fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="" ng-click="layoutReset()">
+              <i id="circle-reset" class="fa fa-retweet fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="" ng-click="addCompound()">
+              <i id="circle-parent" class="fa fa-object-group fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="" ng-click="toggleSidenav()">
+              <i id="circle-burger" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
     </body>
 </html>
