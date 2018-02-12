@@ -687,7 +687,10 @@ define([
 
                     }; // end doCy()
 
-                  scope.doCy();
+                  setTimeout( function() {
+                    scope.doCy();
+                  }, 500);
+
 
                   // Attach an event handler if defined
                   angular.forEach(scope.events, function (callback, event) {
