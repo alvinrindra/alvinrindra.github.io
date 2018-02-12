@@ -14,8 +14,7 @@ define([
           $scope.label = '';
 
           $scope.init = function() {
-            $timeout( function() {
-              debugger;
+            // $timeout( function() {
               $scope.selectedEntity = EntityService.getRootScopeEntity();
               var entity = $scope.selectedEntity;
               if (entity._private) {
@@ -23,7 +22,7 @@ define([
               }
               console.log($scope.selectedEntity);
               // console.log($scope);
-            }, 1000);
+            // }, 1000);
           }
 
           $rootScope.$on('sidenavReinit', function (event, args) {
