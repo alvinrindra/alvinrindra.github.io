@@ -57,11 +57,11 @@ define([
           };
 
           $scope.toggleSidenav = function() {
-            if (window.innerWidth > 1280) {
-              $rootScope.$emit('toggleMainnav');
-            } else {
+            // if (window.innerWidth > 1280) {
+            //   $rootScope.$emit('toggleMainnav');
+            // } else {
               $mdSidenav('left').toggle();
-            }
+            // }
           };
         }
       ]);
