@@ -1,5 +1,6 @@
 define([
     'angular',
+    './components/navs/MainnavController',
     './components/navs/SidenavController',
     './components/navs/CirclenavController',
     './components/network/GraphController',
@@ -16,14 +17,17 @@ define([
 
     var app = angular.module('autolinks', [
             'ui.layout', 'ui.router', 'ui.bootstrap', 'underscore',  'autolinks.graphConfig', 'autolinks.graph',
-            'ngMaterial', 'autolinks.entityservice', 'autolinks.sidenav', 'autolinks.circlenav', 'autolinks.endpointservice'
+            'ngMaterial', 'autolinks.entityservice', 'autolinks.sidenav', 'autolinks.mainnav', 'autolinks.circlenav', 'autolinks.endpointservice'
           ]);
 
     app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
         $stateProvider
         .state('layout', {
             views: {
-              'circlenav': {
+                'mainnav': {
+                  controller: 'MainnavController'
+                },
+                'circlenav': {
                   controller: 'CirclenavController'
                 },
                 'network': {
@@ -56,7 +60,10 @@ define([
                   });
               };
             }
+
+            $scope.toggleLeft = buildToggler('left');
             $scope.toggleRight = buildToggler('right');
+            
             $scope.isOpenRight = function(){
               return $mdSidenav('right').isOpen();
             };

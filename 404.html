@@ -21,6 +21,31 @@
     </head>
 
     <body ng-controller="AppController as app" ngsf-fullscreen>
+      <md-sidenav
+        class="md-sidenav-left md-whiteframe-z2"
+        md-component-id="left"
+        hide-print
+        md-is-locked-open="lockLeft && $mdMedia('gt-md')"
+        style="min-height: 100%; z-index: 1001;"
+        >
+             <md-toolbar class="md-theme-light">
+               <h1 class="md-toolbar-tools">
+                 Autolinks
+               </h1>
+             </md-toolbar>
+           <md-content flex>
+             <h3 class="md-toolbar-tools">
+               <label>Welcome Max Mustermann</label>
+             </h3>
+           </md-content>
+           <md-toolbar class="md-scroll-shrink">
+            <a ng-href="/login" target="_self" layout="row" layout-align="center center" flex style="cursor: pointer;">
+              Logout
+            </a>
+          </md-toolbar>
+         </div>
+      </md-sidenav>
+
       <div id="wrapper" layout="column" ng-cloak layout-fill>
         <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="z-index: 1001">
           <div ng-controller="SidenavController">
