@@ -161,6 +161,14 @@ div.table_description {
   margin: auto;
 }
 
+.md-subheader {
+    display: block;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin: 0;
+    position: relative;
+}
+
 .html-node {
   font-family: sans-serif;
   color: #424242;

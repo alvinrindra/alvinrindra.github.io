@@ -31,11 +31,30 @@
                  <label class="alv_label">alvinrindra.github.io</label>
                </div>
              </md-toolbar>
-           <md-content style="text-align: center;">
+           <md-content style="text-align: justify; margin-top: 15px;">
               <img src="assets/images/Alvin_foto.jpg" alt="Avatar" class="avatar">
              <div class="md-toolbar-tools">
                <label class="alv_label">Alvin Rindra Fazrie</label>
              </div>
+             <md-subheader class="md-no-sticky">
+                <p style="font-size: 16px; line-height: 1.2em">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p style="font-size: 16px; line-height: 1.2em">
+                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+             </md-subheader>
+             <md-list-item class="main-subheader" ng-click="toggle.doc = !toggle.doc">
+                <span flex>Document lists:</span>
+                <i ng-show="!toggle.doc" class="fa fa-chevron-down" aria-hidden="true"></i>
+                <i ng-show="toggle.doc" class="fa fa-chevron-right" aria-hidden="true"></i>
+              </md-list-item>
+              <md-list-item class="main-subheader" ng-click="toggle.doc = !toggle.doc">
+                 <span flex>Document lists:</span>
+                 <i ng-show="!toggle.doc" class="fa fa-chevron-down" aria-hidden="true"></i>
+                 <i ng-show="toggle.doc" class="fa fa-chevron-right" aria-hidden="true"></i>
+               </md-list-item>
+
+
            </md-content>
            <!-- <md-toolbar class="md-scroll-shrink">
             <a ng-href="/login" target="_self" layout="row" layout-align="center center" flex style="cursor: pointer;">

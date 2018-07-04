@@ -316,12 +316,12 @@ define([
                       }
 
                       cy.expandCollapse({
-                        layoutBy: {
-                          name: "cose-bilkent",
-                          // animate: "end",
-                          randomize: false,
-                          fit: true
-                        },
+                        // layoutBy: {
+                        //   name: "cose-bilkent",
+                        //   // animate: "end",
+                        //   randomize: false,
+                        //   fit: true
+                        // },
                         fisheye: false,
                         animate: false
                       });
