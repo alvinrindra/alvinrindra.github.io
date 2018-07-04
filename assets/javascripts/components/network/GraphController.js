@@ -90,6 +90,7 @@ define([
                 { data: { id: 'ruby', name: "Ruby", parent: 'programming_languages', image: "https://alvinrindra.github.io/assets/images/programming/ruby.png" } },
                 { data: { id: 'scala', name: "Scala", parent: 'programming_languages', image: "https://alvinrindra.github.io/assets/images/programming/scala.png" } },
                 { data: { id: 'python', name: "Python", parent: 'programming_languages', image: "https://alvinrindra.github.io/assets/images/programming/python.png" } },
+                { data: { id: 'java', name: "Java", parent: 'programming_languages', image: "https://alvinrindra.github.io/assets/images/programming/java.png" } },
                 { data: { id: 'nodejs', name: "NodeJs", parent: 'programming_languages', image: "https://alvinrindra.github.io/assets/images/programming/nodejs.png" } },
 
                 { data: { id: 'be_frameworks', name: "Frameworks", parent: 'be_stack' } },
@@ -119,7 +120,28 @@ define([
 
                 { data: { id: 'indexing', name: "Indexing", parent: 'tech_stack' } },
                 { data: { id: 'elasticsearch', name: "Elasticsearch", parent: 'indexing', image: "https://alvinrindra.github.io/assets/images/programming/elasticsearch.jpg" } },
-                { data: { id: 'solr', name: "Solr", parent: 'indexing'} },
+                { data: { id: 'solr', name: "Solr", parent: 'indexing', image: "https://alvinrindra.github.io/assets/images/programming/solr.png"} },
+
+                // Data Science Stacks
+                { data: { id: 'data_science_stack', name: "Data Science Stacks" } },
+                { data: { id: "machine_learning", name: "Machine Learning", parent: 'data_science_stack'  } },
+                { data: { id: "reinforcement_learning", name: "Reinforcement Learning", parent: 'machine_learning'  } },
+                { data: { id: "deep_learning", name: "Deep Learning", parent: 'machine_learning'  } },
+
+                { data: { id: "nlp", name: "Natural Language Processing", parent: 'data_science_stack'  } },
+                { data: { id: 'uima', name: "UIMA", parent: 'nlp' } },
+                { data: { id: 'nltk', name: "NLTK", parent: 'nlp' } },
+
+                { data: { id: "big_data", name: "Big Data", parent: 'data_science_stack'  } },
+                { data: { id: "tools", name: "Tools", parent: 'data_science_stack'  } },
+                { data: { id: "ds_visualization", name: "Visualization", parent: 'data_science_stack'  } },
+                { data: { id: "sap", name: "SAP", parent: 'data_science_stack'  } },
+
+                { data: { id: 'projects', name: "Projects" } },
+
+                { data: { id: 'publications', name: "Publications" } },
+
+                { data: { id: 'activities', name: "Activities" } },
                 // { data: { id: '0', parent: 'b', name: "Disease" }, position: { x: 215, y: 85 } },
                 // { data: { id: '1', name: "Caucasian race" } },
                 // { data: { id: '2', name: 'B_CLL', desc: "type of leukemia (a type of cancer of the white blood cells)", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Chronic_lymphocytic_leukemia.jpg/1280px-Chronic_lymphocytic_leukemia.jpg" } },
@@ -144,6 +166,10 @@ define([
                 { data: { id: 'alvinrindraworking_exp', source: 'alvinrindra', target: 'working_exp', name: 'works' } },
                 { data: { id: 'alvinrindraeducation', source: 'alvinrindra', target: 'education', name: 'studies' } },
                 { data: { id: 'alvinrindratech_stack', source: 'alvinrindra', target: 'tech_stack', name: 'has' } },
+                { data: { id: 'alvinrindrapublications', source: 'alvinrindra', target: 'publications', name: 'writes' } },
+                { data: { id: 'alvinrindradata_science', source: 'alvinrindra', target: 'data_science_stack', name: 'learns' } },
+                { data: { id: 'alvinrindraactivities', source: 'alvinrindra', target: 'activities', name: 'enjoys' } },
+                { data: { id: 'alvinrindraprojects', source: 'alvinrindra', target: 'projects', name: 'develops' } },
 
                 { data: { id: 'associate_developerfull_stack_developer_3', source: 'associate_developer', target: 'full_stack_developer_3', name: 'to' } },
                 { data: { id: 'full_stack_developer_3full_stack_developer_2', source: 'full_stack_developer_3', target: 'full_stack_developer_2', name: 'to' } },
