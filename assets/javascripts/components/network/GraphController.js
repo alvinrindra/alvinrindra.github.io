@@ -49,18 +49,6 @@ define([
 
               var promise = $q.defer();
 
-              // initialize data object
-              // var nodes = [
-              //   { data: { id: 'a', parent: 'b', name: "Disease" }, position: { x: 215, y: 85 } },
-              //   { data: { id: 'b', name: "Caucasian race" } },
-              //   { data: { id: 'g', parent: 'a' } },
-              //   { data: { id: 'h', parent: 'a' } },
-              //   { data: { id: 'c', parent: 'b' }, position: { x: 300, y: 85 } },
-              //   { data: { id: 'd', name: "Caucasian race"}, position: { x: 215, y: 175 } },
-              //   { data: { id: 'e' } },
-              //   { data: { id: 'f', parent: 'e' }, position: { x: 300, y: 175 } }
-              // ];
-
               var nodes = [
                 //alvinrindra
                 { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "also known as B lymphocytes, are a type of white blood cell of the lymphocyte subtype.", image: "https://alvinrindra.github.io/assets/images/Alvin_foto.jpg" } },
@@ -85,12 +73,12 @@ define([
                 { data: { id: 'reactjs', name: "React", parent: 'ui_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/react.png" } },
                 { data: { id: 'meteor', name: "Meteor", parent: 'ui_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/meteor.png" } },
 
-                { data: { id: 'build_tools', name: "Build Tools", parent: 'fe_stack' } },
-                { data: { id: 'webpack', name: "Webpack", parent: 'build_tools' } },
+                { data: { id: 'fe_build_tools', name: "Build Tools", parent: 'fe_stack' } },
+                { data: { id: 'webpack', name: "Webpack", parent: 'fe_build_tools', image: "https://alvinrindra.github.io/assets/images/programming/webpack.png" } },
 
                 { data: { id: 'package_managers', name: "Package Managers", parent: 'fe_stack' } },
-                { data: { id: 'npm', name: "npm", parent: 'package_managers'} },
-                { data: { id: 'bower', name: "Bower", parent: 'package_managers'} },
+                { data: { id: 'npm', name: "npm", parent: 'package_managers', image: "https://alvinrindra.github.io/assets/images/programming/npm.png"} },
+                { data: { id: 'bower', name: "Bower", parent: 'package_managers', image: "https://alvinrindra.github.io/assets/images/programming/bower.jpeg"} },
 
                 { data: { id: 'be_stack', name: "Back-End Stack", parent: "tech_stack" } },
                 { data: { id: 'database', name: "Database", parent: 'be_stack' } },
@@ -107,7 +95,11 @@ define([
                 { data: { id: 'be_frameworks', name: "Frameworks", parent: 'be_stack' } },
                 { data: { id: 'ror', name: "Ruby on Rails", parent: 'be_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/ROR.png"} },
                 { data: { id: 'meteor_be', name: "Meteor", parent: 'be_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/meteor.png"} },
-                { data: { id: 'sbt', name: "Sbt", parent: 'be_frameworks'} },
+                { data: { id: 'scala_play', name: "Scala Play", parent: 'be_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/scala-play.png"} },
+
+                { data: { id: 'be_build_tools', name: "Build Tools", parent: 'be_stack' } },
+                { data: { id: 'maven', name: "Maven", parent: 'be_build_tools', image: "https://alvinrindra.github.io/assets/images/programming/maven.png"} },
+                { data: { id: 'scala_sbt', name: "Scala Sbt", parent: 'be_build_tools', image: "https://alvinrindra.github.io/assets/images/programming/scala-sbt.png"} },
 
                 { data: { id: 'api', name: "API", parent: 'be_stack' } },
                 { data: { id: 'swagger', name: "Swagger", parent: 'api', image: "https://alvinrindra.github.io/assets/images/programming/Swagger.png"} },
@@ -115,7 +107,7 @@ define([
 
                 { data: { id: 'ide', name: "IDE", parent: 'tech_stack' } },
                 { data: { id: 'atom', name: "Atom", parent: 'ide', image: "https://alvinrindra.github.io/assets/images/programming/atom.png" } },
-                { data: { id: 'intellij', name: "IntelliJ", parent: 'ide'} },
+                { data: { id: 'intellij', name: "IntelliJ", parent: 'ide', image: "https://alvinrindra.github.io/assets/images/programming/intellij.jpeg" } },
 
                 { data: { id: 'data_visualization', name: "Data Visualization", parent: 'tech_stack' } },
                 { data: { id: 'd3', name: "D3", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/d3js.png"} },
