@@ -127,17 +127,36 @@ define([
                 { data: { id: "machine_learning", name: "Machine Learning", parent: 'data_science_stack'  } },
                 { data: { id: "reinforcement_learning", name: "Reinforcement Learning", parent: 'machine_learning'  } },
                 { data: { id: "deep_learning", name: "Deep Learning", parent: 'machine_learning'  } },
+                { data: { id: "supervised_learning", name: "Supervised Learning", parent: 'machine_learning'  } },
+                { data: { id: "linear_regression", name: "Linear Regression", parent: 'supervised_learning'  } },
+                { data: { id: "classification", name: "Classification", parent: 'supervised_learning'  } },
+                { data: { id: "generative_learning_models", name: "Generative Learning Models", parent: 'supervised_learning'  } },
+                { data: { id: "support_vector_machines", name: "Support Vector Machines", parent: 'supervised_learning'  } },
+                { data: { id: "learning_theory", name: "Learning theory", parent: 'supervised_learning'  } },
+
+                { data: { id: "unsupervised_learning", name: "Unsupervised Learning", parent: 'machine_learning'  } },
+                { data: { id: "expectation_maximization", name: "Expectation Maximization", parent: 'unsupervised_learning'  } },
+                { data: { id: "principal_component_analysis", name: "Principal Component Analysis", parent: 'unsupervised_learning'  } },
+                { data: { id: "independent_component_analysis", name: "Independent Component Analysis", parent: 'unsupervised_learning'  } },
 
                 { data: { id: "nlp", name: "Natural Language Processing", parent: 'data_science_stack'  } },
-                { data: { id: 'uima', name: "UIMA", parent: 'nlp' } },
+                { data: { id: 'uima', name: "UIMA", parent: 'nlp', image: "https://alvinrindra.github.io/assets/images/data_science/uima.png" } },
                 { data: { id: 'nltk', name: "NLTK", parent: 'nlp' } },
+                { data: { id: 'ctakes', name: "cTakes", parent: 'nlp', image: "https://alvinrindra.github.io/assets/images/programming/ctakes.png" } },
 
                 { data: { id: "big_data", name: "Big Data", parent: 'data_science_stack'  } },
                 { data: { id: "tools", name: "Tools", parent: 'data_science_stack'  } },
+                { data: { id: "r_programming", name: "R", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/r-programming.png"  } },
+                { data: { id: "r_studio", name: "R Studio", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/r-studio.png"  } },
+                { data: { id: "matlab", name: "Matlab", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/matlab.gif"  } },
+                { data: { id: "octave", name: "Octave", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/octave.png"  } },
+
                 { data: { id: "ds_visualization", name: "Visualization", parent: 'data_science_stack'  } },
                 { data: { id: "sap", name: "SAP", parent: 'data_science_stack'  } },
 
                 { data: { id: 'projects', name: "Projects" } },
+                { data: { id: 'newsleak', name: "New/s/leak", parent: 'projects' } },
+                { data: { id: 'autolinks', name: "autolinks", parent: 'projects' } },
 
                 { data: { id: 'publications', name: "Publications" } },
 
