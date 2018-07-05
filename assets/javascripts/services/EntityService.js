@@ -1,9 +1,8 @@
 define([
-    'angular',
-    'ngMaterial'
+    'angular'
 ], function (angular) {
     'use strict';
-    angular.module('autolinks.entityservice', ['ngMaterial'])
+    angular.module('autolinks.entityservice', [])
         .factory('EntityService', ['$rootScope', '$mdSidenav', '$mdComponentRegistry', '$timeout', function ($rootScope, $mdSidenav, $mdComponentRegistry, $timeout) {
             var entityScope = null;
             $rootScope.entity = {};

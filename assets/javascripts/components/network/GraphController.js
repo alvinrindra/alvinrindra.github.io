@@ -62,8 +62,11 @@ define([
                 { data: { id: 'associate_developer', name: "Associate Developer (BI)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/programming/wk.jpg" } },
                 //Education
                 { data: { id: 'education', name: "Education" } },
-                { data: { id: 'uni_hamburg', name: "Universität Hamburg", parent: 'education', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg" } },
-                { data: { id: 'uni_due', name: "Universität Duisburg-Essen", parent: 'education', image: "https://alvinrindra.github.io/assets/images/uni_due.png" } },
+                { data: { id: 'degree', name: "Degree", parent: 'education' } },
+                { data: { id: 'non_degree', name: "Non degree", parent: 'education' } },
+                { data: { id: 'msc', name: "MSc", parent: 'degree' } },
+                { data: { id: 'uni_hamburg', name: "Universität Hamburg", parent: 'msc', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg" } },
+                { data: { id: 'uni_due', name: "Universität Duisburg-Essen", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/uni_due.png" } },
                 // Technology Stack
                 { data: { id: 'tech_stack', name: "Technology Stacks" } },
 
@@ -149,7 +152,7 @@ define([
                 { data: { id: "r_programming", name: "R", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/r-programming.png"  } },
                 { data: { id: "r_studio", name: "R Studio", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/r-studio.png"  } },
                 { data: { id: "matlab", name: "Matlab", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/matlab.gif"  } },
-                { data: { id: "octave", name: "Octave", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/octave.png"  } },
+                { data: { id: "octave", name: "Octave", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/octave.jpeg"  } },
 
                 { data: { id: "ds_visualization", name: "Visualization", parent: 'data_science_stack'  } },
                 { data: { id: "sap", name: "SAP", parent: 'data_science_stack'  } },
