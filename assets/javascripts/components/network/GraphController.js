@@ -160,6 +160,10 @@ define([
                 { data: { id: 'projects', name: "Projects" } },
                 { data: { id: 'newsleak', name: "New/s/leak", parent: 'projects' } },
                 { data: { id: 'autolinks', name: "autolinks", parent: 'projects' } },
+                { data: { id: 'irl', name: "Interactive RL", parent: 'projects' } },
+                { data: { id: 'erl', name: "Exploration RL", parent: 'projects' } },
+                { data: { id: 'hausgold_maklerportal', name: "Hausgold maklerportal", parent: 'projects' } },
+                { data: { id: 'quantilope_marktforschung', name: "Q_marktforschung", parent: 'projects' } },
 
                 { data: { id: 'publications', name: "Publications" } },
 
