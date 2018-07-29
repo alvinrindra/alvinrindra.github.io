@@ -67,6 +67,7 @@ define([
                 { data: { id: 'msc', name: "MSc", parent: 'degree' } },
                 { data: { id: 'uni_hamburg', name: "Universität Hamburg", parent: 'msc', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg" } },
                 { data: { id: 'uni_due', name: "Universität Duisburg-Essen", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/uni_due.png" } },
+                { data: { id: 'dlai', name: "deeplearning.ai", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/dlai.jpeg" } },
                 // Technology Stack
                 { data: { id: 'tech_stack', name: "Technology Stacks" } },
 
