@@ -66,7 +66,7 @@ define([
                 { data: { id: 'non_degree', name: "Non degree", parent: 'education' } },
                 { data: { id: 'msc', name: "MSc", parent: 'degree' } },
                 { data: { id: 'bsc', name: "BSc", parent: 'degree' } },
-                { data: { id: 'uin_jkt', name: "UIN Jakarta", parent: 'bsc', image: "https://alvinrindra.github.io/assets/images/uin-jkt-jpeg" } },
+                { data: { id: 'uin_jkt', name: "UIN Jakarta", parent: 'bsc', image: "https://alvinrindra.github.io/assets/images/uin-jkt.jpeg" } },
                 { data: { id: 'uni_hamburg', name: "Universität Hamburg", parent: 'msc', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg" } },
                 { data: { id: 'uni_due', name: "Universität Duisburg-Essen", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/uni_due.png" } },
                 { data: { id: 'dlai', name: "deeplearning.ai", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/dlai.jpeg" } },
@@ -181,7 +181,7 @@ define([
                 { data: { id: 'autolinks', name: "autolinks", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/autolinks.png"  } },
                 { data: { id: 'irl', name: "Interactive RL", parent: 'projects' } },
                 { data: { id: 'erl', name: "Exploration RL", parent: 'projects' } },
-                { data: { id: 'hausgold_maklerportal', name: "Hausgold maklerportal", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/machine_learning/hausgold.png"  } },
+                { data: { id: 'hausgold_maklerportal', name: "Hausgold maklerportal", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/hausgold.png"  } },
                 { data: { id: 'quantilope_marktforschung', name: "Q_marktforschung", parent: 'projects' } },
 
                 { data: { id: 'publications', name: "Publications" } },
