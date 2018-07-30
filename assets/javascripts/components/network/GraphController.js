@@ -51,7 +51,7 @@ define([
 
               var nodes = [
                 //alvinrindra
-                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "also known as B lymphocytes, are a type of white blood cell of the lymphocyte subtype.", image: "https://alvinrindra.github.io/assets/images/Alvin_foto.jpg" } },
+                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Lorem ipsum dolor sit amet", image: "https://alvinrindra.github.io/assets/images/Alvin_foto.jpg" } },
                 //working_exps
                 { data: { id: 'working_exp', name: "Professional Positions" } },
                 { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg" } },
@@ -65,9 +65,12 @@ define([
                 { data: { id: 'degree', name: "Degree", parent: 'education' } },
                 { data: { id: 'non_degree', name: "Non degree", parent: 'education' } },
                 { data: { id: 'msc', name: "MSc", parent: 'degree' } },
+                { data: { id: 'bsc', name: "BSc", parent: 'degree' } },
+                { data: { id: 'uin_jkt', name: "UIN Jakarta", parent: 'bsc', image: "https://alvinrindra.github.io/assets/images/uin-jkt-jpeg" } },
                 { data: { id: 'uni_hamburg', name: "Universität Hamburg", parent: 'msc', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg" } },
                 { data: { id: 'uni_due', name: "Universität Duisburg-Essen", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/uni_due.png" } },
                 { data: { id: 'dlai', name: "deeplearning.ai", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/dlai.jpeg" } },
+                { data: { id: 'iium', name: "IIUM", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/iium.png" } },
                 // Technology Stack
                 { data: { id: 'tech_stack', name: "Technology Stacks" } },
 
@@ -130,13 +133,25 @@ define([
                 { data: { id: 'data_science_stack', name: "Data Science Stacks" } },
                 { data: { id: "machine_learning", name: "Machine Learning", parent: 'data_science_stack'  } },
                 { data: { id: "reinforcement_learning", name: "Reinforcement Learning", parent: 'machine_learning'  } },
-                { data: { id: "deep_learning", name: "Deep Learning", parent: 'machine_learning'  } },
+
                 { data: { id: "supervised_learning", name: "Supervised Learning", parent: 'machine_learning'  } },
                 { data: { id: "linear_regression", name: "Linear Regression", parent: 'supervised_learning'  } },
                 { data: { id: "classification", name: "Classification", parent: 'supervised_learning'  } },
                 { data: { id: "generative_learning_models", name: "Generative Learning Models", parent: 'supervised_learning'  } },
                 { data: { id: "support_vector_machines", name: "Support Vector Machines", parent: 'supervised_learning'  } },
                 { data: { id: "learning_theory", name: "Learning theory", parent: 'supervised_learning'  } },
+                //{ data: { id: "nn", name: "Neural Network", parent: 'supervised_learning'  } },
+
+                { data: { id: "deep_learning", name: "Deep Learning", parent: 'machine_learning'  } },
+                { data: { id: "lstm", name: "LSTM", parent: 'deep_learning'  } },
+                { data: { id: "cnn", name: "CNN", parent: 'deep_learning'  } },
+                { data: { id: "dl_tools", name: "Tools", parent: 'deep_learning'  } },
+                { data: { id: "tensorflow", name: "Tensorflow", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/tensorflow.jpeg" } },
+                { data: { id: "scikit_learn", name: "scikit-learn", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/scikit-learn.png" } },
+                { data: { id: "jupyter", name: "Jupyter", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/jupyter.png" } },
+                { data: { id: "keras", name: "Keras", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/keras.png" } },
+                { data: { id: "matplotlib", name: "matplotlib", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/matplotlib.png" } },
+                { data: { id: "numpy", name: "numpy", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/numpy.png" } },
 
                 { data: { id: "unsupervised_learning", name: "Unsupervised Learning", parent: 'machine_learning'  } },
                 { data: { id: "expectation_maximization", name: "Expectation Maximization", parent: 'unsupervised_learning'  } },
@@ -154,16 +169,19 @@ define([
                 { data: { id: "r_studio", name: "R Studio", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/r-studio.png"  } },
                 { data: { id: "matlab", name: "Matlab", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/matlab.gif"  } },
                 { data: { id: "octave", name: "Octave", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/octave.jpeg"  } },
+                { data: { id: "ggplot2", name: "ggplot2", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/ggplot2.png"  } },
+                { data: { id: "shiny", name: "shiny", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/shiny.png"  } },
+                { data: { id: "tidyverse", name: "tidyverse", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/tidyverse.jpg"  } },
 
                 { data: { id: "ds_visualization", name: "Visualization", parent: 'data_science_stack'  } },
                 { data: { id: "sap", name: "SAP", parent: 'data_science_stack'  } },
 
                 { data: { id: 'projects', name: "Projects" } },
-                { data: { id: 'newsleak', name: "New/s/leak", parent: 'projects' } },
-                { data: { id: 'autolinks', name: "autolinks", parent: 'projects' } },
+                { data: { id: 'newsleak', name: "New/s/leak", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/newsleak.png"  } },
+                { data: { id: 'autolinks', name: "autolinks", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/autolinks.png"  } },
                 { data: { id: 'irl', name: "Interactive RL", parent: 'projects' } },
                 { data: { id: 'erl', name: "Exploration RL", parent: 'projects' } },
-                { data: { id: 'hausgold_maklerportal', name: "Hausgold maklerportal", parent: 'projects' } },
+                { data: { id: 'hausgold_maklerportal', name: "Hausgold maklerportal", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/machine_learning/hausgold.png"  } },
                 { data: { id: 'quantilope_marktforschung', name: "Q_marktforschung", parent: 'projects' } },
 
                 { data: { id: 'publications', name: "Publications" } },
@@ -202,6 +220,8 @@ define([
                 { data: { id: 'full_stack_developer_3full_stack_developer_2', source: 'full_stack_developer_3', target: 'full_stack_developer_2', name: 'to' } },
                 { data: { id: 'full_stack_developer_2full_stack_developer_1', source: 'full_stack_developer_2', target: 'full_stack_developer_1', name: 'to' } },
                 { data: { id: 'full_stack_developer_1research_assistant', source: 'full_stack_developer_1', target: 'research_assistant', name: 'to' } },
+
+                // { data: { id: 'nndeeplearning', source: 'nn', target: 'deep_learning', name: 'aka' } },
               ];
 
               var response = {data: {entities: nodes, relations: edges}};
