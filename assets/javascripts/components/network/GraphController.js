@@ -185,6 +185,8 @@ define([
                 { data: { id: 'quantilope_marktforschung', name: "Q_marktforschung", parent: 'projects' } },
 
                 { data: { id: 'publications', name: "Publications" } },
+                { data: { id: 'paper_irl', name: "Interactive RL", parent: 'publications', image: "https://alvinrindra.github.io/assets/images/papers/interactive_RL.png", desc: "https://ieeexplore.ieee.org/iel7/8326423/8329770/08329809.pdf", } },
+                { data: { id: 'paper_xrl', name: "Exploration RL", parent: 'publications', image: "https://alvinrindra.github.io/assets/images/papers/exploration_RL.png", desc: "http://la-cci.org/la-cci-2018/accepted-papers-2018/",  } },
 
                 { data: { id: 'activities', name: "Activities" } },
                 // { data: { id: '0', parent: 'b', name: "Disease" }, position: { x: 215, y: 85 } },
