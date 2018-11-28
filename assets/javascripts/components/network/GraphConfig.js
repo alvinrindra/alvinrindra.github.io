@@ -94,8 +94,8 @@ define([
                {
                 selector: 'node',
                 css: {
-                    'shape': 'roundrectangle',
-                    'width': '120',
+                    'shape': 'ellipse',
+                    'width': '50',
                     'height': '50',
                     'background-color': 'rgba(102, 127, 227, 0.84)',
                     'background-fit': 'cover',
@@ -103,7 +103,7 @@ define([
                       function(e) {
                         return e.data('name');
                       },
-                    'text-valign': 'center',
+                    'text-valign': 'bottom',
                     // 'color': 'rgba(35, 35, 35, 0.84)',
                     // 'text-outline-width': 2,
                     // 'text-outline-color': 'data(typeColor)'

@@ -213,7 +213,7 @@ define([
                             .selector('#'+ n.data('id'))
                             .css(
                               {
-                              // 'shape': 'roundrectangle',
+                              'shape': 'roundrectangle',
                               'background-image': n.data('image'),
                               'background-color': 'rgba(255, 255, 255, 0)',
                               'text-valign': 'bottom',
