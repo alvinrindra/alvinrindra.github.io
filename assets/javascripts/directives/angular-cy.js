@@ -166,12 +166,22 @@ define([
                             scope.data.edges.push(edgeObj);
                             edgeTipExtension(addedEles);
                           }
-                          this.enabled = false;
+                          eh.enabled = false;
                         },
+                        stop: function( sourceNode ) {
+                          eh.enabled = false;
+                        }
                       }
                       // debugger;
                       var eh = cy.edgehandles(edgeHandleProps);
                       eh.enabled = false;
+
+
+                      scope.coordinate = {};
+                      scope.selectedEntity = {};
+                      scope.mergeMode = false;
+                      scope.annotationHighlighted = null;
+
 
                       // if (scope.$parent.edgehandler) {
                       //   eh.enabled = true;
@@ -205,6 +215,131 @@ define([
                       cy.on('taphold', function(e){
                           eh.enabled = false;
                           scope.coordinate = e.position;
+                      });
+
+                          // Events collection : mouseover, taphold, tapend, tap
+                      cy.on('tapend', 'node', function(evt) {
+                        var node = evt.target;
+                        var nodeLabel = node.data('metadata') && node.data('metadata').label ? node.data('metadata').label : node.data('name');
+
+                        //NOTE: merge node scenarios
+                        if (scope.mergeMode) {
+                          scope.coordinate = evt.position;
+                          // var x = scope.coordinate.x;
+                          // var y = scope.coordinate.y;
+                          scope.mergeToParentNodes = {target: node, source: scope.selectedNodesToMerge, children: scope.selectedNodesToMerge.children()}
+                          var confirm = scope.$parent.$mdDialog.confirm()
+                               .title('merge to ' + nodeLabel +'?')
+                               // .targetEvent(doc)
+                               .ok('Yes, merge!')
+                               .cancel('Cancel');
+
+                          scope.$parent.$mdDialog.show(confirm).then(function() {
+
+                            const sourceData = scope.mergeToParentNodes.source;
+                            const targetData = scope.mergeToParentNodes.target;
+                            const hasChildren = scope.mergeToParentNodes.source.children().length > 0 ? true : false;
+
+
+                            const mvData = sourceData.move({parent: targetData.data('id')});
+                            nodeTipExtension(mvData);
+                            nodeTipExtension(mvData.descendants());
+                            edgeTipExtension(mvData.connectedEdges());
+
+                            scope.mergeMode = false;
+
+                            // if (sourceData.data('rid') === targetData.data('rid')) {
+                            //   scope.$parent.$mdToast.show(
+                            //         scope.$parent.$mdToast.simple()
+                            //           .textContent('Merging to the same node is not allowed')
+                            //           .position('top right')
+                            //           .theme("warn-toast")
+                            //           .hideDelay(3500)
+                            //       );
+                            // } else {
+                            //   if (!node.isParent()) {
+                            //     if (cy.$(':selected').length > 0) {
+                            //       scope.$parent.EntityService.openSideNav('createCompound');
+                            //     } else {
+                            //       scope.$parent.$mdToast.show(
+                            //             scope.$parent.$mdToast.simple()
+                            //               .textContent('Please select one or more nodes to be children')
+                            //               .position('top right')
+                            //               .theme("warn-toast")
+                            //               .hideDelay(3500)
+                            //           );
+                            //     }
+                            //   } else {
+                            //     const before = {
+                            //       "rid": sourceData.data('rid'),
+                            //       "cid": sourceData.data('cid'),
+                            //       "metadata": sourceData.data('metadata'),
+                            //       "value": sourceData.data('value'),
+                            //     };
+                            //
+                            //     const after = {
+                            //       "rid": sourceData.data('rid'),
+                            //       "cid": targetData.data('rid'),
+                            //       "metadata": sourceData.data('metadata'),
+                            //       "value": sourceData.data('value'),
+                            //     };
+                            //     const data = { before: before, after: after };
+                            //
+                            //     scope.$parent.EndPointService.editResource(data).then(function(response) {
+                            //
+                            //       var hasDuplicateInTarget = _.filter(targetData.children(), function(d) { return d.data().rid === sourceData.data().rid });
+                            //
+                            //       if (hasDuplicateInTarget.length < 1) {
+                            //         if (sourceData.connectedEdges().length > 0) {
+                            //           var sourceJson = sourceData.json();
+                            //           sourceJson.data.id = targetData.data('id') + (sourceJson.data.parent ? sourceJson.data.id.replace(sourceJson.data.parent, "") : sourceJson.data.id);
+                            //           sourceJson.data.parent = targetData.data('id');
+                            //           sourceJson.data.cid = targetData.data('rid');
+                            //           sourceJson.position.x = (sourceJson.position.x + targetData.position().x) / 2;
+                            //           sourceJson.position.y = (sourceJson.position.y + targetData.position().y) / 3;
+                            //
+                            //           const mvData = cy.add(sourceJson);
+                            //           nodeTipExtension(mvData);
+                            //           nodeTipExtension(mvData.descendants());
+                            //           edgeTipExtension(mvData.connectedEdges());
+                            //         } else {
+                            //           scope.selectedNodesToMerge.hide();
+                            //
+                            //           // targetData.data().cid = newCompound.data('rid');
+                            //           // const mvDataTarget = targetData.move({parent: newCompound.data('id')});
+                            //           // nodeTipExtension(mvDataTarget);
+                            //
+                            //           sourceData.data().cid = targetData.data('rid');
+                            //           const mvData = sourceData.move({parent: targetData.data('id')});
+                            //           nodeTipExtension(mvData);
+                            //           nodeTipExtension(mvData.descendants());
+                            //           edgeTipExtension(mvData.connectedEdges());
+                            //         }
+                            //       }  else {
+                            //           scope.$parent.$mdToast.show(
+                            //                 scope.$parent.$mdToast.simple()
+                            //                   .textContent(((sourceData.data('metadata') && sourceData.data('metadata').label) ? sourceData.data('metadata').label : sourceData.data('name'))
+                            //                   + ' is already in ' + ((targetData.data('metadata') && targetData.data('metadata').label) ? targetData.data('metadata').label : targetData.data('name')))
+                            //                   .position('top right')
+                            //                   .theme("warn-toast")
+                            //                   .hideDelay(3500)
+                            //               );
+                            //         }
+                            //       scope.mergeMode = false;
+                            //     });
+                            //   }
+                            // }
+                            // addNewNode(data, targetData, hasChildren);
+                          }, function() {
+                            scope.mergeMode = false;
+                          });
+                          // $rootScope.$emit('mergeToParent');
+                        } else {
+                          // console.log( 'tapend ' + node.id() );
+                          //console.log(x, y);
+                        }
+                        // evt.neighborhood('edge').style( { 'line-color' : 'black' });
+                        // evt.connectedEdges().style( { 'line-color' : 'black' });
                       });
 
                       cy.nodes().forEach(function(n){
@@ -270,7 +405,7 @@ define([
                                     console.log(scope.selectedEntity.id());
                                     return (
                                     '<div class="node-buttons">' +
-                                    '<button id="readMode" class="node-button"><i class="fa fa-book fa-2x"/></button>' +
+                                    '<button id="moveNode" class="node-button"><i class="fa fa-arrows-alt fa-2x"/></button>' +
                                     '<button id="addEdge" class="node-button"><i class="fa fa-link fa-2x"/></button> ' +
                                     '<button id="editNode" class="node-button"><i class="fa fa-pencil fa-2x"/></button>' +
                                     '</div>'
@@ -685,6 +820,18 @@ define([
                           cy.fit();
                       });
 
+
+                      $rootScope.$on('mergeToParent', function() {
+                          scope.selectedNodesToMerge = cy.$(':selected');
+                          // var descendants = selectedNodesToParent.descendants();
+                          if (!scope.mergeMode) {
+                            scope.mergeMode = true;
+                          } else {
+
+                          }
+                      });
+
+
                     }; // end doCy()
 
                   setTimeout( function() {
@@ -722,6 +869,20 @@ define([
 
                   $(document).on('click', "#addEdge", function(e){
                     $rootScope.$broadcast('addEdge');
+                  });
+
+                  $(document).on('click', "#moveNode", function(event, n){
+                    // scope.$parent.EntityService.openSideNav(scope.selectedEntity);
+                    if (cy.$(':selected').length > 0) {
+                      scope.$parent.$mdToast.show(
+                            scope.$parent.$mdToast.simple()
+                              .textContent('Please select the target node to merge')
+                              .position('top right')
+                              .theme("primary-toast")
+                              .hideDelay(3500)
+                          );
+                      $rootScope.$emit('mergeToParent');
+                    }
                   });
 
                 });
