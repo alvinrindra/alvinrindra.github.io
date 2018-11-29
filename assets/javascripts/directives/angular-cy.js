@@ -788,15 +788,38 @@ define([
 
                       $rootScope.$on('createCompound', function() {
                         var newCompound = angular.element('#newCompound').val();
-                        var nodeObj = {
-                            data: {
-                              id: newCompound + '_as_parent',
-                              name: newCompound
-                            }
-                        };
+                        var ns = cy.$(':selected');
+                        const timestamp = Date.now();
+
+                        // var hasParent = _.find(ns, function(n){ if (n.parent().id()) { return n; } });
+                        // if (hasParent) {
+                        //   //scope.newCompound.move({parent: hasParent.parent().id()});
+                        //   var nodeObj = {
+                        //       data: {
+                        //         id: newCompound + timestamp,
+                        //         name: newCompound,
+                        //         parent: hasParent.parent().id()
+                        //       },
+                        //       position: {
+                        //         x: ns[0].position().x,
+                        //         y: ns[0].position().y
+                        //       }
+                        //   };
+                        // } else {
+                          var nodeObj = {
+                              data: {
+                                id: newCompound + timestamp,
+                                name: newCompound
+                              },
+                              position: {
+                                x: ns[0].position().x,
+                                y: ns[0].position().y
+                              }
+                          };
+                        // }
                         scope.newCompound = cy.add(nodeObj);
                         scope.data.nodes.push(nodeObj);
-                        var ns = cy.$(':selected');
+
                         _.forEach(ns, function(n) {
                           n.data().parent = scope.newCompound.data('id');
                         });
@@ -808,6 +831,8 @@ define([
                         cy.edges().forEach(function(e) {
                           edgeTipExtension(e);
                         });
+
+                        nodeTipExtension(scope.newCompound);
                         cy.layout({name: 'cose-bilkent'}).run();
                         cy.fit();
                       });

@@ -9,8 +9,8 @@ define([
     angular.module('autolinks.circlenav', []);
     angular.module('autolinks.circlenav')
         // Circlenav Controller
-        .controller('CirclenavController', ['$scope', '$rootScope', '$mdSidenav', 'EntityService',
-        function ($scope, $rootScope, $mdSidenav, EntityService) {
+        .controller('CirclenavController', ['$scope', '$rootScope', '$mdSidenav', 'EntityService', '$mdToast',
+        function ($scope, $rootScope, $mdSidenav, EntityService, $mdToast) {
 
           $scope.lockLeft = true;
 
@@ -44,7 +44,13 @@ define([
             if (cy.$(':selected').length > 0) {
               EntityService.openSideNav('createCompound');
             } else {
-              console.log('Please select one or more node to be children');
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent('Please select one or more nodes to be children')
+                  .position('top right')
+                  .theme("warn-toast")
+                  .hideDelay(3500)
+              );
             }
           };
 

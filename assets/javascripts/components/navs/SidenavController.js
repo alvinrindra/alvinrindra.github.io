@@ -28,6 +28,7 @@ define([
 
           $rootScope.$on('sidenavReinit', function (event, args) {
             $scope.init();
+            $mdSidenav('right').open();
           });
 
           $scope.init();

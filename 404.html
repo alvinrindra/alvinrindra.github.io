@@ -113,12 +113,24 @@
                  <md-button ng-click="delete()" class="md-warn" ng-if="selectedEntity !== 'createCompound'">
                    Delete
                  </md-button>
-                 <md-button ng-click="update()" class="md-primary" ng-if="selectedEntity !== 'createCompound'">
+                 <!-- <md-button ng-click="update()" class="md-primary" ng-if="selectedEntity !== 'createCompound'">
                    Update
-                 </md-button>
+                 </md-button> -->
                  <md-button ng-click="createCompound()" class="md-primary" ng-if="selectedEntity === 'createCompound'">
                    Create
                  </md-button>
+                 <md-input-container
+                  ng-if="selectedEntity !== 'createCompound' && selectedEntity.data().desc"
+                  style="width: 100%"
+                 >
+                   <label for="testInput">Description</label>
+                   <textarea
+                      ng-model="selectedEntity.data().desc"
+                      md-autofocus
+                      ng-model-options="{ getterSetter: true, updateOn: 'default' }"
+                    >
+                   </textarea>
+                 </md-input-container>
                </md-content>
              </form>
              <md-toolbar class="md-scroll-shrink">
@@ -153,21 +165,25 @@
         <ul id="navs">
           <li>
             <a href="" ng-click="centerGraph()">
+              <md-tooltip md-direction="left">Fit Layout</md-tooltip>
               <i id="circle-fit" class="fa fa-expand fa-2x" aria-hidden="true"></i>
             </a>
           </li>
           <li>
             <a href="" ng-click="layoutReset()">
+              <md-tooltip md-direction="left">Fix Layout</md-tooltip>
               <i id="circle-reset" class="fa fa-retweet fa-2x" aria-hidden="true"></i>
             </a>
           </li>
           <li>
             <a href="" ng-click="addCompound()">
+              <md-tooltip md-direction="top">Create Compound</md-tooltip>
               <i id="circle-parent" class="fa fa-object-group fa-2x" aria-hidden="true"></i>
             </a>
           </li>
           <li>
             <a href="" ng-click="toggleSidenav()">
+              <md-tooltip md-direction="top">Open Mainnav</md-tooltip>
               <i id="circle-burger" class="fa fa-bars fa-2x" aria-hidden="true"></i>
             </a>
           </li>
