@@ -8,10 +8,11 @@ define([
     angular.module('autolinks.sidenav', []);
     angular.module('autolinks.sidenav')
         // Viewer Controller
-        .controller('SidenavController', ['$scope', '$rootScope', '$timeout', '$mdSidenav', '$log', 'EntityService', 'EndPointService', '_',
-        function ($scope, $rootScope, $timeout, $mdSidenav, $log, EntityService, EndPointService, _) {
+        .controller('SidenavController', ['$scope', '$rootScope', '$timeout', '$mdSidenav', '$mdDialog','$log', 'EntityService', 'EndPointService', '_',
+        function ($scope, $rootScope, $timeout, $mdSidenav, $mdDialog, $log, EntityService, EndPointService, _) {
 
           $scope.label = '';
+          $scope.metadata = {};
 
           $scope.init = function() {
             // $timeout( function() {
@@ -38,25 +39,26 @@ define([
               const entity = $scope.selectedEntity;
               const label = $scope.label;
 
-              const before = {
-                "rid": entity.data('rid'),
-                "cid": entity.data('cid'),
-                "metadata": entity.data('metadata') ? entity.data('metadata') : {},
-                "value": entity.data('value') ? entity.data('value') : {}
-              };
-              const after = {
-                "rid": entity.data('rid'),
-                "cid": entity.data('cid'),
-                "metadata": $scope.selectedEntity.data().name ? { label: $scope.selectedEntity.data().name } : {},
-                "value": entity.data('value') ? entity.data('value') : {}
-              };
-              const data = { before: before, after: after};
-              EndPointService.editResource(data);
+              // const before = {
+              //   "rid": entity.data('rid'),
+              //   "cid": entity.data('cid'),
+              //   "metadata": entity.data('metadata') ? entity.data('metadata') : {},
+              //   "value": entity.data('value') ? entity.data('value') : {}
+              // };
+              // const after = {
+              //   "rid": entity.data('rid'),
+              //   "cid": entity.data('cid'),
+              //   "metadata": $scope.selectedEntity.data().name ? { label: $scope.selectedEntity.data().name } : {},
+              //   "value": entity.data('value') ? entity.data('value') : {}
+              // };
+              // const data = { before: before, after: after};
+              // EndPointService.editResource(data);
 
               // $scope.selectedEntity = EntityService.updateRootScopeEntity($scope.selectedEntity);
               // // broadcasting the event
               // // $rootScope.$broadcast('appChanged');
-              // $mdSidenav('right').close();
+              $mdSidenav('right').close();
+              cy.$(":selected").data('name', $scope.selectedEntity.data().name);
           };
 
           $scope.createCompound = function(){
@@ -64,10 +66,37 @@ define([
               $mdSidenav('right').close();
           };
 
-          $scope.delete = function(){
-              EntityService.deleteEntity();
-              $mdSidenav('right').close();
+          $scope.delete = function(ev) {
+              const entity = $scope.selectedEntity;
+              const label = $scope.label;
+              var entName = entity.data('metadata') && entity.data('metadata').label ?  entity.data('metadata').label : entity.data('name');
+
+              var confirm = $mdDialog.confirm()
+                   .title('Are you sure to delete ' + entName + ' node ?')
+                   .targetEvent(ev)
+                   .ok('Yes, delete it!')
+                   .cancel('Cancel');
+
+              $mdDialog.show(confirm).then(function() {
+                // if (entity.data('rid')) {
+                //   const before = {
+                //     "rid": entity.data('rid'),
+                //     "cid": entity.data('cid'),
+                //     "metadata": $scope.metadata ? $scope.metadata : {},
+                //     "value": entity.data('name') ? entity.data('name') : {}
+                //   };
+                //
+                //   const data = { before: before, after: null };
+                //   EndPointService.editResource(data);
+                // }
+                EntityService.deleteEntity();
+                $mdSidenav('right').close();
+              }, function() {
+               // cancel function
+              });
+
           };
+
 
           $scope.close = function () {
             // Component lookup should always be available since we are not using `ng-if`
