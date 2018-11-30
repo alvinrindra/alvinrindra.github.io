@@ -13,8 +13,8 @@ define([
     angular.module('autolinks.graph', ['ngCy']);
     angular.module('autolinks.graph')
         // Graph Controller
-        .controller('GraphController', ['$scope', '$q', '$rootScope', 'graphProperties', 'EntityService', '_', '$mdDialog', '$mdToast',
-        function ($scope, $q, $rootScope, graphProperties, EntityService, _, $mdDialog, $mdToast) {
+        .controller('GraphController', ['$scope', '$q', '$rootScope', 'graphProperties', 'EntityService', '_', '$mdDialog', '$mdToast', '$timeout',
+        function ($scope, $q, $rootScope, graphProperties, EntityService, _, $mdDialog, $mdToast, $timeout) {
 
           var self = this;
           /* Background collection */
@@ -284,6 +284,9 @@ define([
           $scope.reloadGraph = function () {
               clearGraph();
               $scope.buildGraph();
+                $timeout( function() {
+                  $scope.progressBarIsInactive = true;
+                }, 1000);
           };
 
           function clearGraph() {
@@ -364,7 +367,6 @@ define([
 
           // delete a node
           $scope.delObj = function(){
-            debugger;
             if (self.cy.$(":selected").length > 0) {
                 self.cy.$(":selected").remove();
             }

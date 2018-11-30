@@ -561,7 +561,7 @@ define([
                         var edges = scope.data.edges;
                         var newNode = [];
                         var newEdge = [];
-                        debugger;
+
                         if (entity) {
                           _.forEach(entity.value, function(n) {
                             function extractEntity(n, parent = null) {
@@ -601,7 +601,7 @@ define([
                                 return n[0].value;
                               }
 
-                              debugger;
+
                               if (_.isArray(s.value)) {
                                 var s1 = extractSubject(s.value);
                                 var subject = {
@@ -780,6 +780,9 @@ define([
                         }
                       }
 
+                      // scope.$parent.progressBarIsInactive = true;
+                      // scope.progressBarIsInactive = true;
+
                       $rootScope.$on('deleteEntity', function(){
                         if (cy.$(":selected").length > 0) {
                             cy.$(":selected").remove();
@@ -855,8 +858,6 @@ define([
 
                           }
                       });
-
-
                     }; // end doCy()
 
                   setTimeout( function() {

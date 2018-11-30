@@ -157,9 +157,12 @@
            </div>
         </md-sidenav>
 
-        <span class="graphs">
+        <span class="graphs" ng-controller="GraphController">
+          <div class="progressBar" ng-hide="progressBarIsInactive">
+            <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+          </div>
             <main id="center-box-entity" resizable r-directions="['right']" r-flex="true" flex="none">
-              <div id="content" class="container" ng-controller="GraphController">
+              <div id="content" class="container">
                 <div style="height: 100%">
                   <div class="row alvin__header__title">
                     <div class="col-xs-12">

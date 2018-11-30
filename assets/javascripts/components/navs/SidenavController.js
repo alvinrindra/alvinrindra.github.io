@@ -41,6 +41,7 @@ define([
 
           // // add Edges to the edges object, then broadcast the change event
           $scope.update = function() {
+              $rootScope.createCompound = true;
               const entity = $scope.selectedEntity;
               const label = $scope.label;
 
