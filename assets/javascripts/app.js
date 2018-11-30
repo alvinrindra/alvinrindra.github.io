@@ -42,8 +42,8 @@ define([
         $urlRouterProvider.otherwise('/');
     }]);
 
-    app.controller('AppController', ['$scope', '$state', '$mdSidenav', 'EntityService',
-        function ($scope, $state, $mdSidenav, EntityService) {
+    app.controller('AppController', ['$scope', '$state', '$mdSidenav', 'EntityService', '$mdDialog',
+        function ($scope, $state, $mdSidenav, EntityService, $mdDialog) {
 
             init();
 
@@ -61,6 +61,45 @@ define([
                   });
               };
             }
+
+            if(!sessionStorage.alvinIntro) {
+              showDialog();
+            }
+
+            function showDialog($event) {
+               var parentEl = angular.element(document.body);
+               $mdDialog.show({
+                 parent: parentEl,
+                 targetEvent: $event,
+                 template:
+                   '<md-dialog aria-label="List dialog">' +
+                   '  <md-dialog-content class="md-dialog-content">'+
+                   '  <h2 class="md-title"><b> Welcome to alvinrindra.github.io!</b></h2>' +
+                   '  <div class="md-dialog-content-body">In this website, you can observe my <i>resume</i> interactively in the knowledge graphs. </div>' +
+                   '  <div class="md-dialog-content-body">You can create a node, a relation, a compound graph, or even build your own <i>knowledge graphs.</i> </div>' +
+                   '  <div class="md-dialog-content-body">Click a <i>circle-nav</i> button in the lower right corner to get more features. </div>' +
+                   '  </md-dialog-content>' +
+                   '  <md-dialog-actions>' +
+                   '    <md-button ng-click="closeDialog()" class="md-primary">' +
+                   '      Okay!' +
+                   '    </md-button>' +
+                   '  </md-dialog-actions>' +
+                   '</md-dialog>',
+                 locals: {
+                   items: $scope.items
+                 },
+                 controller: DialogController
+              });
+              function DialogController($scope, $mdDialog, items) {
+                $scope.items = items;
+                $scope.closeDialog = function() {
+                  sessionStorage.setItem("alvinIntro", "done");
+                  $mdDialog.hide();
+                }
+              }
+            };
+
+
 
             $scope.toggleLeft = buildToggler('left');
             $scope.toggleRight = buildToggler('right');

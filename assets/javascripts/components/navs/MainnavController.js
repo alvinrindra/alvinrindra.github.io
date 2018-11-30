@@ -22,6 +22,16 @@ define([
              });
          };
 
+         // var confirm = $mdDialog.confirm()
+         // .title('Welcome to alvinrindra.github.io!')
+         // .textContent('Click circe-nav button in the lower right corner to get more features')
+         // // .targetEvent(doc)
+         // .ok('Okay!')
+         //
+         // $mdDialog.show(confirm).then(function() {
+         //
+         // });
+
          $scope.showTabDialog = function(ev) {
           $mdDialog.show({
             templateUrl: '/assets/partials/tabdialog.tmpl.html',
