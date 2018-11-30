@@ -61,16 +61,17 @@ define([
 
           $scope.hasManual = function() {
             if(!sessionStorage.alvinCirclenavIntro) {
-              showDialog();
+              showHint();
             }
 
-            function showDialog($event) {
+            function showHint($event) {
+               $mdSidenav('left').close();
                var parentEl = angular.element(document.body);
                $mdDialog.show({
                  parent: parentEl,
                  targetEvent: $event,
                  template:
-                   '<md-dialog aria-label="List dialog">' +
+                   '<md-dialog aria-label="List dialog" style="z-index: 1009;">' +
                    '  <md-dialog-content class="md-dialog-content">'+
                    '  <div class="md-dialog-content-body">For further details of manual, click open mainnav button and click user manual</div>' +
                    '  </md-dialog-content>' +

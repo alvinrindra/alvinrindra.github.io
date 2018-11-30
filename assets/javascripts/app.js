@@ -84,7 +84,7 @@ define([
                  parent: parentEl,
                  targetEvent: $event,
                  template:
-                   '<md-dialog aria-label="List dialog">' +
+                   '<md-dialog aria-label="List dialog" style="z-index: 1009;">' +
                    '  <md-dialog-content class="md-dialog-content">'+
                    '  <h2 class="md-title"><b> Welcome to alvinrindra.github.io!</b></h2>' +
                    '  <div class="md-dialog-content-body">In this website, you can observe my <i>resume</i> interactively in the knowledge graphs. </div>' +

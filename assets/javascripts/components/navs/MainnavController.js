@@ -9,8 +9,8 @@ define([
     angular.module('autolinks.mainnav', []);
     angular.module('autolinks.mainnav')
         // Mainnav Controller
-        .controller('MainnavController', ['$scope', '$rootScope', '$mdDialog',
-        function ($scope, $rootScope , $mdDialog) {
+        .controller('MainnavController', ['$scope', '$rootScope', '$mdDialog', '$mdSidenav',
+        function ($scope, $rootScope , $mdDialog, $mdSidenav) {
 
           $scope.lockLeft = true;
 
@@ -23,13 +23,14 @@ define([
          };
 
          $scope.toggleManual = function($event) {
+            $mdSidenav('left').close();
             var parentEl = angular.element(document.body);
             $mdDialog.show({
               parent: parentEl,
               targetEvent: $event,
               template:
 
-              '<md-dialog aria-label="Mango (Fruit)">' +
+              '<md-dialog aria-label="User Manual" style="z-index: 1009;">' +
                   '<form>' +
                     '<md-toolbar>' +
                       '<div class="md-toolbar-tools">' +
