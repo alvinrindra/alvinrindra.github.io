@@ -64,9 +64,11 @@ define([
 
 
             $mdSidenav('right', true).then(function(instance) {
+
               instance.onClose(function() {
+                const temp = $rootScope.oldName;
                 if(!$rootScope.createCompound) {
-                  cy.$(":selected").data('name', $rootScope.selectedEntity.data().name);
+                  cy.$(":selected").data('name', temp);
                 }
               });
             });

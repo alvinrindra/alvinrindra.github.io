@@ -45,11 +45,11 @@ define([
                         '<md-tab label="Build Knowledge graphs">' +
                           '<md-content class="md-padding">' +
                             // '<h1 class="md-display-2">Build knowledge graphs:</h1>' +
-                            '<p>1. Click and hold, then select an add icon to create a new node.</p>' +
-                            '<p>2. Click a node to show a qTip, click a link icon to draw a relational edge to other nodes.</p>' +
-                            '<p>3. Click a node to show a qTip, click an arrows icon to move to a parent node or merge to other single nodes.</p>' +
-                            '<p>4. Click a node/an edge to show a qTip, click edit icon to open node details. Then the side navigation will be shown. </p>' +
-                            '<p>5. To change the name of a node, just change the label text in the side navigation and it will immediately be updated.</p>' +
+                            '<p>1. Click and hold; then select an add icon to create a new node.</p>' +
+                            '<p>2. Click a node to show a qTip; click a link icon to draw a relational edge to other nodes.</p>' +
+                            '<p>3. Click a node to show a qTip; click an arrows icon to move to a parent node or merge to other single nodes.</p>' +
+                            '<p>4. Click a node/an edge to show a qTip; click edit icon to open node details. Then the side navigation will be shown. </p>' +
+                            '<p>5. To change the name of a node, we just just need to change the label in the side navigation and click the update button.</p>' +
                           '</md-content>' +
                         '</md-tab>' +
                         // '<md-tab label="three">' +

@@ -17,11 +17,13 @@ define([
 
           $scope.init = function() {
             // $timeout( function() {
-              $rootScope.selectedEntity = EntityService.getRootScopeEntity();
-              $scope.tempEnt = _.clone($rootScope.selectedEntity);
-              var entity = $rootScope.selectedEntity;
+              $scope.selectedEntity = EntityService.getRootScopeEntity();
+
+              var entity = $scope.selectedEntity;
               if (entity._private) {
                 $scope.label = entity._private.data.name;
+                const lbl = $scope.label;
+                $rootScope.oldName = lbl;
               }
               console.log($scope.selectedEntity);
               // console.log($scope);
@@ -65,10 +67,8 @@ define([
           };
 
           $scope.createCompound = function(){
-              $rootScope.createCompound = true;
               $rootScope.$emit('createCompound');
               $mdSidenav('right').close();
-              $rootScope.createCompound = false;
           };
 
           $scope.delete = function(ev) {
@@ -115,13 +115,9 @@ define([
           $scope.close = function () {
             // Component lookup should always be available since we are not using `ng-if`
             // $route.reload();
-            $mdSidenav('right').close()
-              .then(function () {
-                $log.debug("close RIGHT is done");
-                console.log('Wawww');
-              });
+            $mdSidenav('right').close();
               // $scope.selectedEntity = $scope.temp;
-            cy.$(":selected").data('name', $scope.selectedEntity.data().name);
+            cy.$(":selected").data('name', $scope.label);
           };
 
         }

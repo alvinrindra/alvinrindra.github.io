@@ -124,12 +124,11 @@
                       >
                     </input>
                    </md-input-container>
-                 <md-button ng-click="delete()" class="md-warn" ng-if="selectedEntity !== 'createCompound'">
-                   Delete
-                 </md-button>
-                 <!-- <md-button ng-click="update()" class="md-primary" ng-if="selectedEntity !== 'createCompound'">
+                 <!-- <div> -->
+                 <md-button ng-click="update()" class="md-primary" ng-if="selectedEntity !== 'createCompound'">
                    Update
-                 </md-button> -->
+                 </md-button>
+                  <!-- </div> -->
                  <md-button ng-click="createCompound()" class="md-primary" ng-if="selectedEntity === 'createCompound'">
                    Create
                  </md-button>
@@ -145,6 +144,9 @@
                     >
                    </textarea>
                  </md-input-container>
+                 <md-button ng-click="delete()" class="md-warn" ng-if="selectedEntity !== 'createCompound'">
+                   Delete
+                 </md-button>
                </md-content>
              </form>
              <md-toolbar class="md-scroll-shrink">
@@ -175,7 +177,7 @@
         </span>
       </div>
 
-      <div ng-controller="CirclenavController">
+      <div ng-controller="CirclenavController" ng-click="hasManual()">
         <ul id="navs">
           <li>
             <a href="" ng-click="centerGraph()">

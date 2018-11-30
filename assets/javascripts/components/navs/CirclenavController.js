@@ -9,8 +9,8 @@ define([
     angular.module('autolinks.circlenav', []);
     angular.module('autolinks.circlenav')
         // Circlenav Controller
-        .controller('CirclenavController', ['$scope', '$rootScope', '$mdSidenav', 'EntityService', '$mdToast',
-        function ($scope, $rootScope, $mdSidenav, EntityService, $mdToast) {
+        .controller('CirclenavController', ['$scope', '$rootScope', '$mdSidenav', 'EntityService', '$mdToast', '$mdDialog',
+        function ($scope, $rootScope, $mdSidenav, EntityService, $mdToast, $mdDialog) {
 
           $scope.lockLeft = true;
 
@@ -57,6 +57,44 @@ define([
           $scope.centerGraph = function() {
             $rootScope.$emit('centerGraph');
           };
+
+
+          $scope.hasManual = function() {
+            if(!sessionStorage.alvinCirclenavIntro) {
+              showDialog();
+            }
+
+            function showDialog($event) {
+               var parentEl = angular.element(document.body);
+               $mdDialog.show({
+                 parent: parentEl,
+                 targetEvent: $event,
+                 template:
+                   '<md-dialog aria-label="List dialog">' +
+                   '  <md-dialog-content class="md-dialog-content">'+
+                   '  <div class="md-dialog-content-body">For further details of manual, click open mainnav button and click user manual</div>' +
+                   '  </md-dialog-content>' +
+                   '  <md-dialog-actions>' +
+                   '    <md-button ng-click="closeDialog()" class="md-primary">' +
+                   '      Okay!' +
+                   '    </md-button>' +
+                   '  </md-dialog-actions>' +
+                   '</md-dialog>',
+                 locals: {
+                   items: $scope.items
+                 },
+                 controller: DialogController
+              });
+              function DialogController($scope, $mdDialog, items) {
+                $scope.items = items;
+                $scope.closeDialog = function() {
+                  sessionStorage.setItem("alvinCirclenavIntro", "done");
+                  $mdDialog.hide();
+                }
+              }
+            };
+          };
+
 
           $scope.layoutReset = function(){
             $rootScope.$broadcast('layoutReset');
