@@ -1,11 +1,12 @@
 define([
     'angular',
+    'ngMaterial'
 ], function(angular) {
     'use strict';
     /**
      * viewer module:
      */
-    angular.module('autolinks.sidenav', []);
+    angular.module('autolinks.sidenav', ['ngMaterial']);
     angular.module('autolinks.sidenav')
         // Viewer Controller
         .controller('SidenavController', ['$scope', '$rootScope', '$timeout', '$mdSidenav', '$mdDialog','$log', 'EntityService', 'EndPointService', '_',
@@ -16,9 +17,9 @@ define([
 
           $scope.init = function() {
             // $timeout( function() {
-              $scope.selectedEntity = EntityService.getRootScopeEntity();
-              $scope.tempEnt = _.clone($scope.selectedEntity);
-              var entity = $scope.selectedEntity;
+              $rootScope.selectedEntity = EntityService.getRootScopeEntity();
+              $scope.tempEnt = _.clone($rootScope.selectedEntity);
+              var entity = $rootScope.selectedEntity;
               if (entity._private) {
                 $scope.label = entity._private.data.name;
               }
@@ -64,8 +65,10 @@ define([
           };
 
           $scope.createCompound = function(){
+              $rootScope.createCompound = true;
               $rootScope.$emit('createCompound');
               $mdSidenav('right').close();
+              $rootScope.createCompound = false;
           };
 
           $scope.delete = function(ev) {
@@ -99,17 +102,25 @@ define([
 
           };
 
+          // $mdSidenav('right', true).then(function(instance) {
+          //   // On close callback to handle close, backdrop click, or escape key pressed.
+          //   // Callback happens BEFORE the close action occurs.
+          //   instance.onClose(function() {
+          //     $log.debug('closing');
+          //     console.log('closeeee');
+          //   });
+          // });
+
 
           $scope.close = function () {
             // Component lookup should always be available since we are not using `ng-if`
             // $route.reload();
-            // $scope.selectedEntity = $scope.temp;
-            EndPointService.fetchData();
             $mdSidenav('right').close()
               .then(function () {
                 $log.debug("close RIGHT is done");
+                console.log('Wawww');
               });
-
+              // $scope.selectedEntity = $scope.temp;
             cy.$(":selected").data('name', $scope.selectedEntity.data().name);
           };
 

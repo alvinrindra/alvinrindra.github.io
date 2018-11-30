@@ -42,8 +42,8 @@ define([
         $urlRouterProvider.otherwise('/');
     }]);
 
-    app.controller('AppController', ['$scope', '$state', '$mdSidenav', 'EntityService', '$mdDialog',
-        function ($scope, $state, $mdSidenav, EntityService, $mdDialog) {
+    app.controller('AppController', ['$scope', '$state', '$mdSidenav', 'EntityService', '$mdDialog', '$rootScope',
+        function ($scope, $state, $mdSidenav, EntityService, $mdDialog, $rootScope) {
 
             init();
 
@@ -61,6 +61,16 @@ define([
                   });
               };
             }
+
+
+            $mdSidenav('right', true).then(function(instance) {
+              instance.onClose(function() {
+                if(!$rootScope.createCompound) {
+                  cy.$(":selected").data('name', $rootScope.selectedEntity.data().name);
+                }
+              });
+            });
+
 
             if(!sessionStorage.alvinIntro) {
               showDialog();

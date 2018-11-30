@@ -48,13 +48,25 @@
                 <span ng-href="https://alvinrindra.github.io/assets/docs/Alvin's_Resume.pdf" target="_blank" flex>CV</span>
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
               </md-list-item>
-              <!-- <md-list-item class="main-subheader" ng-click="toggle.doc = !toggle.doc">
-                 <span flex>Website lists:</span>
-                 <i ng-show="toggle.doc" class="fa fa-chevron-down" aria-hidden="true"></i>
-                 <i ng-show="!toggle.doc" class="fa fa-chevron-right" aria-hidden="true"></i>
-               </md-list-item> -->
 
+              <md-list-item class="main-subheader" disable flex style = "color: grey; cursor:not-allowed">
+                 <span flex>About</span>
+                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
+               </md-list-item>
 
+               <md-list-item class="main-subheader" disable flex style = "color: grey; cursor:not-allowed">
+                  <span flex>Work in Progress</span>
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </md-list-item>
+
+              <md-list-item class="main-subheader" disable flex style = "color: grey; cursor:not-allowed">
+                 <span flex>Blog</span>
+                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
+               </md-list-item>
+              <md-list-item class="main-subheader" ng-click="toggleManual()">
+                 <span flex>User manual:</span>
+                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
+               </md-list-item>
            </md-content>
            <!-- <md-toolbar class="md-scroll-shrink">
             <a ng-href="/login" target="_self" layout="row" layout-align="center center" flex style="cursor: pointer;">

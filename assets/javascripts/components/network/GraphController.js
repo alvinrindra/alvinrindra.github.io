@@ -54,7 +54,7 @@ define([
 
               var nodes = [
                 //alvinrindra
-                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Lorem ipsum dolor sit amet", image: "https://alvinrindra.github.io/assets/images/Alvin_foto.jpg" } },
+                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Software Engineer with Machine Learning Expertise.", image: "https://alvinrindra.github.io/assets/images/Alvin_foto.jpg" } },
                 //working_exps
                 { data: { id: 'working_exp', name: "Professional Positions" } },
                 { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg" } },
