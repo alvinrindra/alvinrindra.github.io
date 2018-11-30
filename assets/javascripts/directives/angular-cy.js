@@ -229,9 +229,9 @@ define([
                           // var y = scope.coordinate.y;
                           scope.mergeToParentNodes = {target: node, source: scope.selectedNodesToMerge, children: scope.selectedNodesToMerge.children()}
                           var confirm = scope.$parent.$mdDialog.confirm()
-                               .title('merge to ' + nodeLabel +'?')
+                               .title('Move to ' + nodeLabel +'?')
                                // .targetEvent(doc)
-                               .ok('Yes, merge!')
+                               .ok('Yes, move!')
                                .cancel('Cancel');
 
                           scope.$parent.$mdDialog.show(confirm).then(function() {
@@ -491,34 +491,34 @@ define([
                         cy.panzoom( defaults );
 
 
-                        cy.cxtmenu({
-                          selector: 'node, edge',
-                          fillColor: 'rgba(95, 239, 228, 0.84)',
-                          // openMenuEvents: 'tap',
-                          commands: [
-                            {
-                              content: '<span class="fa fa-flash fa-2x"></span>',
-                              select: function(ele){
-                                console.log( ele.id() );
-                              }
-                            },
-
-                            {
-                              content: '<span class="fa fa-star fa-2x"></span>',
-                              select: function(ele){
-                                console.log( ele.data('name') );
-                              },
-                              disabled: true
-                            },
-
-                            {
-                              content: 'Text',
-                              select: function(ele){
-                                console.log( ele.position() );
-                              }
-                            }
-                          ]
-                        });
+                        // cy.cxtmenu({
+                        //   selector: 'node, edge',
+                        //   fillColor: 'rgba(95, 239, 228, 0.84)',
+                        //   // openMenuEvents: 'tap',
+                        //   commands: [
+                        //     {
+                        //       content: '<span class="fa fa-flash fa-2x"></span>',
+                        //       select: function(ele){
+                        //         console.log( ele.id() );
+                        //       }
+                        //     },
+                        //
+                        //     {
+                        //       content: '<span class="fa fa-star fa-2x"></span>',
+                        //       select: function(ele){
+                        //         console.log( ele.data('name') );
+                        //       },
+                        //       disabled: true
+                        //     },
+                        //
+                        //     {
+                        //       content: 'Text',
+                        //       select: function(ele){
+                        //         console.log( ele.position() );
+                        //       }
+                        //     }
+                        //   ]
+                        // });
 
                         cy.cxtmenu({
                         selector: 'core',
@@ -548,7 +548,7 @@ define([
                           },
 
                           {
-                            content: '<span class="fa fa-flash fa-2x"></span>',
+                            content: '<span class="fa fa-ban fa-2x"></span>',
                             select: function(){
                               console.log( 'function 2' );
                             }

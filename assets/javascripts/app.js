@@ -1,6 +1,7 @@
 define([
     'angular',
     './components/navs/MainnavController',
+    './components/dialog/DialogController',
     './components/navs/SidenavController',
     './components/navs/CirclenavController',
     './components/network/GraphController',
@@ -63,7 +64,7 @@ define([
 
             $scope.toggleLeft = buildToggler('left');
             $scope.toggleRight = buildToggler('right');
-            
+
             $scope.isOpenRight = function(){
               return $mdSidenav('right').isOpen();
             };

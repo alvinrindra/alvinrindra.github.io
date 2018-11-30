@@ -26,6 +26,7 @@
         md-component-id="left"
         style="min-height: 100%; z-index: 1003;"
         >
+        <div ng-controller="MainnavController">
              <md-toolbar class="md-theme-light">
                <div class="md-toolbar-tools">
                  <label class="alv_label">alvinrindra.github.io</label>
@@ -36,6 +37,9 @@
              <div class="md-toolbar-tools">
                <label class="alv_label">Alvin Rindra Fazrie</label>
              </div>
+             <md-button class="md-primary md-raised" ng-click="showTabDialog($event)" >
+  Tab Dialog
+</md-button>
              <md-subheader class="md-no-sticky">
                 <p style="font-size: 14px; line-height: 1.2em">Software Engineer with Machine Learning Expertise. AI at Universität Hamburg; BI at Universität Duisburg-Essen; Deep Learning by deeplearning.ai.
                 </p>
@@ -61,6 +65,7 @@
             </a>
           </md-toolbar> -->
          </div>
+       </div>
       </md-sidenav>
 
       <div id="wrapper" layout="column" ng-cloak layout-fill>

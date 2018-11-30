@@ -17,6 +17,7 @@ define([
           $scope.init = function() {
             // $timeout( function() {
               $scope.selectedEntity = EntityService.getRootScopeEntity();
+              $scope.tempEnt = _.clone($scope.selectedEntity);
               var entity = $scope.selectedEntity;
               if (entity._private) {
                 $scope.label = entity._private.data.name;
@@ -102,11 +103,14 @@ define([
           $scope.close = function () {
             // Component lookup should always be available since we are not using `ng-if`
             // $route.reload();
+            // $scope.selectedEntity = $scope.temp;
             EndPointService.fetchData();
             $mdSidenav('right').close()
               .then(function () {
                 $log.debug("close RIGHT is done");
               });
+
+            cy.$(":selected").data('name', $scope.selectedEntity.data().name);
           };
 
         }
