@@ -180,11 +180,11 @@ define([
                 { data: { id: "sap", name: "SAP", parent: 'data_science_stack'  } },
 
                 { data: { id: 'projects', name: "Projects" } },
-                { data: { id: 'newsleak', name: "New/s/leak", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/newsleak.png"  } },
-                { data: { id: 'autolinks', name: "autolinks", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/autolinks.png"  } },
+                { data: { id: 'newsleak', name: "New/s/leak", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/newsleak.png", desc: 'http://www.newsleak.io/'  } },
+                { data: { id: 'autolinks', name: "autolinks", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/autolinks.png", desc: 'https://uhh-lt.github.io/autolinks'  } },
                 { data: { id: 'irl', name: "Interactive RL", parent: 'projects' } },
                 { data: { id: 'erl', name: "Exploration RL", parent: 'projects' } },
-                { data: { id: 'hausgold_maklerportal', name: "Hausgold maklerportal", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/hausgold.png"  } },
+                { data: { id: 'hausgold_maklerportal', name: "Hausgold maklerportal", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/hausgold.png", desc: 'https://maklerportal.hausgold.de/'  } },
                 { data: { id: 'quantilope_marktforschung', name: "Q_marktforschung", parent: 'projects' } },
 
                 { data: { id: 'publications', name: "Publications" } },
