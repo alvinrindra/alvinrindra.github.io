@@ -57,12 +57,12 @@ define([
                 { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Software Engineer with Machine Learning Expertise.", image: "https://alvinrindra.github.io/assets/images/Alvin_foto.jpg" } },
                 //working_exps
                 { data: { id: 'working_exp', name: "Professional Positions" } },
-                { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg" } },
-                { data: { id: 'full_stack_developer_1', name: "Full Stack Developer (ROR)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/hausgold.png" } },
-                { data: { id: 'full_stack_developer_2', name: "Full Stack Developer (ROR)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/converate.jpeg" } },
-                { data: { id: 'full_stack_developer_3', name: "Full Stack Developer (JS)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/quantilope.png" } },
+                { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "Worked on projects, new/s/leak 2.0 (Network of Searchable leaks), Science and Data-Driven Journalism tool http://www.newsleak.io/ and autolinks (automatic proactive researching) - https://uhh-lt.github.io/autolinks, under the supervision of Prof. Chris Biemann.\n \n Tech stack: Scala Play, AngularJS, NodeJS, Elasticsearch, Docker, PostgreSQL, Python, NLP components: UIMA, cTAKES, Polyglot-NER." } },
+                { data: { id: 'full_stack_developer_1', name: "Full Stack Developer (ROR)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/hausgold.png", desc: "Worked on a project for building a maklerportal and CRM. Maklerportal-frontend stacks: ReactJS, SCSS, Webpack, E2E Test: NightwatchJS. Maklerportal-api stacks: Ruby on Rails, PostgreSQL.Container: Docker" } },
+                { data: { id: 'full_stack_developer_2', name: "Full Stack Developer (ROR)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/converate.jpeg", desc: "Developed features of several websites (ximmo, ubitricity, codetalk): HTML5, sass, Bootstrap, Javascript. Framework: Ruby on Rails, TDD/BDD: RSpec." } },
+                { data: { id: 'full_stack_developer_3', name: "Full Stack Developer (JS)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/quantilope.png", desc: "Developed a Market Research Software: MeteorJS, AngularJS, HTML5, LESS, Bootstrap, jQuery, and MongoDB." } },
 
-                { data: { id: 'associate_developer', name: "Associate Developer (BI)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/programming/wk.jpg" } },
+                { data: { id: 'associate_developer', name: "Associate Developer (BI)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/programming/wk.jpg", desc: "1. Researched on Information retrieval using Apache SOLR for company data indexing.\n \n 2. Implemented ETL (Extract Transform Load) and Business Intelligence Process via Microsoft BIDS (Business Intelligence Development Studio) using SSIS (SQL Server Integration Services)." } },
                 //Education
                 { data: { id: 'education', name: "Education" } },
                 { data: { id: 'degree', name: "Degree", parent: 'education' } },
@@ -70,7 +70,7 @@ define([
                 { data: { id: 'msc', name: "MSc", parent: 'degree' } },
                 { data: { id: 'bsc', name: "BSc", parent: 'degree' } },
                 { data: { id: 'uin_jkt', name: "UIN Jakarta", parent: 'bsc', image: "https://alvinrindra.github.io/assets/images/uin-jkt.jpeg" } },
-                { data: { id: 'uni_hamburg', name: "Universität Hamburg", parent: 'msc', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg" } },
+                { data: { id: 'uni_hamburg', name: "Universität Hamburg", parent: 'msc', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "-Machine Learning\n\n-Natural Language Processing\n\n-Neural Networks/Deep Learning\n\n-Reinforcement Learning" } },
                 { data: { id: 'uni_due', name: "Universität Duisburg-Essen", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/uni_due.png" } },
                 { data: { id: 'dlai', name: "deeplearning.ai", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/dlai.jpeg" } },
                 { data: { id: 'iium', name: "IIUM", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/iium.png" } },
@@ -180,10 +180,10 @@ define([
                 { data: { id: "sap", name: "SAP", parent: 'data_science_stack'  } },
 
                 { data: { id: 'projects', name: "Projects" } },
-                { data: { id: 'newsleak', name: "New/s/leak", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/newsleak.png", desc: 'http://www.newsleak.io/'  } },
-                { data: { id: 'autolinks', name: "autolinks", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/autolinks.png", desc: 'https://uhh-lt.github.io/autolinks'  } },
-                { data: { id: 'irl', name: "Interactive RL", parent: 'projects' } },
-                { data: { id: 'erl', name: "Exploration RL", parent: 'projects' } },
+                { data: { id: 'newsleak', name: "New/s/leak", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/newsleak.png", url: 'http://www.newsleak.io/', desc: "New/s/leak (NetWork of Searchable Leaks) is a research project producing a piece of software that allows to quickly and intuitively explore large amounts of textual data. The tool will support journalists working with datasets like the War Diaries or the Embassy cables (both distributed by Wikileaks) or the hacking of Hacking Team. The goal is to provide a quick access to important entities (people, organizations, places) and their relationships, and how those things change over time."  } },
+                { data: { id: 'autolinks', name: "autolinks", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/autolinks.png", url: 'https://uhh-lt.github.io/autolinks', desc: "Autolinks (Automatic Proactive Researching) is an approach to bottom-up biomedical information management that extracts biomedical entities in the document. It provides novel features in the information management to enable users to build a knowledge graph with compound graphs and discontinuous annotation implementation.\n\nTech Stack: AngularJS, Node.JS, Cytoscape.JS, MySQL, Swagger.io, NLP: cTAKES., "  } },
+                { data: { id: 'irl', name: "Interactive RL", parent: 'projects', desc: "we review a number of proposed advising approaches for interactive reinforcement learning and discuss their implications, namely, probabilistic advising, early advising, importance advising, and mistake correcting. Moreover, we implement the advice strategies for interactive reinforcement learning based on a simulated robotic scenario of a domestic cleaning task. Tech stack: Python, numpy, matplotlib." } },
+                { data: { id: 'erl', name: "Exploration RL", parent: 'projects', desc: "The project compares multiple approaches to the exploration/exploitation dilemma in reinforcement learning and, moreover, it implements an exemplary reinforcement learning task within the domain of domestic robotics to show the performance of different exploration policies on it. We perform the domestic task using e-greedy, softmax, VDBE, and VDBESoftmax with online and offline temporal-difference learning. Tech Stack: Python, numpy, matplotlib." } },
                 { data: { id: 'hausgold_maklerportal', name: "Hausgold maklerportal", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/hausgold.png", desc: 'https://maklerportal.hausgold.de/'  } },
                 { data: { id: 'quantilope_marktforschung', name: "Q_marktforschung", parent: 'projects' } },
 
