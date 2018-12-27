@@ -87,7 +87,7 @@ define([
                    '<md-dialog aria-label="List dialog" style="z-index: 1009;">' +
                    '  <md-dialog-content class="md-dialog-content">'+
                    '  <h2 class="md-title"><b> Welcome to alvinrindra.github.io!</b></h2>' +
-                   '  <div class="md-dialog-content-body">In this website, you can observe my <i>resume</i> interactively in the knowledge graphs. </div>' +
+                   '  <div class="md-dialog-content-body">In this website, you can observe my interactive <i>resume</i>, visualized in the knowledge graphs. </div>' +
                    '  <div class="md-dialog-content-body">You can create a node, a relation, a compound graph, or even build your own <i>knowledge graphs.</i> </div>' +
                    '  <div class="md-dialog-content-body">Click a <i>circle-nav</i> button in the lower right corner to get more features. </div>' +
                    '  </md-dialog-content>' +
