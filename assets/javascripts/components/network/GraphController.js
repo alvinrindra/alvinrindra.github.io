@@ -188,8 +188,8 @@ define([
                 { data: { id: 'quantilope_marktforschung', name: "Q_marktforschung", parent: 'projects' } },
 
                 { data: { id: 'publications', name: "Publications" } },
-                { data: { id: 'paper_irl', name: "Interactive RL", parent: 'publications', image: "https://alvinrindra.github.io/assets/images/papers/interactive_RL.png", desc: "https://ieeexplore.ieee.org/iel7/8326423/8329770/08329809.pdf", } },
-                { data: { id: 'paper_xrl', name: "Exploration RL", parent: 'publications', image: "https://alvinrindra.github.io/assets/images/papers/exploration_RL.png", desc: "http://la-cci.org/la-cci-2018/accepted-papers-2018/",  } },
+                { data: { id: 'paper_irl', name: "Interactive RL", parent: 'publications', image: "https://alvinrindra.github.io/assets/images/papers/interactive_RL.png", url: "https://ieeexplore.ieee.org/iel7/8326423/8329770/08329809.pdf", desc: "we review a number of proposed advising approaches for interactive reinforcement learning and discuss their implications, namely, probabilistic advising, early advising, importance advising, and mistake correcting. Moreover, we implement the advice strategies for interactive reinforcement learning based on a simulated robotic scenario of a domestic cleaning task. Tech stack: Python, numpy, matplotlib."} },
+                { data: { id: 'paper_xrl', name: "Exploration RL", parent: 'publications', image: "https://alvinrindra.github.io/assets/images/papers/exploration_RL.png", url: "http://la-cci.org/la-cci-2018/accepted-papers-2018/", desc: "This paper compares multiple approaches to the exploration/exploitation dilemma in reinforcement learning and, moreover, it implements an exemplary reinforcement learning task within the domain of domestic robotics to show the performance of different exploration policies on it. We perform the domestic task using e-greedy, softmax, VDBE, and VDBESoftmax with online and offline temporal-difference learning. Tech Stack: Python, numpy, matplotlib." } },
 
                 { data: { id: 'activities', name: "Activities" } },
                 // { data: { id: '0', parent: 'b', name: "Disease" }, position: { x: 215, y: 85 } },
@@ -255,6 +255,10 @@ define([
 
                   if(n.data.desc){
                     result['data'].desc = n.data.desc;
+                  }
+
+                  if(n.data.url){
+                    result['data'].url = n.data.url;
                   }
 
                   return result;

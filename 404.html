@@ -149,6 +149,10 @@
                     >
                    </textarea>
                  </md-input-container>
+                 <div ng-if="selectedEntity !== 'createCompound' && selectedEntity.data().url">
+                  <span><b>URL: </b></span><a href="{{ selectedEntity.data().url }}" style="word-break: break-all;" target="_blank">{{selectedEntity.data().url}}</a>
+                 </div>
+                </br>
                  <md-button ng-click="delete()" class="md-warn" ng-if="selectedEntity !== 'createCompound'">
                    Delete
                  </md-button>
