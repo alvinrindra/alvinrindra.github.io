@@ -41,11 +41,11 @@ define([
                 // // Whether to enable incremental mode
                 randomize: false,
                 // // Node repulsion (non overlapping) multiplier
-                nodeRepulsion: 4500,
+                nodeRepulsion: 9500,
                 // // Ideal (intra-graph) edge length
-                idealEdgeLength: 60,
+                idealEdgeLength: 100,
                 // // Divisor to compute edge forces
-                edgeElasticity: 0.60,
+                edgeElasticity: 0.95,
                 // // Nesting factor (multiplier) to compute ideal edge length for inter-graph edges
                 nestingFactor: 0.1,
                 // // Gravity force (constant)
