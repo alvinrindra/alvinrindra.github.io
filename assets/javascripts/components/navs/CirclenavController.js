@@ -60,7 +60,7 @@ define([
 
 
           $scope.hasManual = function() {
-            if(!sessionStorage.alvinCirclenavIntro) {
+            if(!localStorage.alvinCirclenavIntro) {
               showHint();
             }
 
@@ -89,7 +89,7 @@ define([
               function DialogController($scope, $mdDialog, items) {
                 $scope.items = items;
                 $scope.closeDialog = function() {
-                  sessionStorage.setItem("alvinCirclenavIntro", "done");
+                  localStorage.setItem("alvinCirclenavIntro", "done");
                   $mdDialog.hide();
                 }
               }
