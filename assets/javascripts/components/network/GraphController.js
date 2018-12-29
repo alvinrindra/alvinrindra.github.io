@@ -137,6 +137,18 @@ define([
                 { data: { id: "machine_learning", name: "Machine Learning", parent: 'data_science_stack'  } },
                 { data: { id: "reinforcement_learning", name: "Reinforcement Learning", parent: 'machine_learning'  } },
 
+                { data: { id: "interactive_reinforcement_learning", name: "Interactive RL (Agent Advising)", parent: 'reinforcement_learning'  } },
+                { data: { id: "explorative_reinforcement_learning", name: "Explorative RL (Action Selection)", parent: 'reinforcement_learning'  } },
+
+                { data: { id: "q_learning", name: "Q Learning", parent: 'explorative_reinforcement_learning'  } },
+                { data: { id: "sarsa", name: "SARSA", parent: 'explorative_reinforcement_learning'  } },
+
+                { data: { id: "mistake_correcting", name: "Mistake Correcting", parent: 'interactive_reinforcement_learning'  } },
+                { data: { id: "early_advising", name: "Early Advising", parent: 'interactive_reinforcement_learning'  } },
+                { data: { id: "importance_advising", name: "Importance Advising", parent: 'interactive_reinforcement_learning'  } },
+                { data: { id: "probabilistic_advising", name: "Probabilistic Advising", parent: 'interactive_reinforcement_learning'  } },
+
+
                 { data: { id: "supervised_learning", name: "Supervised Learning", parent: 'machine_learning'  } },
                 { data: { id: "linear_regression", name: "Linear Regression", parent: 'supervised_learning'  } },
                 { data: { id: "classification", name: "Classification", parent: 'supervised_learning'  } },
@@ -155,6 +167,7 @@ define([
                 { data: { id: "keras", name: "Keras", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/keras.png" } },
                 { data: { id: "matplotlib", name: "matplotlib", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/matplotlib.png" } },
                 { data: { id: "numpy", name: "numpy", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/numpy.png" } },
+                { data: { id: "pandas", name: "pandas", parent: 'dl_tools'} },
 
                 { data: { id: "unsupervised_learning", name: "Unsupervised Learning", parent: 'machine_learning'  } },
                 { data: { id: "expectation_maximization", name: "Expectation Maximization", parent: 'unsupervised_learning'  } },
