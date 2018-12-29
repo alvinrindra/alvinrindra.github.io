@@ -407,7 +407,7 @@ define([
                                     '<div class="node-buttons">' +
                                     '<button id="moveNode" class="node-button"><i class="fa fa-arrows-alt fa-2x"/></button>' +
                                     '<button id="addEdge" class="node-button"><i class="fa fa-link fa-2x"/></button> ' +
-                                    '<button id="editNode" class="node-button"><i class="fa fa-pencil fa-2x"/></button>' +
+                                    '<button id="editNode" class="node-button" style="color: blue"><i class="fa fa-pencil fa-2x"/></button>' +
                                     '</div>'
                                     )
                                   }
