@@ -88,7 +88,7 @@ define([
                           cy = null;
                           // delete $rootScope.$$listeners['addEdge'];
                           // $rootScope.$destroy();
-                          // debugger;
+                          // ;
                           // cy.edgehandles().destroy();
                       }
 
@@ -153,18 +153,24 @@ define([
                           // get edge source
                           if (sourceNode.data && targetNode.data) {
                             // build the edge object
-                            var edgeObj = {
-                                data:{
-                                  id: sourceNode.data('id') + targetNode.data('id'),
-                                  source: sourceNode.data('id'),
-                                  target: targetNode.data('id'),
-                                  name: 'has relation'
-                                }
-                            };
-                            addedEles.data().name = 'has relation';
-                            // adding the edge object to the edges array
-                            scope.data.edges.push(edgeObj);
-                            edgeTipExtension(addedEles);
+
+                            if (sourceNode.data() !== targetNode.data()) {
+                              var edgeObj = {
+                                  data:{
+                                    id: sourceNode.data('id') + targetNode.data('id'),
+                                    source: sourceNode.data('id'),
+                                    target: targetNode.data('id'),
+                                    name: 'has relation'
+                                  }
+                              };
+                              addedEles.data().name = 'has relation';
+                              // adding the edge object to the edges array
+                              scope.data.edges.push(edgeObj);
+                              edgeTipExtension(addedEles);
+                            } else {
+                              console.log("wow");
+                            }
+
                           }
                           eh.enabled = false;
                         },
@@ -172,7 +178,7 @@ define([
                           eh.enabled = false;
                         }
                       }
-                      // debugger;
+                      // ;
                       var eh = cy.edgehandles(edgeHandleProps);
                       eh.enabled = false;
 
@@ -185,7 +191,7 @@ define([
 
                       // if (scope.$parent.edgehandler) {
                       //   eh.enabled = true;
-                      //   debugger;
+                      //   ;
                       //   eh.start( cy.$('node:selected').remove() );
                       // }
 
@@ -581,7 +587,7 @@ define([
                               }
 
                               function extractObject(n) {
-                                // debugger;
+                                // ;
                                 if (_.isArray(n[0].value)) {
                                   return extractObject(n[0].value);
                                 }
@@ -754,20 +760,20 @@ define([
                           cy.layout(scope.options.layout).run();
                         }
                       });
-                      // debugger;
+                      // ;
                       if (!$rootScope.$$listenerCount.addEdge) {
                         if ($rootScope.$$listenerCount.addEdge === 1) {
                           $rootScope.$$listenerCount.addEdge = 0;
-                          // debugger;
+                          // ;
                           return;
                         } else {
                           $rootScope.$on('addEdge', function(e){
-                            debugger;
+                            ;
                             eh.enabled = true;
                             // eh.active = true;
                             var nodeId = scope.selectedEntity.data('id');
                             console.log(nodeId);
-                            // debugger;
+                            // ;
                             // console.log(eh.listeners);
                             // console.log(cy.$('#' + nodeId));
                             if (eh.listeners.length === 0) {
@@ -894,6 +900,13 @@ define([
                   });
 
                   $(document).on('click', "#addEdge", function(e){
+                    scope.$parent.$mdToast.show(
+                          scope.$parent.$mdToast.simple()
+                            .textContent('Select a target node to draw a relation')
+                            .position('top right')
+                            .theme("primary-toast")
+                            .hideDelay(3500)
+                        );
                     $rootScope.$broadcast('addEdge');
                   });
 
