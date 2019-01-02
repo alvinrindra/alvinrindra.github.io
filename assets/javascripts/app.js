@@ -91,7 +91,7 @@ define([
                    '  <div class="md-dialog-content-body">You can create a node, a relation, a compound graph, or even build your own <i>knowledge graphs.</i> </div>' +
                    '  <div class="md-dialog-content-body">Click a <i>circle-nav</i> button in the lower right corner to access more features. </div>' +
                    ' </br>' +
-                   '  <div class="md-dialog-content-body">*) Better with Chrome browser. </div>' +
+                   '  <div class="md-dialog-content-body">*) Better with Chrome Web Browser. </div>' +
                    '  </md-dialog-content>' +
                    '  <md-dialog-actions>' +
                    '    <md-button ng-click="closeDialog()" class="md-primary">' +

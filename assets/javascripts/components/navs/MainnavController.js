@@ -52,7 +52,7 @@ define([
                             '<p>4. Click a node/an edge to show a qTip; click edit icon to open node details. Then the side navigation will be shown. </p>' +
                             '<p>5. To change the name of a node, we just just need to change the label in the side navigation and click the update button.</p>' +
                             '<br/>' +
-                            '<p>*) Better with Chrome browser.</p>' +
+                            '<p>*) Better with Chrome Web Browser.</p>' +
                           '</md-content>' +
                         '</md-tab>' +
                         // '<md-tab label="three">' +
