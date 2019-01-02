@@ -210,7 +210,7 @@ define([
                 { data: { id: 'tw', name: "Teamwork", parent: 'interests' } },
                 { data: { id: 'orga', name: "Organizational Activities", parent: 'interests' } },
                 { data: { id: 'ps', name: "Public Speaking", parent: 'interests' } },
-                { data: { id: 'cycling', name: "Cycling", parent: 'interests' } },
+                { data: { id: 'futsal', name: "Futsal", parent: 'interests' } },
                 { data: { id: 'swimming', name: "Swimming", parent: 'interests' } },
 
                 { data: { id: 'languages', name: "Languages" } },
