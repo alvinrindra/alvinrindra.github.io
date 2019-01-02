@@ -51,6 +51,8 @@ define([
                             '<p>3. Click a node to show a qTip; click an arrows icon to move to a parent node or merge to other single nodes.</p>' +
                             '<p>4. Click a node/an edge to show a qTip; click edit icon to open node details. Then the side navigation will be shown. </p>' +
                             '<p>5. To change the name of a node, we just just need to change the label in the side navigation and click the update button.</p>' +
+                            '<br/>' +
+                            '<p>*) Better with Chrome browser.</p>' +
                           '</md-content>' +
                         '</md-tab>' +
                         // '<md-tab label="three">' +
