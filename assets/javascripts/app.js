@@ -107,7 +107,7 @@ define([
               function DialogController($scope, $mdDialog, items) {
                 $scope.items = items;
                 $scope.closeDialog = function() {
-                  sessiontorage.setItem("alvinIntro", "done");
+                  sessionStorage.setItem("alvinIntro", "done");
                   $mdDialog.hide();
                 }
               }
