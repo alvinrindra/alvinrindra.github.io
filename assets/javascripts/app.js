@@ -74,7 +74,7 @@ define([
             });
 
 
-            if(!localStorage.alvinIntro) {
+            if(!sessionStorage.alvinIntro) {
               showDialog();
             }
 
@@ -107,7 +107,7 @@ define([
               function DialogController($scope, $mdDialog, items) {
                 $scope.items = items;
                 $scope.closeDialog = function() {
-                  localStorage.setItem("alvinIntro", "done");
+                  sessiontorage.setItem("alvinIntro", "done");
                   $mdDialog.hide();
                 }
               }
