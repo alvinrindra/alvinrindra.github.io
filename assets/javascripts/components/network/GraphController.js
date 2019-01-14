@@ -58,7 +58,7 @@ define([
                 //working_exps
                 { data: { id: 'working_exp', name: "Professional Positions" } },
                 { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "Worked on projects, new/s/leak 2.0 (Network of Searchable leaks), Science and Data-Driven Journalism tool http://www.newsleak.io/ and autolinks (automatic proactive researching) - https://uhh-lt.github.io/autolinks, under the supervision of Prof. Chris Biemann.\n \n Tech stack: Scala Play, AngularJS, NodeJS, Elasticsearch, Docker, PostgreSQL, Python, NLP components: UIMA, cTAKES, Polyglot-NER." } },
-                { data: { id: 'full_stack_developer_1', name: "Full Stack Developer (ROR)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/hausgold.png", desc: "Worked on a project for building a maklerportal and CRM. Maklerportal-frontend stacks: ReactJS, SCSS, Webpack, E2E Test: NightwatchJS. Maklerportal-api stacks: Ruby on Rails, PostgreSQL.Container: Docker" } },
+                { data: { id: 'full_stack_developer_1', name: "Full Stack Developer (ROR)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/hausgold.png", desc: "Worked on a project for building a maklerportal and CRM. Maklerportal-frontend Stack: ReactJS, SCSS, Webpack, E2E Test: NightwatchJS. Maklerportal-api Stack: Ruby on Rails, PostgreSQL.Container: Docker" } },
                 { data: { id: 'full_stack_developer_2', name: "Full Stack Developer (ROR)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/converate.jpeg", desc: "Developed features of several websites (ximmo, ubitricity, codetalk): HTML5, sass, Bootstrap, Javascript. Framework: Ruby on Rails, TDD/BDD: RSpec." } },
                 { data: { id: 'full_stack_developer_3', name: "Full Stack Developer (JS)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/quantilope.png", desc: "Developed a Market Research Software: MeteorJS, AngularJS, HTML5, LESS, Bootstrap, jQuery, and MongoDB." } },
 
@@ -75,7 +75,7 @@ define([
                 { data: { id: 'dlai', name: "deeplearning.ai", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/dlai.jpeg" } },
                 { data: { id: 'iium', name: "IIUM", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/iium.png" } },
                 // Technology Stack
-                { data: { id: 'tech_stack', name: "Technology Stacks" } },
+                { data: { id: 'tech_stack', name: "Technology Stack" } },
 
                 { data: { id: 'fe_stack', name: "Front-End Stack", parent: "tech_stack" } },
                 { data: { id: 'ui_frameworks', name: "UI Frameworks", parent: 'fe_stack' } },
@@ -132,8 +132,8 @@ define([
                 { data: { id: 'elasticsearch', name: "Elasticsearch", parent: 'indexing', image: "https://alvinrindra.github.io/assets/images/programming/elasticsearch.jpg" } },
                 { data: { id: 'solr', name: "Solr", parent: 'indexing', image: "https://alvinrindra.github.io/assets/images/programming/solr.png"} },
 
-                // Data Science Stacks
-                { data: { id: 'data_science_stack', name: "Data Science Stacks" } },
+                // Data Science Stack
+                { data: { id: 'data_science_stack', name: "Data Science Stack" } },
                 { data: { id: "machine_learning", name: "Machine Learning", parent: 'data_science_stack'  } },
                 { data: { id: "reinforcement_learning", name: "Reinforcement Learning", parent: 'machine_learning'  } },
 
