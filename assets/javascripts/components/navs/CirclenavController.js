@@ -46,7 +46,7 @@ define([
             } else {
               $mdToast.show(
                 $mdToast.simple()
-                  .textContent('Please select one or more nodes to be children')
+                  .textContent('To use this feature, please select one or more nodes first!')
                   .position('top right')
                   .theme("warn-toast")
                   .hideDelay(3500)
