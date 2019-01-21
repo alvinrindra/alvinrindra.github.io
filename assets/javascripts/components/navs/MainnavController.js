@@ -113,7 +113,7 @@ define([
                   '<form>' +
                     '<md-toolbar>' +
                       '<div class="md-toolbar-tools">' +
-                        '<h2>Kiviat Diagram</h2>' +
+                        '<h2>Alvin\'s Tech Stack Statistics</h2>' +
                         '<span flex></span>' +
                         '<md-button class="md-icon-button" ng-click="cancel()">' +
                           '<md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>' +
@@ -122,10 +122,14 @@ define([
                     '</md-toolbar>' +
                   '<md-dialog-content style="max-width:1800px;max-height:810px; ">' +
                       '<md-tabs md-dynamic-height md-border-bottom>' +
-                        '<md-tab label="Alvin\'s Tech Stack">' +
+                        '<md-tab label="Kiviat Diagrams">' +
                           '<md-content class="md-padding">' +
-                            // '<h1 class="md-display-2">Build knowledge graphs:</h1>' +
                             '<iframe src="radar.html" width="710px" height="555px" style="border:none"></iframe>' +
+                          '</md-content>' +
+                        '</md-tab>' +
+                        '<md-tab label="Bar Chart">' +
+                          '<md-content class="md-padding">' +
+                            '<p>Will be updated soon... </p>' +
                           '</md-content>' +
                         '</md-tab>' +
                         // '<md-tab label="three">' +
