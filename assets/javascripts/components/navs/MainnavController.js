@@ -125,7 +125,7 @@ define([
                         '<md-tab label="Alvin\'s Tech Stack">' +
                           '<md-content class="md-padding">' +
                             // '<h1 class="md-display-2">Build knowledge graphs:</h1>' +
-                            '<iframe src="radar.html" width="680px" height="560px" style="border:none"></iframe>' +
+                            '<iframe src="radar.html" width="710px" height="560px" style="border:none"></iframe>' +
                           '</md-content>' +
                         '</md-tab>' +
                         // '<md-tab label="three">' +

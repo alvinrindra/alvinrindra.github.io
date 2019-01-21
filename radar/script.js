@@ -4,7 +4,7 @@ var w = 500,
 var colorscale = d3.scale.category10();
 
 //Legend titles
-var LegendOptions = ['All', 'Data Visualization','Programming Languages', 'Databases', 'Machine Learning', 'NLP'];
+var LegendOptions = ['All', 'Data Visualization','Programming Languages', 'Databases', 'Machine Learning', 'NLP', 'Big Data'];
 
 //Data
 var d = [
@@ -22,7 +22,8 @@ var d = [
 		{axis:"Java",value:0.5},
 		{axis:"SQL;NoSQL",value:0.75},
 		{axis:"Tensorflow; Sklearn; Keras",value:0.5},
-		{axis:"NLTK; Polyglot; SpaCy",value:0.6},
+		{axis:"NLTK; Polyglot; SpaCy",value:0.65},
+		{axis:"Elasticsearch;Solr;Spark",value:0.5},
 	],
 		  [
 			{axis:"D3;Cytoscape;Vis JS",value:0.8},
@@ -39,6 +40,7 @@ var d = [
 			{axis:"SQL;NoSQL",value:0},
 			{axis:"Tensorflow; Sklearn; Keras",value:0},
 			{axis:"NLTK; Polyglot; SpaCy",value:0},
+			{axis:"Elasticsearch; Solr; Spark",value:0},
 		  ],[
 				{axis:"D3;Cytoscape;Vis JS",value:0},
 				{axis:"Matplotlib",value:0},
@@ -54,6 +56,7 @@ var d = [
 				{axis:"SQL;NoSQL",value:0},
 				{axis:"Tensorflow; Sklearn; Keras",value:0},
 				{axis:"NLTK; Polyglot; SpaCy",value:0},
+				{axis:"Elasticsearch; Solr; Spark",value:0},
 		  ],
 			[
 				{axis:"D3;Cytoscape;Vis JS",value:0},
@@ -70,6 +73,7 @@ var d = [
 				{axis:"SQL;NoSQL",value:0.75},
 				{axis:"Tensorflow;Sklearn;Keras",value:0},
 				{axis:"NLTK;Polyglot;SpaCy",value:0},
+				{axis:"Elasticsearch; Solr; Spark",value:0},
 			],
 			[
 				{axis:"D3;Cytoscape;Vis JS",value:0},
@@ -86,6 +90,7 @@ var d = [
 				{axis:"SQL;NoSQL",value:0},
 				{axis:"Tensorflow;Sklearn;Keras",value:0.5},
 				{axis:"NLTK;Polyglot;SpaCy",value:0},
+				{axis:"Elasticsearch; Solr; Spark",value:0},
 		  ],
 			[
 				{axis:"D3;Cytoscape;Vis JS",value:0},
@@ -101,7 +106,24 @@ var d = [
 				{axis:"Java",value:0},
 				{axis:"SQL;NoSQL",value:0},
 				{axis:"Tensorflow;Sklearn;Keras",value:0},
-				{axis:"NLTK;Polyglot;SpaCy",value:0.6},
+				{axis:"NLTK;Polyglot;SpaCy",value:0.65},
+			],
+			[
+				{axis:"D3;Cytoscape;Vis JS",value:0},
+				{axis:"Matplotlib",value:0},
+				{axis:"ggplot2",value:0},
+				{axis:"Python",value:0},
+				{axis:"Ruby on Rails",value:0},
+				{axis:"R",value:0},
+				{axis:"Javascript",value:0},
+				{axis:"NodeJS",value:0},
+				{axis:"Scala",value:0},
+				{axis:"C++",value:0},
+				{axis:"Java",value:0},
+				{axis:"SQL;NoSQL",value:0},
+				{axis:"Tensorflow;Sklearn;Keras",value:0},
+				{axis:"NLTK;Polyglot;SpaCy",value:0},
+				{axis:"Elasticsearch;Solr;Spark",value:0.5},
 			]
 		];
 
@@ -129,14 +151,14 @@ var svg = d3.select('#body')
 	.attr("height", h)
 
 //Create the title for the legend
-var text = svg.append("text")
-	.attr("class", "title")
-	.attr('transform', 'translate(90,0)')
-	.attr("x", w - 70)
-	.attr("y", 10)
-	.attr("font-size", "12px")
-	.attr("fill", "#404040")
-	.text("Label:");
+// var text = svg.append("text")
+// 	.attr("class", "title")
+// 	.attr('transform', 'translate(90,0)')
+// 	.attr("x", w - 15)
+// 	.attr("y", 10)
+// 	.attr("font-size", "12px")
+// 	.attr("fill", "#404040")
+// 	.text("Label:");
 
 //Initiate Legend
 var legend = svg.append("g")
@@ -150,7 +172,7 @@ var legend = svg.append("g")
 	  .data(LegendOptions)
 	  .enter()
 	  .append("rect")
-	  .attr("x", w - 65)
+	  .attr("x", w - 15)
 	  .attr("y", function(d, i){ return i * 20;})
 	  .attr("width", 10)
 	  .attr("height", 10)
@@ -161,7 +183,7 @@ var legend = svg.append("g")
 	  .data(LegendOptions)
 	  .enter()
 	  .append("text")
-	  .attr("x", w - 52)
+	  .attr("x", w - 2)
 	  .attr("y", function(d, i){ return i * 20 + 9;})
 	  .attr("font-size", "11px")
 	  .attr("fill", "#737373")
