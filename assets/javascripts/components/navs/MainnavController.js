@@ -113,7 +113,7 @@ define([
                   '<form>' +
                     '<md-toolbar>' +
                       '<div class="md-toolbar-tools">' +
-                        '<h2>STATS</h2>' +
+                        '<h2>STATISTICS - Radar Chart</h2>' +
                         '<span flex></span>' +
                         '<md-button class="md-icon-button" ng-click="cancel()">' +
                           '<md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>' +
@@ -125,7 +125,7 @@ define([
                         '<md-tab label="Alvin\'s Tech Stack">' +
                           '<md-content class="md-padding">' +
                             // '<h1 class="md-display-2">Build knowledge graphs:</h1>' +
-                            '<iframe src="radar.html" width="710px" height="560px" style="border:none"></iframe>' +
+                            '<iframe src="radar.html" width="710px" height="555px" style="border:none"></iframe>' +
                           '</md-content>' +
                         '</md-tab>' +
                         // '<md-tab label="three">' +
