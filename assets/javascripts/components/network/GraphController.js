@@ -67,13 +67,13 @@ define([
                 { data: { id: 'education', name: "Education" } },
                 { data: { id: 'degree', name: "Degree", parent: 'education' } },
                 { data: { id: 'non_degree', name: "Non degree", parent: 'education' } },
-                { data: { id: 'msc', name: "MSc. (Intelligent Adaptive Systems)", parent: 'degree' } },
-                { data: { id: 'bsc', name: "BSc. (Informatics)", desc: 'Software Engineering', parent: 'degree' } },
-                { data: { id: 'uin_jkt', name: "UIN Jakarta", parent: 'bsc', image: "https://alvinrindra.github.io/assets/images/uin-jkt.jpeg" } },
-                { data: { id: 'uni_hamburg', name: "Universität Hamburg", parent: 'msc', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "-Machine Learning\n\n-Natural Language Processing\n\n-Neural Networks/Deep Learning\n\n-Reinforcement Learning" } },
+                { data: { id: 'msc', name: "Intelligent Adaptive Systems (M.Sc.)", parent: 'degree' } },
+                { data: { id: 'bsc', name: "Computer Science (B.Sc.)", parent: 'degree' } },
+                { data: { id: 'uin_jkt', name: "UIN Jakarta", parent: 'bsc', image: "https://alvinrindra.github.io/assets/images/uin-jkt.jpeg", desc: "Software Engineering. \n\nGrades Standard: \nGerman Grade: 1.42 (Cumlaude). \nIndo/US Grade: 3.58 (Cumlaude)" } },
+                { data: { id: 'uni_hamburg', name: "Universität Hamburg", parent: 'msc', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "-Machine Learning\n-Natural Language Processing\n-Neural Networks/Deep Learning\n-Reinforcement Learning\n\nGrades Standard: \nGerman Grade: 2.38 (Good)" } },
                 { data: { id: 'uni_due', name: "Universität Duisburg-Essen", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/uni_due.png" } },
                 { data: { id: 'dlai', name: "deeplearning.ai", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/dlai.jpeg" } },
-                { data: { id: 'iium', name: "IIUM", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/iium.png" } },
+                { data: { id: 'iium', name: "IIUM", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/iium.png", desc: "Artificial Intelligence\nTheory of Automata\nInformation Retrieval" } },
                 // Technology Stack
                 { data: { id: 'tech_stack', name: "Technology Stack" } },
 
