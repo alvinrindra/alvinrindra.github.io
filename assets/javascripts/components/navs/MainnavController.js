@@ -113,7 +113,7 @@ define([
                   '<form>' +
                     '<md-toolbar>' +
                       '<div class="md-toolbar-tools">' +
-                        '<h2>STATISTICS - Radar Chart</h2>' +
+                        '<h2>Kiviat Diagram</h2>' +
                         '<span flex></span>' +
                         '<md-button class="md-icon-button" ng-click="cancel()">' +
                           '<md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>' +
