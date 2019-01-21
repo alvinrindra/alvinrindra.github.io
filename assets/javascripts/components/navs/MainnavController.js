@@ -101,6 +101,79 @@ define([
            }
          };
 
+         $scope.toggleStats = function($event) {
+            $mdSidenav('left').close();
+            var parentEl = angular.element(document.body);
+            $mdDialog.show({
+              parent: parentEl,
+              targetEvent: $event,
+              template:
+
+              '<md-dialog aria-label="" style="z-index: 1009;">' +
+                  '<form>' +
+                    '<md-toolbar>' +
+                      '<div class="md-toolbar-tools">' +
+                        '<h2>STATS</h2>' +
+                        '<span flex></span>' +
+                        '<md-button class="md-icon-button" ng-click="cancel()">' +
+                          '<md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>' +
+                        '</md-button>' +
+                      '</div>' +
+                    '</md-toolbar>' +
+                  '<md-dialog-content style="max-width:1800px;max-height:810px; ">' +
+                      '<md-tabs md-dynamic-height md-border-bottom>' +
+                        '<md-tab label="Alvin\'s Tech Stack">' +
+                          '<md-content class="md-padding">' +
+                            // '<h1 class="md-display-2">Build knowledge graphs:</h1>' +
+                            '<iframe src="radar.html" width="680px" height="560px" style="border:none"></iframe>' +
+                          '</md-content>' +
+                        '</md-tab>' +
+                        // '<md-tab label="three">' +
+                        //   '<md-content class="md-padding">' +
+                        //     '<h1 class="md-display-2">Tab Three</h1>' +
+                        //   '<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>' +
+                        //   '</md-content>' +
+                        // '</md-tab>' +
+                      '</md-tabs>' +
+                    '</md-dialog-content>' +
+
+                    '<md-dialog-actions layout="row">' +
+                      // '<md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>' +
+                      // '  More on Wikipedia' +
+                      // '</md-button>' +
+                      '<span flex></span>' +
+                      '<md-button ng-click="closeDialog()" style="margin-right:20px;" >' +
+                        'Close' +
+                      '</md-button>' +
+                    '</md-dialog-actions>' +
+                  '</form>' +
+                  '</md-dialog>',
+                // '<md-dialog aria-label="List dialog">' +
+                // '  <md-dialog-content class="md-dialog-content">'+
+                // '  <h2 class="md-title"><b> Welcome to alvinrindra.github.io!</b></h2>' +
+                // '  <div class="md-dialog-content-body">In this website, you can observe my <i>resume</i> interactively in the knowledge graphs. </div>' +
+                // '  <div class="md-dialog-content-body">You can create a node, a relation, a compound graph, or even build your own <i>knowledge graphs.</i> </div>' +
+                // '  <div class="md-dialog-content-body">Click a <i>circle-nav</i> button in the lower right corner to get more features. </div>' +
+                // '  </md-dialog-content>' +
+                // '  <md-dialog-actions>' +
+                // '    <md-button ng-click="closeDialog()" class="md-primary">' +
+                // '      Okay!' +
+                // '    </md-button>' +
+                // '  </md-dialog-actions>' +
+                // '</md-dialog>',
+              locals: {
+                items: $scope.items
+              },
+              controller: DialogController
+           });
+           function DialogController($scope, $mdDialog, items) {
+             $scope.items = items;
+             $scope.closeDialog = function() {
+               $mdDialog.hide();
+             }
+           }
+         };
+
          // var confirm = $mdDialog.confirm()
          // .title('Welcome to alvinrindra.github.io!')
          // .textContent('Click circe-nav button in the lower right corner to get more features')
