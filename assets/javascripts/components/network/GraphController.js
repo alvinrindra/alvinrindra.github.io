@@ -186,7 +186,7 @@ define([
                 { data: { id: "matlab", name: "Matlab", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/matlab.gif"  } },
                 { data: { id: "octave", name: "Octave", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/octave.jpeg"  } },
                 { data: { id: "ggplot2", name: "ggplot2", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/ggplot2.png"  } },
-                { data: { id: "shiny", name: "shiny", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/shiny.png"  } },
+                { data: { id: "shiny", name: "Rshiny", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/shiny.png"  } },
                 { data: { id: "tidyverse", name: "tidyverse", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/tidyverse.jpg"  } },
 
                 { data: { id: "ds_visualization", name: "Visualization", parent: 'data_science_stack'  } },
