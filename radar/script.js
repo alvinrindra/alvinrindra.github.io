@@ -11,7 +11,7 @@ var d = [
 	[
 		{axis:"D3;Cytoscape;Vis JS",value:0.8},
 		{axis:"Matplotlib;Seaborn",value:0.6},
-		{axis:"ggplot2;Shiny",value:0.4},
+		{axis:"ggplot2;RShiny",value:0.4},
 		{axis:"Python",value:0.75},
 		{axis:"Ruby on Rails",value:0.65},
 		{axis:"R",value:0.55},
@@ -28,7 +28,7 @@ var d = [
 		  [
 			{axis:"D3;Cytoscape;Vis JS",value:0.8},
 			{axis:"Matplotlib;Seaborn",value:0.6},
-			{axis:"ggplot2;RShiny",value:0.4},
+			{axis:"ggplot2;Shiny",value:0.4},
 			{axis:"Python",value:0},
 			{axis:"Ruby on Rails",value:0},
 			{axis:"R",value:0},
