@@ -73,7 +73,7 @@ define([
                 { data: { id: 'uni_hamburg', name: "Universität Hamburg", parent: 'msc', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "-Machine Learning\n-Natural Language Processing\n-Neural Networks/Deep Learning\n-Reinforcement Learning\n\nStandard: \nGerman Grade: 2.38 (Good)" } },
                 { data: { id: 'uni_due', name: "Universität Duisburg-Essen", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/uni_due.png" } },
                 { data: { id: 'dlai', name: "deeplearning.ai", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/dlai.jpeg" } },
-                { data: { id: 'iium', name: "IIUM", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/iium.png", desc: "-Artificial Intelligence\n-Theory of Automata\n-Information Retrieval" } },
+                { data: { id: 'iium', name: "IIUM, Malaysia", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/iium.png", desc: "1-year study abroad program, majoring Information and Communication Technology.\n\n-Artificial Intelligence\n-Theory of Automata\n-Information Retrieval\nGerman Grade: 2.00 (Good) \nMalay/US Grade: 3.00 (Good)" } },
                 // Technology Stack
                 { data: { id: 'tech_stack', name: "Technology Stack" } },
 
