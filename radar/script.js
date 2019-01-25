@@ -22,7 +22,7 @@ var d = [
 		{axis:"Java",value:0.5},
 		{axis:"SQL;NoSQL",value:0.75},
 		{axis:"Tensorflow; Sklearn; Keras",value:0.5},
-		{axis:"NLTK; Polyglot; SpaCy",value:0.65},
+		{axis:"NLTK; Polyglot; SpaCy",value:0.70},
 		{axis:"Elasticsearch;Solr;Spark",value:0.5},
 	],
 		  [
