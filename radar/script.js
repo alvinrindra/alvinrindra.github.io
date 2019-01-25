@@ -106,7 +106,7 @@ var d = [
 				{axis:"Java",value:0},
 				{axis:"SQL;NoSQL",value:0},
 				{axis:"Tensorflow;Sklearn;Keras",value:0},
-				{axis:"NLTK;Polyglot;SpaCy",value:0.65},
+				{axis:"NLTK;Polyglot;SpaCy",value:0.70},
 			],
 			[
 				{axis:"D3;Cytoscape;Vis JS",value:0},
