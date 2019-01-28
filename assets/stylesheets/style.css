@@ -13,6 +13,12 @@ html, body, .container, canvas {
     clear: both;*/
 }
 
+#chart {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
 #canvas {
 	z-index: 1 !important;
 }

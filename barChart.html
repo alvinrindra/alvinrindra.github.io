@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://bl.ocks.org/nbremer/raw/6506614/ -->
+<html>
+ <head>
+ <title>Bar chart</title>
+<link type="text/css" rel="stylesheet" href="./d3/barChart.css">
+</head>
+<body data-gr-c-s-loaded="true" style="">
+  <div>
+    <button onclick="changeData()">New</button>
+    <button onclick="appendData()">Append</button>
+    <button onclick="sortData()">Sort</button>
+  </div>
+  <div id='barContainer'>
+  <svg viewBox='0 0 750 500'/>
+    <div class="trans-fore">
+      <div id="tooltip"></div>
+    </div>
+</div>
+  <svg id="barChart"></svg>
+  <p>
+    Click on the bar to delete it.
+  </p>
+  <div>
+    <button onclick="changeData()">New</button>
+    <button onclick="appendData()">Append</button>
+    <button onclick="sortData()">Sort</button>
+  </div>
+  <script type="text/javascript" src="./d3/d3.v3.min.js"></script>
+  <script type="text/javascript" src="./d3/barChart.js"></script>
+  <div class="trans-fore">
+    <div id="tooltip"></div>
+  </div>
+</body>
+</html>
