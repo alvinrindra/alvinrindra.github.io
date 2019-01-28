@@ -75,7 +75,7 @@ define([
                 { data: { id: 'dlai', name: "deeplearning.ai", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/dlai.jpeg" } },
                 { data: { id: 'iium', name: "IIUM, Malaysia", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/iium.png", desc: "1-year study abroad program, majoring Information and Communication Technology.\n\n-Artificial Intelligence\n-Theory of Automata\n-Information Retrieval\nGerman Grade: 2.00 (Good) \nMalay/US Grade: 3.00 (Good)" } },
                 // Technology Stack
-                { data: { id: 'tech_stack', name: "Technology Stack" } },
+                { data: { id: 'tech_stack', name: "Full Stack" } },
 
                 { data: { id: 'fe_stack', name: "Front-End Stack", parent: "tech_stack" } },
                 { data: { id: 'ui_frameworks', name: "UI Frameworks", parent: 'fe_stack' } },
@@ -243,7 +243,7 @@ define([
                 { data: { id: 'alvinrindraeducation', source: 'alvinrindra', target: 'education', name: 'studies' } },
                 { data: { id: 'alvinrindratech_stack', source: 'alvinrindra', target: 'tech_stack', name: 'has' } },
                 { data: { id: 'alvinrindrapublications', source: 'alvinrindra', target: 'publications', name: 'writes' } },
-                { data: { id: 'alvinrindradata_science', source: 'alvinrindra', target: 'data_science_stack', name: 'learns' } },
+                { data: { id: 'alvinrindradata_science', source: 'alvinrindra', target: 'data_science_stack', name: 'has' } },
                 { data: { id: 'alvinrindraactivities', source: 'alvinrindra', target: 'interests', name: 'has' } },
                 { data: { id: 'alvinrindralanguages', source: 'alvinrindra', target: 'languages', name: 'speaks' } },
                 { data: { id: 'alvinrindraprojects', source: 'alvinrindra', target: 'projects', name: 'develops' } },
