@@ -192,6 +192,14 @@ svg
   .attr('text-anchor', 'middle')
   .text('Exp and Confidence Meter (%)')
 
+
+      svg.append('text')
+        .attr('class', 'label')
+        .attr('x', Chart.width / 2 + Chart.margin.left)
+        .attr('y', Chart.height)
+        .attr('text-anchor', 'middle')
+        .text('Technology Stack')
+
 svg.append('g')
   .attr('transform',
     `translate(${Chart.margin.left + Chart.sideWidth}, ${Chart.margin.top})`)
