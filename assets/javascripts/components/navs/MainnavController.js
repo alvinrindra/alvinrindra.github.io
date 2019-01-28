@@ -129,7 +129,7 @@ define([
                         '</md-tab>' +
                         '<md-tab label="Bar Chart">' +
                           '<md-content class="md-padding">' +
-                            '<p>Will be updated soon... </p>' +
+                            '<iframe src="skillsdata.html" width="625px" height="325px" style="border:none"></iframe>' +
                           '</md-content>' +
                         '</md-tab>' +
                         // '<md-tab label="three">' +
