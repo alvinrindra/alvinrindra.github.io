@@ -122,14 +122,14 @@ define([
                     '</md-toolbar>' +
                   '<md-dialog-content style="max-width:1800px;max-height:810px; ">' +
                       '<md-tabs md-dynamic-height md-border-bottom>' +
-                        '<md-tab label="Kiviat Diagrams">' +
-                          '<md-content class="md-padding">' +
-                            '<iframe src="radar.html" width="710px" height="555px" style="border:none"></iframe>' +
-                          '</md-content>' +
-                        '</md-tab>' +
                         '<md-tab label="Bar Chart">' +
                           '<md-content class="md-padding">' +
                             '<iframe src="skillsdata.html" width="625px" height="325px" style="border:none"></iframe>' +
+                          '</md-content>' +
+                        '</md-tab>' +
+                        '<md-tab label="Kiviat Diagrams">' +
+                          '<md-content class="md-padding">' +
+                            '<iframe src="radar.html" width="710px" height="555px" style="border:none"></iframe>' +
                           '</md-content>' +
                         '</md-tab>' +
                         // '<md-tab label="three">' +
