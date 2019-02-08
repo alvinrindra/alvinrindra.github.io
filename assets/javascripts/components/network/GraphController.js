@@ -317,6 +317,7 @@ define([
               $scope.buildGraph();
                 $timeout( function() {
                   $scope.progressBarIsInactive = true;
+                  $rootScope.$emit('progressBarIsInactive');
                 }, 1000);
           };
 

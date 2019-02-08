@@ -13,6 +13,13 @@ define([
         function ($scope, $rootScope , $mdDialog, $mdSidenav) {
 
           $scope.lockLeft = true;
+          $scope.progressBarIsInactive = false;
+          $scope.toolbarIsHidden = true;
+
+          $rootScope.$on('progressBarIsInactive', function (event) {
+            $scope.progressBarIsInactive = true;
+            $scope.toolbarIsHidden = false;
+          });
 
           $scope.close = function () {
            // Component lookup should always be available since we are not using `ng-if`

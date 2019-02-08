@@ -28,11 +28,14 @@
         >
         <div ng-controller="MainnavController">
              <md-toolbar class="md-theme-light">
-               <div class="md-toolbar-tools">
+               <div class="md-toolbar-tools" ng-hide="progressBarIsInactive">
+                 <label class="alv_label" style="text-align:center">Better with Chrome Web Browser</label>
+               </div>
+               <div class="md-toolbar-tools" style="visibility: 'hidden'" ng-hide="!progressBarIsInactive" ng-show="progressBarIsInactive">
                  <label class="alv_label">alvinrindra.github.io</label>
                </div>
              </md-toolbar>
-           <md-content style="text-align: justify; margin-top: 15px;">
+           <md-content style="text-align: justify; margin-top: 15px;" ng-hide="!progressBarIsInactive" ng-show="progressBarIsInactive">
               <img src="assets/images/Alvin_foto_1.jpg" alt="Avatar" class="avatar">
              <div class="md-toolbar-tools">
                <label class="alv_label">Alvin Rindra Fazrie</label>
