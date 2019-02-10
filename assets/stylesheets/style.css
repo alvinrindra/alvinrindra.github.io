@@ -233,6 +233,16 @@ div.popupMenu ul li:hover {
   object-fit: cover;
 }
 
+.snapshot {
+  margin: auto;
+  display: block;
+  height: 200px;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ebecec;
+  object-fit: cover;
+}
+
 #navs {
   z-index: 999;
   position: fixed;
