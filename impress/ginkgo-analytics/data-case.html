@@ -143,7 +143,7 @@
 					<aside class="notes">
 						Da (Because) wir die NLP-Aufgabe lösen möchten und werden, verwenden wir den NLP-Prozess Flow.
 						<br/> <br/>
-						Also, zwischen Data Preparation und Modelling in CRISP-DM. Es liegt NLP Process Flow.
+						Also, zwischen Data Preparation und Modelling in CRISP-DM. Es liegt NLP Process Flow, die sind es beginnt mit Datensammlung, ...
 						<br>
 						........
 						<br/> <br/>
@@ -186,74 +186,189 @@
 
 					<section>
 						<img width="800" src="img/Selection_762.png">
+						<aside class="notes">
+							Das ist das Ergebnis der Datenbereinigung. Ihr kann gucken.
+							<br/> <br/>
+							Es gibt keine ...
+						</aside>
 					</section>
 
 					<section>
 						<img width="800" src="img/Selection_763.png">
+						<aside class="notes">
+							wie wir schon besprochen haben, in Datenvorverarbeitung es gibt Schritte: Label Selection, NA values entfernen. und so weiter.
+							<br/> <br/>
+							Also das ist die gewählte label, gewählte classes. Warum wähle ich diese labeln aus? Es gibt eine geschichte, eine Historie. Dafür gibt es einen Grund.
+							<br>
+							Ich habe mir die Confusion Matrix angesehen. Dass diese Classes/Katgories besser accuracy haben. Ich entferne manche ambiguos/vieldeutig kategorie wie ..., ...
+							<br/> <br/>
+							It’s hard to classify, even we as a human. Und Ich entferne auch the minority classes, weil sie oft falsch klassifiziert werden. Many are misclassified.
+						</aside>
 					</section>
 				</section>
 
 				<section>
 					<section>
 						<img width="800" src="img/Selection_764.png">
+						<aside class="notes">
+							Ich habe eine kurze Intermezzo bevor wir über deep learning reden. Das is die confusion matrix mit classification report. Where I can find which classes are classified correctly, richtig klassifiziert, und welche Klasse ist falsch klassifiziert.
+							<br/> <br/>
+							Wir können sehen, dass die majorität labeln wie ‘Credit reporting’, ‘Debt Collection’, und ‘Mortgage’ immer eine bessere accuracy haben und Meisten sind richtig klassifiziert.
+						</aside>
 					</section>
 
 					<section>
 						<img width="800" src="img/Selection_765.png">
+						<aside class="notes">
+							Hier ist noch Intermezzo, Dealing with imbalanced classes.
+							<br/> <br/>
+							Am Anfang habe ich TfidfVectorizer verwendet, also ich kann unigrams, bigrams, oder n-grams in jedes Narrative text finden. So, I want in each categories/class has their own unique and strong n-grams.
+							<br>
+							Es scheint gut zu funktionieren. Aber, leider funktioniert dieser Vectorizer nicht mit großen Datenmengen. Ich habe immer MemoryError bekommen. Es funktioniert nur mit dataset circa 50k rows.
+							<br/> <br/>
+							Und verwende ich auch diese vectorizer für die word embeddings im deep learning model. Aber ich hatte eine schlechte performance. Ich weiß es nicht. und Ich muss später noch mal gucken.
+						</aside>
 					</section>
 
 					<section>
 						<img width="800" src="img/Selection_766.png">
+						<aside class="notes">
+							Also versuche ich, diesen Vektorisierer für den Vanilla Machine Learning-Algorithmus zu verwenden. In diesem Fall verwende ich Multinominal NB und es scheint gut zu funktionieren.
+							<br/> <br/>
+							Es hat circa 86% accuracy und the majority class sind natürlich richtig klassifiziert.
+						</aside>
 					</section>
 
 				</section>
 
 					<section>
 						<img width="800" src="img/Selection_767.png">
+						<aside class="notes">
+							Jetzt sind wir im Feature Engineering. Es gibt einige Arten von Feature-Engineering.
+							<br/> <br/>
+							Es gibt ...
+							<br>
+							Wie wir schon gesehen haben, N-grams, TF-IDF.
+							<br/> <br/>
+							Was funktioniert am besten für Deep Learning? Das ist Word Embeddings.
+						</aside>
 					</section>
 
 					<section>
 						<img width="800" src="img/Selection_768.png">
+						<aside class="notes">
+							Nach dem Feature Engineering diskutieren wir nun über die Modellierung, NLP-Algorithmen. Welches ist das Beste für diesen Fall.
+							<br/> <br/>
+							Ich habe zwei Modelle ausprobiert, CNN und LSTM.
+							<br><br/>
+							Obwohl CNN für die Bildklassifizierung populär ist, funktioniert es auch für die Textklassifizierung. Und LSTM ist populär für many-to-many solutions wie sentiment anlyse, machine translation, chatbot, NER, und so weiter.
+							<br/> <br/>
+							Aber diese LSTM Model ist auch populär für die Trainingszeit. We can train it like forever. Es braucht wirklich Zeit, deshalb verwenden wir noch Convolutiional Layer to make um training schneller zu machen.
+							<br/> <br/>
+							Es gibt nachteile, disadvantages, und vorteile, disadvantages zwischen diesem model.
+						</aside>
 					</section>
 
 
 				<section>
 					<section>
 						<img width="800" src="img/Selection_769.png">
+						<aside class="notes">
+							Dies ist das Ergebnis von Training und Evaluation. Wir haben etwas die gleiche Performance zwischen CNN und LSTM.
+							<br/> <br/>
+							CNN hat…. LSTM hat … mit 5 Epoch.
+							<br/> </br>
+							Aber was den Unterschied macht, ist die Trainingszeit. LSTM dauert 10x länger zum Trainieren.
+						</aside>
 					</section>
 
 						<section>
 							<img width="800" src="img/Selection_770.png">
+							<aside class="notes">
+								Okay, das ist die Obervations.
+								<br/> <br/>
+								- beide haben ein ähnliches Ergebnis, ähnliches accuracy. Obwohl CNN kurze besser performance hat.
+								<br/><br/>
+								- CNN model outperformed LSTM in training time.  wie ich schon gesagt habe, training LSTM could be ...
+								<br/><br/>
+								- LSTM hat jedoch einen positiven und beständigen Trend. Auf der anderen Seite hat CNN einen negativen Trend und mehr overfitting trend für die nächste epoch.
+								<br/><br/>
+								- At the end, benutze Ich CNN.
+							</aside>
 						</section>
 
 						<section>
 							<img width="800" src="img/Selection_771.png">
+							<aside class="notes">
+								Das ist die Training Setup.
+								<br/> <br/>
+								Es gibt ..
+								<br/><br/>
+								- Regularization für overfitting verhindern
+								<br/><br/>
+								Am anfang benutze Ich kleine max_features. Ich denke, dass es nur circa 2000 worter gibt in Narrative und zwar es gibt 40k worter. Ändern der Max_ features, Es verbessert die Performance.
+								<br/><br/>
+								Viele Leute benutzen 64/128/256 als Hyperparameter nummer, vielleicht das ist die Best practice.
+								<br/><br/>
+								Und dann, wir können die Testing sehen.
+							</aside>
 						</section>
 
 					</section>
 
 					<section>
 						<img width="800" src="img/Selection_772.png">
+						<aside class="notes">
+							Und jetzt kommen wir zum Problem für ....
+							<br/> <br/>
+							Aus dem narrativen Text können wir die Einsicht der Daten extrahieren. Zum Beispiel können wir die Sentiment-Analyse des Textes extrahieren, ob er positiv oder negativ ist. Damit können wir vorhersagen / forecasting, ob der Kunde streiten/dispute wird oder nicht.
+							<br/><br/>
+							Was habe ich getan, war, die Final layer und Loss function ändern. Von … zu …
+							<br/><br/>
+							Und das ist das Trainingsergebnis, accuracy und loss plotten.
+						</aside>
 					</section>
 
 					<section>
 						<img width="800" src="img/Selection_773.png">
+						<aside class="notes">
+							und jetzt können wir unseren Klassifikator testen.
+							<br/> <br/>
+							Aus einer einzigen Narrative Text können wir Multiple targets vorhersagen. Predict multiple target.
+						</aside>
 					</section>
 
 					<section>
 						<img width="800" src="img/Selection_774.png">
+						<aside class="notes">
+							Nächster Schritt: Depolyment? Feedback?
+							<br/> <br/>
+							Wie wir besprochen haben, Data Science/Machine Learning prozess ist ein iterativ prozess. Wenn es eine Feedback gibt, Wir können unseren Algorithmus umgestalten/remodellen.
+							<br/><br/>
+							Wir müssen erneut herausfinden, was das Problem ist und welche Faktoren die die Performance verbessern können.
+						</aside>
 					</section>
 
 					<section>
 						<img width="800" src="img/Selection_779.png">
+						<aside class="notes">
+							Dies sind die Dinge, von denen Ich glaube, dass sie die Performance verbessern könnten.
+						</aside>
 					</section>
 
 					<section>
 						<img width="800" src="img/Selection_776.png">
+						<aside class="notes">
+							Fazit,
+							<br/>
+							Die schlussfolgerung
+						</aside>
 					</section>
 
 					<section>
 						<img width="800" src="img/Selection_777.png">
+						<aside class="notes">
+						Gibt es eine Frage?
 					</section>
 
 
