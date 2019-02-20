@@ -49,36 +49,89 @@
 				<section>
 					<img width="800" src="img/intro_1.png">
 					<aside class="notes">
-						Hallo zusammen,
-
-Zunächst möchte ich mich für die Einladung zur Präsentation bedanken. Die heutige Präsentation trägt den Titel eines Datenfalls: AI Solution for Help Desk Inc. Die Präsentation findet auf englischer und auf deutscher Sprache statt / gehalten.
-
-Und ich möchte mich kurz vorstellen. Mein Name ist Alvin Rindra Fazrie, ich habe gerade mein Masterstudium abgeschlossen und ich habe die Erfahrung gemacht, sowohl AI- als auch Nicht-AI-Apps zu entwickeln, und ein Enthusiast von Data Science.
+						 <a style="color:red">Guten Tag</a> Hallo zusammen,
+						<br/> <br/>
+						Zunächst möchte ich mich für die Einladung zur Präsentation bedanken. Die heutige Präsentation trägt den Titel eines Data Case: AI Solution for Help Desk Inc. Die Präsentation findet auf englischer und auf deutscher Sprache statt / gehalten.
 					</aside>
 				</section>
 
 				<section>
 					<IFRAME WIDTH=800 HEIGHT=600 FRAMEBORDER=0 SRC="https://alvinrindra.github.io"></IFRAME>
+					<aside class="notes">
+						Und ich möchte mich kurz vorstellen. Mein Name ist Alvin Rindra Fazrie, ich habe gerade mein Masterstudium abgeschlossen und ich habe die Erfahrung gemacht, sowohl AI-und Full-stack Apps zu entwickeln, und ein Enthusiast von Data Science.
+						<br/> <br/>
+						Ich habe ein starkes Interesse an Data Science/Machine Learning zum Produktion, NLP, und DatenVisualisierung.
+					</aside>
 				</section>
 
 				<section>
 					<img width="800" src="img/Selection_754.png">
+					<aside class="notes">
+						Grundsätzlich müssen wir die C-Suite von Helpdesk Inc. überzeugen, um Einblicke aus unstrukturierten Daten zu erhalten und die "State-of-the-Art-Deep-Learning" -Modelle zu implementieren.	<br/> <br/>
+						Und Ja, das ist möglich, um aus diesen unstrukturierten Textdaten "Deep Learning" zu trainieren, also wir können um die Produkt- oder Problemkategorie vorherzusagen/ prognosen. Und dann wenn eine complaints rechzeitig aufgelöst/entschlossen wird und die ‘consumer’/Konsument die Entscheidung anficht/disputieren. Mit Deep Learning, wir können diese Problem/Prozess automatisieren.
+						<br/> <br/>
+						---------------------------------------------------------------------------
+						<br/> <br/>
+
+						Basically, we need to convince the C-suite of Helpdesk Inc. to get the insight from unstructured data and implement the 'state-of-the-art deep learning' models.
+
+						And Yes, that is possible to train "deep-learning" from this unstructured text data to predict Product or Issue category. And then if a complaint is resolved in a timely manner and if the consumer will dispute the decision.
+					</aside>
 				</section>
 
 				<section>
 					<img width="800" src="img/Selection_780.png">
+					<aside class="notes">
+						Bevor wir weiter gehen und die Implementierung besprechen. Ich möchte Ihnen die CRISP-DM-Methode zeigen. CRISP-DM stands for 'Cross-industry-standard-for-data-mining'.
+							<br/> <br/>
+						Es gibt viele Ansätze/Methodik im Data Science-Prozess. Aber sie sind jedoch dieser CRISP-DM-Methode ziemlich ähnlich/fast gleich.
+						<br/> <br/>
+						Es beginnt mit … danach, weiter, endlich..
+							<br/> <br/>
+							Und wir wissen, dass dieser Data Science-Prozess iterativ ist. Andrew Ng sagt dass auch. ML is ein iterative prozess und Don’t expect it to work first time. Erwarten / glauben wir nicht, dass es das erste Mal funktioniert.
+							<br/> <br/>
+							Laut/ according Andrew ng, es gibt 3 Hauptprozess in ML.
+							1. (Idea → Code → Experiment) → Idea, zum, ….
+							<br/> <br/>
+							Okay, fangen wir mit Business Understanding.
+					</aside>
 				</section>
 
 				<section>
 					<img width="800" src="img/Selection_756.png">
+					<aside class="notes">
+						Dies ist der Beginn / der Anfang des Prozesses. Business Understanding, Geschäftsverständnis, wir müssen über Task, Plan und Analytic Approach verstehen.
+							<br/> <br/>
+						Die Aufgabe / Task ist, C-suite des Helpdesk Inc. überzeugen um Deep learning zu implementieren als die als Lösung des Problems unstrukturierter Textdaten.
+						<br/> <br/>
+						Das Konzept Plan ist, um eine einfachere Ticketübergabe System zu ermöglichen / implementieren. Also, die konzument muss sich keiner komplizierten Form stellen.  Viele input füllen.
+							<br/> <br/>
+						Die Analytic Approach: ...
+					</aside>
 				</section>
 
 				<section>
 					<img width="800" src="img/Selection_757.png">
+					<aside class="notes">
+						Und jezt sprechen wir über Datenverständnis, wir gücken die shape des Daten ist fast 1 Million records/rows and 18 Features/variables.
+							<br/> <br/>
+						Es gibt, …., ..
+						<br/> <br/>
+						Und wählen wir ‘consumer complaints narrative’ feature aus als predictor variables/features und dann Product, timely response, und consumer disputeds werden ausgewählt als target variables.
+						<br/> <br/>
+						Nachdem Datensammlung, haben wir eine wichtige Sache zu tun, nämlich EDA.
+					</aside>
 				</section>
 
 				<section>
 					<img width="800" src="img/Selection_758.png">
+					<aside class="notes">
+						EDA …. John Tukey… Es bedeutet, EDA ist wichtig, um das Datenverständnis zu beginnen. Wir können target variables plotten mit graphical EDA. In diesem Fall benutze Ich seaborn packages.
+							<br/> <br/>
+						Wir können sehen, dass es einige Majoritätsklassen und Minderheitenklassen gibt. Mortgage class ist fast …  in gesamt.
+						<br/> <br/>
+						Am Anfang habe ich das gesamte / Alle Label benutzt. Aber sie haben nicht gut funktioniert.  Sie werden oft falsch klassifiziert. also habe ich mich entschlossen, entschieden, einige von labeln loszuwerden.
+					</aside>
 				</section>
 
 				<section>
