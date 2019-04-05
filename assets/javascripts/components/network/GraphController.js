@@ -58,9 +58,11 @@ define([
                 //working_exps
                 { data: { id: 'working_exp', name: "Professional Positions" } },
                 { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "Worked on projects, new/s/leak 2.0 (Network of Searchable leaks), Science and Data-Driven Journalism tool http://www.newsleak.io/ and autolinks (automatic proactive researching) - https://uhh-lt.github.io/autolinks, under the supervision of Prof. Chris Biemann.\n \n Tech stack: Scala Play, AngularJS, NodeJS, Elasticsearch, Docker, PostgreSQL, Python, NLP components: UIMA, cTAKES, Polyglot-NER." } },
-                { data: { id: 'full_stack_developer_1', name: "Full Stack Developer (ROR)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/hausgold.png", desc: "Worked on a project for building a maklerportal and CRM. Maklerportal-frontend Stack: ReactJS, SCSS, Webpack, E2E Test: NightwatchJS. Maklerportal-api Stack: Ruby on Rails, PostgreSQL.Container: Docker" } },
-                { data: { id: 'full_stack_developer_2', name: "Full Stack Developer (ROR)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/converate.jpeg", desc: "Developed features of several websites (ximmo, ubitricity, codetalk): HTML5, sass, Bootstrap, Javascript. Framework: Ruby on Rails, TDD/BDD: RSpec." } },
-                { data: { id: 'full_stack_developer_3', name: "Full Stack Developer (JS)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/quantilope.png", desc: "Developed a Market Research Software: MeteorJS, AngularJS, HTML5, LESS, Bootstrap, jQuery, and MongoDB." } },
+                { data: { id: 'data_scientist', name: "Data Scientist", parent: 'working_exp' }},
+                { data: { id: 'full_stack_developer', name: "Full Stack Developer", parent: 'working_exp' }},
+                { data: { id: 'full_stack_developer_1', name: "Full Stack Developer (ROR)", parent: 'full_stack_developer', image: "https://alvinrindra.github.io/assets/images/hausgold.png", desc: "Worked on a project for building a maklerportal and CRM. Maklerportal-frontend Stack: ReactJS, SCSS, Webpack, E2E Test: NightwatchJS. Maklerportal-api Stack: Ruby on Rails, PostgreSQL.Container: Docker" } },
+                { data: { id: 'full_stack_developer_2', name: "Full Stack Developer (ROR)", parent: 'full_stack_developer', image: "https://alvinrindra.github.io/assets/images/converate.jpeg", desc: "Developed features of several websites (ximmo, ubitricity, codetalk): HTML5, sass, Bootstrap, Javascript. Framework: Ruby on Rails, TDD/BDD: RSpec." } },
+                { data: { id: 'full_stack_developer_3', name: "Full Stack Developer (JS)", parent: 'full_stack_developer', image: "https://alvinrindra.github.io/assets/images/quantilope.png", desc: "Developed a Market Research Software: MeteorJS, AngularJS, HTML5, LESS, Bootstrap, jQuery, and MongoDB." } },
 
                 { data: { id: 'associate_developer', name: "Associate Developer (BI)", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/programming/wk.jpg", desc: "1. Researched on Information retrieval using Apache SOLR for company data indexing.\n \n 2. Implemented ETL (Extract Transform Load) and Business Intelligence Process via Microsoft BIDS (Business Intelligence Development Studio) using SSIS (SQL Server Integration Services)." } },
                 //Education
@@ -248,10 +250,11 @@ define([
                 { data: { id: 'alvinrindralanguages', source: 'alvinrindra', target: 'languages', name: 'speaks' } },
                 { data: { id: 'alvinrindraprojects', source: 'alvinrindra', target: 'projects', name: 'develops' } },
 
-                { data: { id: 'associate_developerfull_stack_developer_3', source: 'associate_developer', target: 'full_stack_developer_3', name: 'to' } },
+                { data: { id: 'associate_developerfull_stack_developer', source: 'associate_developer', target: 'full_stack_developer', name: 'to' } },
                 { data: { id: 'full_stack_developer_3full_stack_developer_2', source: 'full_stack_developer_3', target: 'full_stack_developer_2', name: 'to' } },
                 { data: { id: 'full_stack_developer_2full_stack_developer_1', source: 'full_stack_developer_2', target: 'full_stack_developer_1', name: 'to' } },
-                { data: { id: 'full_stack_developer_1research_assistant', source: 'full_stack_developer_1', target: 'research_assistant', name: 'to' } },
+                { data: { id: 'full_stack_developerresearch_assistant', source: 'full_stack_developer', target: 'research_assistant', name: 'to' } },
+                { data: { id: 'research_assistantdata_scientist', source: 'research_assistant', target: 'data_scientist', name: 'to' } },
 
                 // { data: { id: 'nndeeplearning', source: 'nn', target: 'deep_learning', name: 'aka' } },
               ];
