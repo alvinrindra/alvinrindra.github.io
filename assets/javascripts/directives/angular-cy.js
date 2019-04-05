@@ -456,7 +456,7 @@ define([
                         });
                       }
 
-                      cy.expandCollapse({
+                      var exp = cy.expandCollapse({
                         // layoutBy: {
                         //   name: "cose-bilkent",
                         //   // animate: "end",
@@ -466,6 +466,9 @@ define([
                         fisheye: false,
                         animate: false
                       });
+
+                      // exp.collapseRecursively(cy.nodes('[id = "full_stack_developer"]'));
+                      // cy.layout({name: 'cose-bilkent'}).run();
 
                         // the default values of each option are outlined below:
                         var defaults = {
