@@ -60,7 +60,7 @@ define([
                 { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "Worked on projects, new/s/leak 2.0 (Network of Searchable leaks), Science and Data-Driven Journalism tool http://www.newsleak.io/ and autolinks (automatic proactive researching) - https://uhh-lt.github.io/autolinks, under the supervision of Prof. Chris Biemann.\n \n Tech stack: Scala Play, AngularJS, NodeJS, Elasticsearch, Docker, PostgreSQL, Python, NLP components: UIMA, cTAKES, Polyglot-NER." } },
                 { data: { id: 'data_scientist', name: "Data Scientist", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/data_science/ginkgo_analytics_200x70_rgb-1_small.png" }},
                 { data: { id: 'full_stack_developer', name: "Full Stack Developer", parent: 'working_exp' }},
-                { data: { id: 'ai_specialist', name: "AI Specialist", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/lhind.png" }},
+                //{ data: { id: 'ai_specialist', name: "AI Specialist", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/lhind.png" }},
                 // { data: { id: 'full_stack_developer_1', name: "Full Stack Developer (ROR)", parent: 'full_stack_developer', image: "https://alvinrindra.github.io/assets/images/hausgold.png", desc: "Worked on a project for building a maklerportal and CRM. Maklerportal-frontend Stack: ReactJS, SCSS, Webpack, E2E Test: NightwatchJS. Maklerportal-api Stack: Ruby on Rails, PostgreSQL.Container: Docker" } },
                 // { data: { id: 'full_stack_developer_2', name: "Full Stack Developer (ROR)", parent: 'full_stack_developer', image: "https://alvinrindra.github.io/assets/images/converate.jpeg", desc: "Developed features of several websites (ximmo, ubitricity, codetalk): HTML5, sass, Bootstrap, Javascript. Framework: Ruby on Rails, TDD/BDD: RSpec." } },
                 // { data: { id: 'full_stack_developer_3', name: "Full Stack Developer (JS)", parent: 'full_stack_developer', image: "https://alvinrindra.github.io/assets/images/quantilope.png", desc: "Developed a Market Research Software: MeteorJS, AngularJS, HTML5, LESS, Bootstrap, jQuery, and MongoDB." } },
@@ -256,7 +256,7 @@ define([
                 // { data: { id: 'full_stack_developer_2full_stack_developer_1', source: 'full_stack_developer_2', target: 'full_stack_developer_1', name: 'to' } },
                 { data: { id: 'full_stack_developerresearch_assistant', source: 'full_stack_developer', target: 'research_assistant', name: 'to' } },
                 { data: { id: 'research_assistantdata_scientist', source: 'research_assistant', target: 'data_scientist', name: 'to' } },
-                { data: { id: 'data_scientistai_specialist', source: 'data_scientist', target: 'ai_specialist', name: 'to' } },
+                //{ data: { id: 'data_scientistai_specialist', source: 'data_scientist', target: 'ai_specialist', name: 'to' } },
                 // { data: { id: 'nndeeplearning', source: 'nn', target: 'deep_learning', name: 'aka' } },
               ];
 
