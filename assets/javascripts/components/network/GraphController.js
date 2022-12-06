@@ -54,7 +54,7 @@ define([
 
               var nodes = [
                 //alvinrindra
-                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Data Scientist AI/BI; Lufthansa's Artificial Intelligence Specialist", image: "https://alvinrindra.github.io/assets/images/Alvinfoto2.jpg" } },
+                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Data Scientist AI/BI; AI & Data Analytics Consultant @ Lufthansa", image: "https://alvinrindra.github.io/assets/images/Alvinfoto2.jpg" } },
                 //working_exps
                 { data: { id: 'working_exp', name: "Professional Positions" } },
                 { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "Worked on projects, new/s/leak 2.0 (Network of Searchable leaks), Science and Data-Driven Journalism tool http://www.newsleak.io/ and autolinks (automatic proactive researching) - https://uhh-lt.github.io/autolinks, under the supervision of Prof. Chris Biemann.\n \n Tech stack: Scala Play, AngularJS, NodeJS, Elasticsearch, Docker, PostgreSQL, Python, NLP components: UIMA, cTAKES, Polyglot-NER." } },
@@ -102,6 +102,8 @@ define([
 
                 { data: { id: 'cloud', name: "Cloud", parent: "tech_stack" } },
                 { data: { id: 'aws', name: "AWS", parent: 'cloud', image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/200px-Amazon_Web_Services_Logo.svg.png" } },
+                { data: { id: "gcp", name: "GCP", parent: 'cloud', image: "https://alvinrindra.github.io/assets/images/data_science/gcp.png"  } },
+                { data: { id: "azure", name: "Azure", parent: 'cloud', image: "https://alvinrindra.github.io/assets/images/data_science/azure.png"  } },
 
                 { data: { id: 'programming_languages', name: "Programming Languages", parent: 'be_stack' } },
                 { data: { id: 'ruby', name: "Ruby", parent: 'programming_languages', image: "https://alvinrindra.github.io/assets/images/programming/ruby.png" } },
@@ -164,7 +166,7 @@ define([
                 { data: { id: "xgb", name: "Extreme Gradient Boosting", parent: 'ensemble'  } },
                 { data: { id: "generative_learning_models", name: "Generative Learning Models", parent: 'supervised_learning'  } },
                 { data: { id: "support_vector_machine", name: "Support Vector Machine", parent: 'supervised_learning'  } },
-                { data: { id: "learning_theory", name: "Learning theory", parent: 'supervised_learning'  } },
+                { data: { id: "naive_bayes", name: "Naive Bayes", parent: 'supervised_learning'  } },
                 //{ data: { id: "nn", name: "Neural Network", parent: 'supervised_learning'  } },
 
                 { data: { id: "deep_learning", name: "Deep Learning", parent: 'supervised_learning'  } },
@@ -192,11 +194,13 @@ define([
                 { data: { id: "nlp", name: "Natural Language Processing", parent: 'data_science_stack'  } },
                 { data: { id: 'uima', name: "UIMA", parent: 'nlp', image: "https://alvinrindra.github.io/assets/images/data_science/uima.png" } },
                 { data: { id: 'nltk', name: "NLTK", parent: 'nlp' } },
+                { data: { id: 'spacy', name: "SpaCy", parent: 'nlp' } },
                 { data: { id: 'ctakes', name: "cTakes", parent: 'nlp', image: "https://alvinrindra.github.io/assets/images/programming/ctakes.png" } },
 
                 { data: { id: "big_data", name: "Big Data", parent: 'data_science_stack'  } },
                 { data: { id: "tools", name: "Tools", parent: 'data_science_stack'  } },
                 { data: { id: "r_programming", name: "R", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/r-programming.png"  } },
+                { data: { id: "airflow", name: "Airflow", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/airflow.png"  } },
                 { data: { id: "r_studio", name: "R Studio", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/r-studio.png"  } },
                 { data: { id: "matlab", name: "Matlab", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/matlab.gif"  } },
                 { data: { id: "octave", name: "Octave", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/octave.jpeg"  } },
