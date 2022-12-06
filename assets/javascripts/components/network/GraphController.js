@@ -54,7 +54,7 @@ define([
 
               var nodes = [
                 //alvinrindra
-                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Data Scientist AI/BI; Lufthansa's Artificial Intelligence Specialist", image: "https://alvinrindra.github.io/assets/images/Alvin_foto_1.jpg" } },
+                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Data Scientist AI/BI; Lufthansa's Artificial Intelligence Specialist", image: "https://alvinrindra.github.io/assets/images/Alvinfoto2.png" } },
                 //working_exps
                 { data: { id: 'working_exp', name: "Professional Positions" } },
                 { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "Worked on projects, new/s/leak 2.0 (Network of Searchable leaks), Science and Data-Driven Journalism tool http://www.newsleak.io/ and autolinks (automatic proactive researching) - https://uhh-lt.github.io/autolinks, under the supervision of Prof. Chris Biemann.\n \n Tech stack: Scala Play, AngularJS, NodeJS, Elasticsearch, Docker, PostgreSQL, Python, NLP components: UIMA, cTAKES, Polyglot-NER." } },
