@@ -54,7 +54,7 @@ define([
 
               var nodes = [
                 //alvinrindra
-                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Data Scientist AI/BI; Lufthansa's Artificial Intelligence Specialist", image: "https://alvinrindra.github.io/assets/images/Alvin_foto_1.jpg" } },
+                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Data Scientist AI/BI; Lufthansa's Artificial Intelligence Specialist", image: "https://alvinrindra.github.io/assets/images/Alvinfoto2.png" } },
                 //working_exps
                 { data: { id: 'working_exp', name: "Professional Positions" } },
                 { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "Worked on projects, new/s/leak 2.0 (Network of Searchable leaks), Science and Data-Driven Journalism tool http://www.newsleak.io/ and autolinks (automatic proactive researching) - https://uhh-lt.github.io/autolinks, under the supervision of Prof. Chris Biemann.\n \n Tech stack: Scala Play, AngularJS, NodeJS, Elasticsearch, Docker, PostgreSQL, Python, NLP components: UIMA, cTAKES, Polyglot-NER." } },
@@ -98,6 +98,10 @@ define([
                 { data: { id: 'mongodb', name: "MongoDB", parent: 'database', image: "https://alvinrindra.github.io/assets/images/programming/mongodb.png" } },
                 { data: { id: 'mysql', name: "MySQL", parent: 'database', image: "https://alvinrindra.github.io/assets/images/programming/mysql.png" } },
                 { data: { id: 'postgre', name: "Postgre", parent: 'database', image: "https://alvinrindra.github.io/assets/images/programming/postgresql.png" } },
+
+
+                { data: { id: 'cloud', name: "Cloud", parent: "tech_stack" } },
+                { data: { id: 'aws', name: "AWS", parent: 'cloud', image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/200px-Amazon_Web_Services_Logo.svg.png" } },
 
                 { data: { id: 'programming_languages', name: "Programming Languages", parent: 'be_stack' } },
                 { data: { id: 'ruby', name: "Ruby", parent: 'programming_languages', image: "https://alvinrindra.github.io/assets/images/programming/ruby.png" } },
@@ -151,29 +155,37 @@ define([
                 { data: { id: "importance_advising", name: "Importance Advising", parent: 'interactive_reinforcement_learning'  } },
                 { data: { id: "probabilistic_advising", name: "Probabilistic Advising", parent: 'interactive_reinforcement_learning'  } },
 
-
                 { data: { id: "supervised_learning", name: "Supervised Learning", parent: 'machine_learning'  } },
                 { data: { id: "linear_regression", name: "Linear Regression", parent: 'supervised_learning'  } },
-                { data: { id: "classification", name: "Classification", parent: 'supervised_learning'  } },
+                { data: { id: "decision_tree", name: "Decision Tree", parent: 'supervised_learning'  } },
+                { data: { id: "k_n_n", name: "K-Nearest Neighbours", parent: 'supervised_learning'  } },
+                { data: { id: "ensemble", name: "Ensemble Learning", parent: 'supervised_learning'  } },
+                { data: { id: "random_forest", name: "Random Forest", parent: 'ensemble'  } },
+                { data: { id: "xgb", name: "Extreme Gradient Boosting", parent: 'ensemble'  } },
                 { data: { id: "generative_learning_models", name: "Generative Learning Models", parent: 'supervised_learning'  } },
-                { data: { id: "support_vector_machines", name: "Support Vector Machines", parent: 'supervised_learning'  } },
+                { data: { id: "support_vector_machine", name: "Support Vector Machine", parent: 'supervised_learning'  } },
                 { data: { id: "learning_theory", name: "Learning theory", parent: 'supervised_learning'  } },
                 //{ data: { id: "nn", name: "Neural Network", parent: 'supervised_learning'  } },
 
-                { data: { id: "deep_learning", name: "Deep Learning", parent: 'machine_learning'  } },
+                { data: { id: "deep_learning", name: "Deep Learning", parent: 'supervised_learning'  } },
                 { data: { id: "lstm", name: "LSTM", parent: 'deep_learning'  } },
                 { data: { id: "cnn", name: "CNN", parent: 'deep_learning'  } },
-                { data: { id: "dl_tools", name: "Tools", parent: 'deep_learning'  } },
-                { data: { id: "tensorflow", name: "Tensorflow", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/tensorflow.jpeg" } },
-                { data: { id: "scikit_learn", name: "scikit-learn", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/scikit-learn.png" } },
-                { data: { id: "jupyter", name: "Jupyter", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/jupyter.png" } },
-                { data: { id: "keras", name: "Keras", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/keras.png" } },
-                { data: { id: "matplotlib", name: "matplotlib", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/matplotlib.png" } },
-                { data: { id: "numpy", name: "numpy", parent: 'dl_tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/numpy.png" } },
-                { data: { id: "pandas", name: "pandas", parent: 'dl_tools'} },
+                { data: { id: "bert", name: "BERT", parent: 'deep_learning'  } },
+                { data: { id: "gpt2", name: "GPT-2", parent: 'deep_learning'  } },
+                { data: { id: "tensorflow", name: "Tensorflow", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/tensorflow.jpeg" } },
+                { data: { id: "scikit_learn", name: "scikit-learn", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/scikit-learn.png" } },
+                { data: { id: "jupyter", name: "Jupyter", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/jupyter.png" } },
+                { data: { id: "keras", name: "Keras", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/keras.png" } },
+                { data: { id: "matplotlib", name: "matplotlib", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/matplotlib.png" } },
+                { data: { id: "numpy", name: "numpy", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/numpy.png" } },
+                { data: { id: "pandas", name: "pandas", parent: 'tools'} },
 
                 { data: { id: "unsupervised_learning", name: "Unsupervised Learning", parent: 'machine_learning'  } },
                 { data: { id: "expectation_maximization", name: "Expectation Maximization", parent: 'unsupervised_learning'  } },
+                { data: { id: "kmeans", name: "KMeans", parent: 'unsupervised_learning'  } },
+                { data: { id: "agglomerative", name: "Agglomerative Clustering", parent: 'unsupervised_learning'  } },
+                { data: { id: "dbscan", name: "DBSCAN", parent: 'unsupervised_learning'  } },
+                { data: { id: "market_basket", name: "Market Basket Analysis", parent: 'unsupervised_learning'  } },
                 { data: { id: "principal_component_analysis", name: "Principal Component Analysis", parent: 'unsupervised_learning'  } },
                 { data: { id: "independent_component_analysis", name: "Independent Component Analysis", parent: 'unsupervised_learning'  } },
 
