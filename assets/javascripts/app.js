@@ -90,9 +90,9 @@ define([
                    '  <div class="md-dialog-content-body">In this website, you can observe my interactive <i>resume</i>, visualized in the knowledge graphs. </div>' +
                    '  <div class="md-dialog-content-body">You can play around with your <b>touchpad/mousepad</b> to <b>navigate</b> this <i>resume</i> such as pinching your finger to zoom or taping to click.</div>' +
                    '  <div class="md-dialog-content-body">You can also use provided buttons to create a node, a relation, a compound graph, or even build your own <i>knowledge graphs.</i> </div>' +
-                   '  <div class="md-dialog-content-body">Click a <i>circle-nav</i> button in the <b>lower right corner</b> to access more features. </div>' +
+                   '  <div class="md-dialog-content-body">Click a <b><i>circle-nav</i></b> button in the <b>lower right corner</b> to access more features. </div>' +
                    ' </br>' +
-                   '  <div class="md-dialog-content-body">*) Better with Chrome Web Browser. </div>' +
+                   '  <div class="md-dialog-content-body">*) Better with <b>Chrome</b> Web Browser. </div>' +
                    '  </md-dialog-content>' +
                    '  <md-dialog-actions>' +
                    '    <md-button ng-click="closeDialog()" class="md-primary">' +
