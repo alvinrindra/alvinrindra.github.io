@@ -237,7 +237,7 @@ define([
 
                 { data: { id: 'languages', name: "Languages" } },
                 { data: { id: 'ec1', name: "English - Expert", parent: 'languages' } },
-                { data: { id: 'bahasa', name: "Bahasa(Indonesian) - Native", parent: 'languages' } },
+                { data: { id: 'bahasa', name: "Indonesian - Native", parent: 'languages' } },
                 { data: { id: 'german', name: "German - Upper Intermediate", parent: 'languages' } },
                 { data: { id: 'malay', name: "Malay - Expert", parent: 'languages' } },
                 // { data: { id: '0', parent: 'b', name: "Disease" }, position: { x: 215, y: 85 } },
