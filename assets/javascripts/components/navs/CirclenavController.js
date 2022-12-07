@@ -75,7 +75,7 @@ define([
                    '  <md-dialog-content class="md-dialog-content">'+
                    '  <div class="md-dialog-content-body">If you are interested to play with knowledge graphs' +
                    '  <div class="md-dialog-content-body">You can find further details of manual</div>' +
-                   '  <div class="md-dialog-content-body">by clicking User Manual in the left main navigation.</div>' +
+                   '  <div class="md-dialog-content-body">by clicking User Manual in the lower left navigation.</div>' +
                    '  </md-dialog-content>' +
                    '  <md-dialog-actions>' +
                    '    <md-button ng-click="closeDialog()" class="md-primary">' +
