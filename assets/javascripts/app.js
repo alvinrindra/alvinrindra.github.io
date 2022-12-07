@@ -88,7 +88,8 @@ define([
                    '  <md-dialog-content class="md-dialog-content">'+
                    '  <h2 class="md-title"><b> Welcome to alvinrindra.github.io!</b></h2>' +
                    '  <div class="md-dialog-content-body">In this website, you can observe my interactive <i>resume</i>, visualized in the knowledge graphs. </div>' +
-                   '  <div class="md-dialog-content-body">You can play around with this <i>resume</i> by creating a node, a relation, a compound graph, or even build your own <i>knowledge graphs.</i> </div>' +
+                   '  <div class="md-dialog-content-body">You can play around with your touchpad/mousepad to navigate this <i>resume</i> such as pinching your finger to zoom or taping to click.</div>' +
+                   '  <div class="md-dialog-content-body">You can also use provided buttons to create a node, a relation, a compound graph, or even build your own <i>knowledge graphs.</i> </div>' +
                    '  <div class="md-dialog-content-body">Click a <i>circle-nav</i> button in the lower right corner to access more features. </div>' +
                    ' </br>' +
                    '  <div class="md-dialog-content-body">*) Better with Chrome Web Browser. </div>' +
