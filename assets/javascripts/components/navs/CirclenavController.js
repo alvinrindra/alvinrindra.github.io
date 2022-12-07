@@ -73,7 +73,9 @@ define([
                  template:
                    '<md-dialog aria-label="List dialog" style="z-index: 1009;">' +
                    '  <md-dialog-content class="md-dialog-content">'+
-                   '  <div class="md-dialog-content-body">For further details of manual, open Main Navigation by clicking lower right button and then click user manual in the left main navigation</div>' +
+                   '  <div class="md-dialog-content-body">If you are interested to play with knowledge graphs' +
+                   '  <div class="md-dialog-content-body">You can find further details of manual</div>' +
+                   '  <div class="md-dialog-content-body">by clicking User Manual in the left main navigation.</div>' +
                    '  </md-dialog-content>' +
                    '  <md-dialog-actions>' +
                    '    <md-button ng-click="closeDialog()" class="md-primary">' +
