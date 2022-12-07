@@ -180,6 +180,9 @@ define([
                 { data: { id: "keras", name: "Keras", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/keras.png" } },
                 { data: { id: "matplotlib", name: "matplotlib", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/matplotlib.png" } },
                 { data: { id: "numpy", name: "numpy", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/machine_learning/numpy.png" } },
+                { data: { id: "flask", name: "Flask", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/flask.png" } },
+                { data: { id: "pytorch", name: "PyTorch", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/pytorch.png" } },
+                { data: { id: "mlflow", name: "MLFlow", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/mlflow.png" } },
                 { data: { id: "pandas", name: "pandas", parent: 'tools'} },
 
                 { data: { id: "unsupervised_learning", name: "Unsupervised Learning", parent: 'machine_learning'  } },
