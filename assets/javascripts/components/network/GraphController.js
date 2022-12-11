@@ -135,8 +135,11 @@ define([
                 { data: { id: 'vis', name: "VisJs", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/visjs.png"} },
                 { data: { id: 'cytoscape', name: "CytoscapeJS", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/cytoscape.svg"} },
 
-                { data: { id: 'container', name: "Container", parent: 'tech_stack' } },
-                { data: { id: 'docker', name: "Docker", parent: 'container', image: "https://alvinrindra.github.io/assets/images/programming/docker.png" } },
+                { data: { id: 'devops', name: "DevOps", parent: 'tech_stack' } },
+                { data: { id: 'docker', name: "Docker", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/docker.png" } },
+                { data: { id: 'helm', name: "HELM", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/helm.png" } },
+                { data: { id: 'kubernetes', name: "Kubernetes", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/kubernetes.png" } },
+                { data: { id: 'terraform', name: "Terraform", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/terraform.png" } },
 
                 { data: { id: 'indexing', name: "Indexing", parent: 'tech_stack' } },
                 { data: { id: 'elasticsearch', name: "Elasticsearch", parent: 'indexing', image: "https://alvinrindra.github.io/assets/images/programming/elasticsearch.jpg" } },
