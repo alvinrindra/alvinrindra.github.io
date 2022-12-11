@@ -124,12 +124,9 @@ define([
 
                 { data: { id: 'api', name: "API", parent: 'be_stack' } },
                 { data: { id: 'swagger', name: "Swagger", parent: 'api', image: "https://alvinrindra.github.io/assets/images/programming/Swagger.png"} },
-
-
                 // { data: { id: 'ide', name: "IDE", parent: 'tech_stack' } },
                 // { data: { id: 'atom', name: "Atom", parent: 'ide', image: "https://alvinrindra.github.io/assets/images/programming/atom.png" } },
                 // { data: { id: 'intellij', name: "IntelliJ", parent: 'ide', image: "https://alvinrindra.github.io/assets/images/programming/intellij.jpeg" } },
-
                 { data: { id: 'data_visualization', name: "Data Visualization", parent: 'tech_stack' } },
                 { data: { id: 'd3', name: "D3", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/d3js.png"} },
                 { data: { id: 'vis', name: "VisJs", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/visjs.png"} },
