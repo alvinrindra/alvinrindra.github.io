@@ -64,7 +64,7 @@ define([
                 { data: { id: 'endpoint', name: "Endpoint", parent: 'resourcegroup', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/other/02579-icon-service-Private-Endpoints.svg" } },
                 { data: { id: 'aad', name: "Active Directory", parent: 'azurecloud', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/security/03343-icon-service-Azure-AD-Authentication-Methods.svg" } },
                 { data: { id: 'adevops', name: "Azure Devops", parent: 'azurecloud', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/devops/10261-icon-service-Azure-DevOps.svg" } },
-                { data: { id: "azure", name: "Azure", parent: 'resourcegroup', image: "https://alvinrindra.github.io/assets/images/data_science/azure.png"  } },
+                { data: { id: "azure", name: "Azure", parent: 'azurecloud', image: "https://alvinrindra.github.io/assets/images/data_science/azure.png"  } },
                 { data: { id: 'storage', name: "Data Estate", parent: 'resourcegroup' } },
                 
                 
