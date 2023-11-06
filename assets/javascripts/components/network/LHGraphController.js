@@ -56,7 +56,7 @@ define([
                 //alvinrindra
                 // { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Data Scientist; Senior AI & Data Consultant @ Lufthansa", image: "https://alvinrindra.github.io/assets/images/Alvinfoto2.jpg" } },
                 //storages
-                { data: { id: 'storage', name: "Storage" } },
+                { data: { id: 'storage', name: "Data Estate" } },
                 // { data: { id: 'lead_data', name: "Lead Data Science", parent: 'storage', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/ai_ml/00028-icon-service-Batch-AI.svg", desc: "" }},
                 { data: { id: 'wind_turbine', name: "Wind Turbine", parent: 'storage', image: "https://static.thenounproject.com/png/649875-200.png", desc: "" }},
 
@@ -70,9 +70,16 @@ define([
                 // { data: { id: 'dlai', name: "deeplearning.ai", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/dlai.jpeg" } },
                 // { data: { id: 'iium', name: "IIUM, Malaysia", parent: 'non_degree', image: "https://alvinrindra.github.io/assets/images/iium.png", desc: "1-year study abroad program, majoring Information and Communication Technology.\n\n-Artificial Intelligence\n-Theory of Automata\n-Information Retrieval\nGerman Grade: 2.00 (Good) \nMalay/US Grade: 3.00 (Good)" } },
                 // Technology Stack
-                { data: { id: 'tech_stack', name: "Stream Analytics" } },
+                { data: { id: 'stream_analytics', name: "Stream Analytics" } },
 
-                { data: { id: 'angularjs', name: "Angular", parent: 'tech_stack', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/iot/00042-icon-service-Stream-Analytics-Jobs.svg" } },
+                { data: { id: 'angularjs', name: "Stream Analytics", parent: 'stream_analytics', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/iot/00042-icon-service-Stream-Analytics-Jobs.svg" } },
+                { data: { id: 'data_science_workflow', name: "Data Science Workflow", parent: 'stream_analytics' } },
+                { data: { id: 'azure_ml', name: "Azure ML", parent: 'data_science_workflow', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/ai_ml/10166-icon-service-Machine-Learning.svg" } },
+
+                // Deliver
+                { data: { id: 'presentation_applications', name: "Presentation & Applications" } },
+
+                { data: { id: 'powerbi', name: "Power BI", parent: 'presentation_applications', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/analytics/03332-icon-service-Power-BI-Embedded.svg" } },
                 // { data: { id: 'reactjs', name: "React", parent: 'ui_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/react.png" } },
                 // { data: { id: 'meteor', name: "Meteor", parent: 'ui_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/meteor.png" } },
 
@@ -83,14 +90,14 @@ define([
                 // { data: { id: 'npm', name: "npm", parent: 'package_managers', image: "https://alvinrindra.github.io/assets/images/programming/npm.png"} },
                 // { data: { id: 'bower', name: "Bower", parent: 'package_managers', image: "https://alvinrindra.github.io/assets/images/programming/bower.jpeg"} },
 
-                // { data: { id: 'be_stack', name: "Back-End Stack", parent: "tech_stack" } },
+                // { data: { id: 'be_stack', name: "Back-End Stack", parent: "stream_analytics" } },
                 // { data: { id: 'database', name: "Database", parent: 'be_stack' } },
                 // { data: { id: 'mongodb', name: "MongoDB", parent: 'database', image: "https://alvinrindra.github.io/assets/images/programming/mongodb.png" } },
                 // { data: { id: 'mysql', name: "MySQL", parent: 'database', image: "https://alvinrindra.github.io/assets/images/programming/mysql.png" } },
                 // { data: { id: 'postgre', name: "Postgre", parent: 'database', image: "https://alvinrindra.github.io/assets/images/programming/postgresql.png" } },
 
 
-                // { data: { id: 'cloud', name: "Cloud", parent: "tech_stack" } },
+                // { data: { id: 'cloud', name: "Cloud", parent: "stream_analytics" } },
                 // { data: { id: 'aws', name: "AWS", parent: 'cloud', image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/200px-Amazon_Web_Services_Logo.svg.png" } },
                 // { data: { id: "gcp", name: "GCP", parent: 'cloud', image: "https://alvinrindra.github.io/assets/images/data_science/gcp.png"  } },
                 // { data: { id: "azure", name: "Azure", parent: 'cloud', image: "https://alvinrindra.github.io/assets/images/data_science/azure.png"  } },
@@ -113,21 +120,21 @@ define([
 
                 // { data: { id: 'api', name: "API", parent: 'be_stack' } },
                 // { data: { id: 'swagger', name: "Swagger", parent: 'api', image: "https://alvinrindra.github.io/assets/images/programming/Swagger.png"} },
-                // // { data: { id: 'ide', name: "IDE", parent: 'tech_stack' } },
+                // // { data: { id: 'ide', name: "IDE", parent: 'stream_analytics' } },
                 // // { data: { id: 'atom', name: "Atom", parent: 'ide', image: "https://alvinrindra.github.io/assets/images/programming/atom.png" } },
                 // // { data: { id: 'intellij', name: "IntelliJ", parent: 'ide', image: "https://alvinrindra.github.io/assets/images/programming/intellij.jpeg" } },
-                // { data: { id: 'data_visualization', name: "Data Visualization", parent: 'tech_stack' } },
+                // { data: { id: 'data_visualization', name: "Data Visualization", parent: 'stream_analytics' } },
                 // { data: { id: 'd3', name: "D3", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/d3js.png"} },
                 // { data: { id: 'vis', name: "VisJs", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/visjs.png"} },
                 // { data: { id: 'cytoscape', name: "CytoscapeJS", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/cytoscape.svg"} },
 
-                // { data: { id: 'devops', name: "DevOps", parent: 'tech_stack' } },
+                // { data: { id: 'devops', name: "DevOps", parent: 'stream_analytics' } },
                 // { data: { id: 'docker', name: "Docker", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/docker.png" } },
                 // { data: { id: 'helm', name: "HELM", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/helm.png" } },
                 // { data: { id: 'kubernetes', name: "Kubernetes", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/kubernetes.png" } },
                 // { data: { id: 'terraform', name: "Terraform", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/terraform.png" } },
 
-                // { data: { id: 'indexing', name: "Indexing", parent: 'tech_stack' } },
+                // { data: { id: 'indexing', name: "Indexing", parent: 'stream_analytics' } },
                 // { data: { id: 'elasticsearch', name: "Elasticsearch", parent: 'indexing', image: "https://alvinrindra.github.io/assets/images/programming/elasticsearch.jpg" } },
                 // { data: { id: 'solr', name: "Solr", parent: 'indexing', image: "https://alvinrindra.github.io/assets/images/programming/solr.png"} },
 
@@ -146,8 +153,8 @@ define([
 
                 { data: { id: 'alvinrindrastorage', source: 'storage', target: 'event_queueing', name: 'ingests' } },
                 { data: { id: 'alvinrindraevent_queueing', source: 'alvinrindra', target: 'event_queueing', name: 'studies' } },
-                { data: { id: 'alvinrindratech_stack', source: 'event_queueing', target: 'tech_stack', name: 'has' } },
-                // { data: { id: 'alvinrindrapublications', source: 'alvinrindra', target: 'publications', name: 'writes' } },
+                { data: { id: 'alvinrindrastream_analytics', source: 'event_queueing', target: 'stream_analytics', name: 'has' } },
+                { data: { id: 'alvinrindrapublications', source: 'stream_analytics', target: 'presentation_applications', name: 'delivers' } },
                 // { data: { id: 'alvinrindradata_science', source: 'alvinrindra', target: 'data_science_stack', name: 'has' } },
                 // { data: { id: 'alvinrindraactivities', source: 'alvinrindra', target: 'interests', name: 'has' } },
                 // { data: { id: 'alvinrindralanguages', source: 'alvinrindra', target: 'languages', name: 'speaks' } },
