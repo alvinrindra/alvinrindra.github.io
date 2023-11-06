@@ -56,19 +56,26 @@ define([
                 //alvinrindra
                 // { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Data Scientist; Senior AI & Data Consultant @ Lufthansa", image: "https://alvinrindra.github.io/assets/images/Alvinfoto2.jpg" } },
                 //storages
-
                 { data: { id: 'azurecloud', name: "Azure Cloud" } },
-                { data: { id: 'keyvault', name: "KeyVault", parent: 'azurecloud', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/security/10245-icon-service-Key-Vaults.svg" } },
+                { data: { id: 'subscription', name: "Subscription", parent:"azurecloud", image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/general/10002-icon-service-Subscriptions.svg" } },
+                { data: { id: 'resourcegroup', name: "Resource Group", parent: "azurecloud" } },
+                { data: { id: 'rg', name: ".....-rg", parent:"azurecloud", image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/general/10007-icon-service-Resource-Groups.svg" } },
+                { data: { id: 'keyvault', name: "KeyVault", parent: 'resourcegroup', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/security/10245-icon-service-Key-Vaults.svg" } },
+                { data: { id: 'endpoint', name: "Endpoint", parent: 'resourcegroup', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/other/02579-icon-service-Private-Endpoints.svg" } },
                 { data: { id: 'aad', name: "Active Directory", parent: 'azurecloud', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/security/03343-icon-service-Azure-AD-Authentication-Methods.svg" } },
-                { data: { id: "azure", name: "Azure", parent: 'azurecloud', image: "https://alvinrindra.github.io/assets/images/data_science/azure.png"  } },
-                { data: { id: 'storage', name: "Data Estate", parent: 'azurecloud' } },
+                { data: { id: 'adevops', name: "Azure Devops", parent: 'azurecloud', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/devops/10261-icon-service-Azure-DevOps.svg" } },
+                { data: { id: "azure", name: "Azure", parent: 'resourcegroup', image: "https://alvinrindra.github.io/assets/images/data_science/azure.png"  } },
+                { data: { id: 'storage', name: "Data Estate", parent: 'resourcegroup' } },
+                
+                
                 // { data: { id: 'lead_data', name: "Lead Data Science", parent: 'storage', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/ai_ml/00028-icon-service-Batch-AI.svg", desc: "" }},
                 { data: { id: 'iot_devices', name: "IoT Devices & Event Sources" } },
                 { data: { id: 'wind_turbine', name: "Wind Turbine", parent: 'iot_devices', image: "https://static.thenounproject.com/png/649875-200.png", desc: "" }},
                 { data: { id: 'weather_data', name: "Weather Data", parent: 'iot_devices', desc: "" }},
                 { data: { id: 'adls', name: "ADLS Gen2", parent: 'storage', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/analytics/10150-icon-service-Data-Lake-Store-Gen1.svg", desc: "" } },
                 { data: { id: 'blob', name: "Storage Blob", parent: 'storage', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/general/10780-icon-service-Blob-Block.svg", desc: "" } },
-                { data: { id: 'onpremise', name: "On Premise Data", desc: "" } },
+                { data: { id: 'onpremise', name: "On Premise / Maintenance Data", desc: "" } },
+                { data: { id: 'historical records', name: "Historical records", desc: "" } },
                 { data: { id: 'oracle', name: "Oracle", parent: 'onpremise', desc: "" } },
                 // { data: { id: 'database', name: "Database", parent: 'be_stack' } },
                 { data: { id: 'mongodb', name: "MongoDB", parent: 'onpremise', image: "https://alvinrindra.github.io/assets/images/programming/mongodb.png" } },
@@ -76,27 +83,28 @@ define([
                 { data: { id: 'postgre', name: "Postgre", parent: 'onpremise', image: "https://alvinrindra.github.io/assets/images/programming/postgresql.png" } },
 
                 //event_queueing
-                { data: { id: 'data_integration', name: "Data Integration", parent: 'azurecloud'} },
+                { data: { id: 'data_integration', name: "Data Integration", parent: 'resourcegroup'} },
                 { data: { id: 'azure_synapse', name: "Azure Synapse", parent: 'data_integration', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/analytics/00606-icon-service-Azure-Synapse-Analytics.svg", desc: "" } },
                 // { data: { id: 'event_hub', name: "Event Hub", parent: 'data_integration', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/iot/00039-icon-service-Event-Hubs.svg", desc: "" } },
 
 
                 //event_queueing
-                { data: { id: 'event_queueing', name: "Event Queueing and Stream Ingestion", parent: 'azurecloud'} },
+                { data: { id: 'event_queueing', name: "Event Queueing and Stream Ingestion", parent: 'resourcegroup'} },
                 { data: { id: 'uin_jkt', name: "IoT Hub", parent: 'event_queueing', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/iot/10182-icon-service-IoT-Hub.svg", desc: "" } },
                 { data: { id: 'event_hub', name: "Event Hub", parent: 'event_queueing', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/iot/00039-icon-service-Event-Hubs.svg", desc: "" } },
 
                // Technology Stack
-                { data: { id: 'stream_analytics', name: "Stream Analytics", parent: 'azurecloud' }},
+                { data: { id: 'stream_analytics', name: "Stream Analytics", parent: 'resourcegroup' }},
 
                 { data: { id: 'angularjs', name: "Stream Analytics", parent: 'stream_analytics', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/iot/00042-icon-service-Stream-Analytics-Jobs.svg" } },
                 { data: { id: 'mlops', name: "MLOps Workflow", parent: 'stream_analytics' } },
                 { data: { id: 'azure_ml', name: "Azure ML", parent: 'mlops', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/ai_ml/10166-icon-service-Machine-Learning.svg" } },
                 { data: { id: 'aks', name: "AKS", parent: 'mlops', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/containers/10023-icon-service-Kubernetes-Services.svg" } },
                 { data: { id: 'azure_monitor', name: "Azure Monitor", parent: 'mlops', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/monitor/00001-icon-service-Monitor.svg" } },
-                
+                { data: { id: 'event_grid', name: "Event Grid", parent: 'mlops', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/integration/10206-icon-service-Event-Grid-Topics.svg" } },
+
                 // Deliver
-                { data: { id: 'presentation_applications', name: "Presentation & Applications", parent: 'azurecloud' } },
+                { data: { id: 'presentation_applications', name: "Presentation & Applications", parent: 'resourcegroup' } },
 
                 { data: { id: 'powerbi', name: "Power BI", parent: 'presentation_applications', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/analytics/03332-icon-service-Power-BI-Embedded.svg" } },
                 { data: { id: 'azure_function', name: "Azure Function", parent: 'presentation_applications', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/iot/10029-icon-service-Function-Apps.svg" } },
@@ -107,7 +115,7 @@ define([
           
                 { data: { id: 'onpremisedata_integration', source: 'onpremise', target: 'data_integration', name: 'ingests' } },
                 { data: { id: 'data_integrationstorage', source: 'data_integration', target: 'storage', name: 'stores' } },
-                { data: { id: 'event_queueingstorage', source: 'event_queueing', target: 'storage', name: 'stores' } },
+                { data: { id: 'event_queueingstorage', source: 'angularjs', target: 'storage', name: 'stores' } },
                 { data: { id: 'iot_devicesevent_queueing', source: 'iot_devices', target: 'event_queueing', name: 'ingests' } },
                 { data: { id: 'alvinrindraevent_queueing', source: 'alvinrindra', target: 'event_queueing', name: 'studies' } },
                 { data: { id: 'alvinrindrastream_analytics', source: 'event_queueing', target: 'stream_analytics', name: 'analyze' } },
