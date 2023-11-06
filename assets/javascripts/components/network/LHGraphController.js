@@ -75,7 +75,7 @@ define([
                 { data: { id: 'adls', name: "ADLS Gen2", parent: 'storage', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/analytics/10150-icon-service-Data-Lake-Store-Gen1.svg", desc: "" } },
                 { data: { id: 'blob', name: "Storage Blob", parent: 'storage', image: "https://alvinrindra.github.io/assets/images/Azure_Public_Service_Icons/Icons/general/10780-icon-service-Blob-Block.svg", desc: "" } },
                 { data: { id: 'onpremise', name: "On Premise / Maintenance Data", desc: "" } },
-                { data: { id: 'historical records', name: "Historical records", desc: "" } },
+                // { data: { id: 'historical records', name: "Historical records", desc: "" } },
                 { data: { id: 'oracle', name: "Oracle", parent: 'onpremise', desc: "" } },
                 // { data: { id: 'database', name: "Database", parent: 'be_stack' } },
                 { data: { id: 'mongodb', name: "MongoDB", parent: 'onpremise', image: "https://alvinrindra.github.io/assets/images/programming/mongodb.png" } },
