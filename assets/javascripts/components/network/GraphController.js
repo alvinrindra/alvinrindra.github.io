@@ -84,6 +84,7 @@ define([
                 { data: { id: 'fe_stack', name: "Front-End Stack", parent: "tech_stack" } },
                 { data: { id: 'ui_frameworks', name: "UI Frameworks", parent: 'fe_stack' } },
                 { data: { id: 'angularjs', name: "Angular", parent: 'ui_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/angular.png" } },
+                { data: { id: 'streamlit', name: "Streamlit", parent: 'ui_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/streamlit.png" } },
                 { data: { id: 'reactjs', name: "React", parent: 'ui_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/react.png" } },
                 { data: { id: 'meteor', name: "Meteor", parent: 'ui_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/meteor.png" } },
 
@@ -114,6 +115,7 @@ define([
                 { data: { id: 'nodejs', name: "NodeJs", parent: 'programming_languages', image: "https://alvinrindra.github.io/assets/images/programming/nodejs.png" } },
 
                 { data: { id: 'be_frameworks', name: "Frameworks", parent: 'be_stack' } },
+                { data: { id: 'fastapi', name: "FastAPI", parent: 'be_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/fastapi.png"} },
                 { data: { id: 'ror', name: "Ruby on Rails", parent: 'be_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/ROR.png"} },
                 { data: { id: 'meteor_be', name: "Meteor", parent: 'be_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/meteor.png"} },
                 { data: { id: 'scala_play', name: "Scala Play", parent: 'be_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/scala-play.png"} },
@@ -131,6 +133,7 @@ define([
                 { data: { id: 'd3', name: "D3", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/d3js.png"} },
                 { data: { id: 'vis', name: "VisJs", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/visjs.png"} },
                 { data: { id: 'cytoscape', name: "CytoscapeJS", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/cytoscape.svg"} },
+                { data: { id: 'plotly', name: "Plotly", parent: 'data_visualization', image: "https://alvinrindra.github.io/assets/images/programming/plotly.png"} },
 
                 { data: { id: 'devops', name: "DevOps", parent: 'tech_stack' } },
                 { data: { id: 'docker', name: "Docker", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/docker.png" } },
@@ -143,7 +146,7 @@ define([
                 { data: { id: 'solr', name: "Solr", parent: 'indexing', image: "https://alvinrindra.github.io/assets/images/programming/solr.png"} },
 
                 // Data Science Stack
-                { data: { id: 'data_science_stack', name: "Data Science Stack" } },
+                { data: { id: 'data_science_stack', name: "AI/Data Science Stack" } },
                 { data: { id: "machine_learning", name: "Machine Learning", parent: 'data_science_stack'  } },
                 { data: { id: "reinforcement_learning", name: "Reinforcement Learning", parent: 'machine_learning'  } },
 
@@ -164,7 +167,8 @@ define([
                 { data: { id: "k_n_n", name: "K-Nearest Neighbours", parent: 'supervised_learning'  } },
                 { data: { id: "ensemble", name: "Ensemble Learning", parent: 'supervised_learning'  } },
                 { data: { id: "random_forest", name: "Random Forest", parent: 'ensemble'  } },
-                { data: { id: "xgb", name: "Extreme Gradient Boosting", parent: 'ensemble'  } },
+                { data: { id: "xgb", name: "XGBoost", parent: 'ensemble', image: "https://alvinrindra.github.io/assets/images/data_science/xgboost.png" } },
+                { data: { id: "catboost", name: "CatBoost", parent: 'ensemble', image: "https://alvinrindra.github.io/assets/images/data_science/catboost.png" } },
                 { data: { id: "generative_learning_models", name: "Generative Learning Models", parent: 'supervised_learning'  } },
                 { data: { id: "support_vector_machine", name: "Support Vector Machine", parent: 'supervised_learning'  } },
                 { data: { id: "naive_bayes", name: "Naive Bayes", parent: 'supervised_learning'  } },
@@ -201,7 +205,23 @@ define([
                 { data: { id: 'spacy', name: "SpaCy", parent: 'nlp' } },
                 { data: { id: 'ctakes', name: "cTakes", parent: 'nlp', image: "https://alvinrindra.github.io/assets/images/programming/ctakes.png" } },
 
-                { data: { id: "big_data", name: "Big Data", parent: 'data_science_stack'  } },
+                { data: { id: "genai", name: "GenAI/LLMOPS", parent: 'machine_learning'  } },
+                { data: { id: 'llm', name: "LLM", parent: 'genai'} },
+                { data: { id: 'openai', name: "OpenAI-GPT4", parent: 'llm', image: "https://alvinrindra.github.io/assets/images/genai/openai.png" } },
+                { data: { id: 'meta', name: "Meta-LLama2", parent: 'llm', image: "https://alvinrindra.github.io/assets/images/genai/meta.png" } },
+                { data: { id: 'vectorstore', name: "Vectorstore", parent: 'genai' } },
+                { data: { id: 'elasticvect', name: "Elasticsearch", parent: 'vectorstore', image: "https://alvinrindra.github.io/assets/images/genai/elastic.png" } },
+                { data: { id: 'milvus', name: "Milvus", parent: 'vectorstore', image: "https://alvinrindra.github.io/assets/images/genai/milvus.png" } },
+                { data: { id: 'chroma', name: "Chroma", parent: 'vectorstore', image: "https://alvinrindra.github.io/assets/images/genai/chroma.png" } },
+                { data: { id: 'frameworks', name: "GenAI Frameworks", parent: 'genai' } },
+                { data: { id: 'langchain', name: "Langchain", parent: 'frameworks', image: "https://alvinrindra.github.io/assets/images/genai/langchain.png" } },
+                { data: { id: 'haystack', name: "Haystack", parent: 'frameworks', image: "https://alvinrindra.github.io/assets/images/genai/haystack.png" } },
+                { data: { id: 'dep_mon', name: "LLM Evaluation", parent: 'genai' } },
+                { data: { id: 'mlflow_2', name: "MLFlow", parent: 'dep_mon', image: "https://alvinrindra.github.io/assets/images/data_science/mlflow.png" } },
+                { data: { id: 'prompt_eng', name: "Prompt Engineering", parent: 'genai' } },
+                { data: { id: 'promptflow', name: "prompflow", parent: 'prompt_eng', image: "https://alvinrindra.github.io/assets/images/genai/promptflow.png" } },
+
+                // { data: { id: "big_data", name: "Big Data", parent: 'data_science_stack'  } },
                 { data: { id: "tools", name: "Tools", parent: 'data_science_stack'  } },
                 { data: { id: "r_programming", name: "R", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/r-programming.png"  } },
                 { data: { id: "airflow", name: "Airflow", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/airflow.png"  } },
@@ -212,8 +232,8 @@ define([
                 { data: { id: "shiny", name: "Rshiny", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/shiny.png"  } },
                 { data: { id: "tidyverse", name: "tidyverse", parent: 'tools', image: "https://alvinrindra.github.io/assets/images/data_science/tidyverse.jpg"  } },
 
-                { data: { id: "ds_visualization", name: "Visualization", parent: 'data_science_stack'  } },
-                { data: { id: "sap", name: "SAP", parent: 'data_science_stack'  } },
+                // { data: { id: "ds_visualization", name: "Visualization", parent: 'data_science_stack'  } },
+                // { data: { id: "sap", name: "SAP", parent: 'data_science_stack'  } },
 
                 { data: { id: 'projects', name: "Projects" } },
                 { data: { id: 'newsleak', name: "New/s/leak 2.0", parent: 'projects', image: "https://alvinrindra.github.io/assets/images/projects/newsleak.png", url: 'http://www.newsleak.io/', desc: "New/s/leak (NetWork of Searchable Leaks) is a research project producing a piece of software that allows to quickly and intuitively explore large amounts of textual data. The tool will support journalists working with datasets like the War Diaries or the Embassy cables (both distributed by Wikileaks) or the hacking of Hacking Team. The goal is to provide a quick access to important entities (people, organizations, places) and their relationships, and how those things change over time. \n \n Tech Stack: AngularJS, VIS.js, Scala, Play, Elasticsearch, PostgreSQL, Docker, NLP: UIMA, GermaNER, Python – PolyglotNER (new/s/leak 2.0)."  } },
