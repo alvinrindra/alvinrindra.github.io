@@ -141,9 +141,14 @@ define([
                 { data: { id: 'kubernetes', name: "Kubernetes", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/kubernetes.png" } },
                 { data: { id: 'terraform', name: "Terraform", parent: 'devops', image: "https://alvinrindra.github.io/assets/images/programming/terraform.png" } },
 
-                { data: { id: 'indexing', name: "Indexing", parent: 'tech_stack' } },
+                { data: { id: 'indexing', name: "Index/Search", parent: 'tech_stack' } },
                 { data: { id: 'elasticsearch', name: "Elasticsearch", parent: 'indexing', image: "https://alvinrindra.github.io/assets/images/programming/elasticsearch.jpg" } },
                 { data: { id: 'solr', name: "Solr", parent: 'indexing', image: "https://alvinrindra.github.io/assets/images/programming/solr.png"} },
+                
+
+                { data: { id: 'e2e', name: "E2E Automation", parent: 'tech_stack' } },
+                { data: { id: 'selenium', name: "Selenium", parent: 'e2e', image: "https://alvinrindra.github.io/assets/images/programming/selenium.png" } },
+                { data: { id: 'nightwatch', name: "Nightwatch", parent: 'e2e', image: "https://alvinrindra.github.io/assets/images/programming/nightwatch.png"} },
 
                 // Data Science Stack
                 { data: { id: 'data_science_stack', name: "AI/Data Science Stack" } },
@@ -220,6 +225,8 @@ define([
                 { data: { id: 'mlflow_2', name: "MLFlow", parent: 'dep_mon', image: "https://alvinrindra.github.io/assets/images/data_science/mlflow.png" } },
                 { data: { id: 'prompt_eng', name: "Prompt Engineering", parent: 'genai' } },
                 { data: { id: 'promptflow', name: "prompflow", parent: 'prompt_eng', image: "https://alvinrindra.github.io/assets/images/genai/promptflow.png" } },
+                // { data: { id: 'llm_deployment', name: "Deployment", parent: 'genai' } },
+                // { data: { id: 'ollama', name: "Ollama", parent: 'llm', image: "https://alvinrindra.github.io/assets/images/genai/ollama.png" } },
 
                 // { data: { id: "big_data", name: "Big Data", parent: 'data_science_stack'  } },
                 { data: { id: "tools", name: "Tools", parent: 'data_science_stack'  } },

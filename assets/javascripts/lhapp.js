@@ -5,7 +5,7 @@ define([
     './components/navs/SidenavController',
     './components/navs/CirclenavController',
     // './components/network/GraphController',
-    './components/network/LHGraphController',
+    './components/network/AIAutomationGraphController',
     './components/network/GraphConfig',
     './services/EntityService',
     './services/EndPointService',
