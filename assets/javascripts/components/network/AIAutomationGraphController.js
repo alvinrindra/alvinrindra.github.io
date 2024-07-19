@@ -56,9 +56,15 @@ define([
                 //alvinrindra
                 { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Data Scientist; Senior AI & Data Consultant @ Lufthansa", image: "https://alvinrindra.github.io/assets/images/Alvinfoto2.jpg" } },
                 // Technology Stack
-                { data: { id: 'tech_stack', name: "AI Automation Topic (WIP)" } },
+                { data: { id: 'tech_stack', name: "AI Automation Topic Milestones (WIP)" } },
+                { data: { id: 'fe_stack', name: "Vision", parent: "tech_stack" } },
+                { data: { id: 'fe_2025', name: "2025", parent: "tech_stack" } },
+                { data: { id: 'T2', name: "T2", parent: "fe_2025" } },
+                { data: { id: 'T1', name: "T1", parent: "fe_2025" } },
 
-                // { data: { id: 'fe_stack', name: "Front-End Stack", parent: "tech_stack" } },
+                { data: { id: 'fe_2024', name: "2024", parent: "tech_stack" } },
+                { data: { id: 'T124', name: "T1", parent: "fe_2024" } },
+
                 // { data: { id: 'ui_frameworks', name: "UI Frameworks", parent: 'fe_stack' } },
                 // { data: { id: 'angularjs', name: "Angular", parent: 'ui_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/angular.png" } },
                 // { data: { id: 'streamlit', name: "Streamlit", parent: 'ui_frameworks', image: "https://alvinrindra.github.io/assets/images/programming/streamlit.png" } },
