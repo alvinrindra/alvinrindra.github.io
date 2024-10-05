@@ -54,14 +54,14 @@ define([
 
               var nodes = [
                 //alvinrindra
-                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Data Scientist; Senior AI & Data Consultant @ Lufthansa", image: "https://alvinrindra.github.io/assets/images/Alvinfoto2.jpg" } },
+                { data: { id: 'alvinrindra', name: 'alvinrindra', desc: "Sr. AI & Data Consultant | Sr. AI Architect | MLOps & GenAI/LLMOps Lead", image: "https://alvinrindra.github.io/assets/images/Alvinfoto2.jpg" } },
                 //working_exps
                 { data: { id: 'working_exp', name: "Professional Positions" } },
                 { data: { id: 'research_assistant', name: "Research Assistant", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/uni_hh.jpg", desc: "Worked on projects, new/s/leak 2.0 (Network of Searchable leaks), Science and Data-Driven Journalism tool http://www.newsleak.io/ and autolinks (automatic proactive researching) - https://uhh-lt.github.io/autolinks, under the supervision of Prof. Chris Biemann.\n \n Tech stack: Scala Play, AngularJS, NodeJS, Elasticsearch, Docker, PostgreSQL, Python, NLP components: UIMA, cTAKES, Polyglot-NER." } },
                 { data: { id: 'data_scientist', name: "Data Scientist", parent: 'working_exp', desc: "Developing ML and Deep Learning models and developing the Proof of Concepts",image: "https://alvinrindra.github.io/assets/images/data_science/ginkgo_analytics_200x70_rgb-1_small.png" }},
                 { data: { id: 'full_stack_developer', name: "Full Stack Dev-3 Startups", parent: 'working_exp', desc: "3+ years experience in 3 different Startups to build Dashboards for Data Analytics" }},
-                { data: { id: 'ai_specialist', name: "Senior AI & Data", parent: 'working_exp', desc: "~5 years of experience developing and deploying AI and Data Solutions to production", image: "https://alvinrindra.github.io/assets/images/lhind.png" }},
-                { data: { id: 'lead_data', name: "Lead Data Science", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/dtsense.png", desc: "As a lead data science instructor, leading a team of instructors in topics: AI, ML, DL, RL" }},
+                { data: { id: 'ai_specialist', name: "Senior AI & Data", parent: 'working_exp', desc: "Sr. Consultant; Sr. AI Architect; MLOps/LLMOps Lead. Leading MLOps and GenAI/LLMOps topics in the company. >5 years of experience developing, deploying, and architecting AI & data solutions to production", image: "https://alvinrindra.github.io/assets/images/lhind.png" }},
+                { data: { id: 'lead_data', name: "Lead GenAI & Data", parent: 'working_exp', image: "https://alvinrindra.github.io/assets/images/dtsense.png", desc: "As a lead GenAI & Data Science Instructor: Leading a team of Data Scientists in topics: GenAI, ML, DL, RL." }},
                 // { data: { id: 'full_stack_developer_1', name: "Full Stack Developer (ROR)", parent: 'full_stack_developer', image: "https://alvinrindra.github.io/assets/images/hausgold.png", desc: "Worked on a project for building a maklerportal and CRM. Maklerportal-frontend Stack: ReactJS, SCSS, Webpack, E2E Test: NightwatchJS. Maklerportal-api Stack: Ruby on Rails, PostgreSQL.Container: Docker" } },
                 // { data: { id: 'full_stack_developer_2', name: "Full Stack Developer (ROR)", parent: 'full_stack_developer', image: "https://alvinrindra.github.io/assets/images/converate.jpeg", desc: "Developed features of several websites (ximmo, ubitricity, codetalk): HTML5, sass, Bootstrap, Javascript. Framework: Ruby on Rails, TDD/BDD: RSpec." } },
                 // { data: { id: 'full_stack_developer_3', name: "Full Stack Developer (JS)", parent: 'full_stack_developer', image: "https://alvinrindra.github.io/assets/images/quantilope.png", desc: "Developed a Market Research Software: MeteorJS, AngularJS, HTML5, LESS, Bootstrap, jQuery, and MongoDB." } },
@@ -213,7 +213,7 @@ define([
                 { data: { id: "genai", name: "GenAI/LLMOPS", parent: 'machine_learning'  } },
                 { data: { id: 'llm', name: "LLM", parent: 'genai'} },
                 { data: { id: 'openai', name: "OpenAI-GPT4", parent: 'llm', image: "https://alvinrindra.github.io/assets/images/genai/openai.png" } },
-                { data: { id: 'meta', name: "Meta-LLama2", parent: 'llm', image: "https://alvinrindra.github.io/assets/images/genai/meta.png" } },
+                { data: { id: 'meta', name: "Meta-LLama3", parent: 'llm', image: "https://alvinrindra.github.io/assets/images/genai/meta.png" } },
                 { data: { id: 'vectorstore', name: "Vectorstore", parent: 'genai' } },
                 { data: { id: 'elasticvect', name: "Elasticsearch", parent: 'vectorstore', image: "https://alvinrindra.github.io/assets/images/genai/elastic.png" } },
                 { data: { id: 'milvus', name: "Milvus", parent: 'vectorstore', image: "https://alvinrindra.github.io/assets/images/genai/milvus.png" } },
