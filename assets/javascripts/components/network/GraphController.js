@@ -226,7 +226,7 @@ define([
                 { data: { id: 'databricks', name: "Databricks", parent: 'frameworks', image: "https://alvinrindra.github.io/assets/images/genai/databricks.png" } },
                 { data: { id: 'dep_mon', name: "LLM Evaluation", parent: 'genai' } },
                 { data: { id: 'mlflow_2', name: "MLFlow", parent: 'dep_mon', image: "https://alvinrindra.github.io/assets/images/data_science/mlflow.png" } },
-                { data: { id: 'mosaic', name: "MosaicAI", parent: 'dep_mon', image: "https://alvinrindra.github.io/assets/images/data_science/mosaic.png" } },
+                { data: { id: 'mosaic', name: "MosaicAI", parent: 'dep_mon', image: "https://alvinrindra.github.io/assets/images/genai/mosaic.png" } },
                 { data: { id: 'prompt_eng', name: "Prompt Engineering", parent: 'genai' } },
                 { data: { id: 'promptflow', name: "prompflow", parent: 'prompt_eng', image: "https://alvinrindra.github.io/assets/images/genai/promptflow.png" } },
                 // { data: { id: 'llm_deployment', name: "Deployment", parent: 'genai' } },
